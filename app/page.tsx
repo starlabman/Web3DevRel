@@ -130,7 +130,7 @@ export default function HomePage() {
                 transition={{ duration: 1, delay: 0.4 }}
                 className="text-xl md:text-2xl text-muted-foreground max-w-2xl"
               >
-                {t.hero.subtitle}
+                DevRel & Ecosystem Builder | Founder Africa Blockchain Community & Coverner ETHAfrique
               </motion.p>
 
               <motion.p

@@ -13,6 +13,23 @@ export const quickLinks = [
 
 export const mentorshipServices = [
   {
+    title: "Quick Web3 Consultation",
+    description: "Affordable one-on-one session exclusively with Kodjo for personalized Web3 guidance",
+    duration: "1 hour",
+    price: "$10/session",
+    features: [
+      "Direct 1-on-1 consultation with Kodjo",
+      "Personalized Web3 career advice",
+      "Quick project review & feedback",
+      "Technology stack recommendations",
+      "Immediate answers to your questions",
+      "Follow-up resources & next steps",
+    ],
+    href: "https://calendly.com/starlabman/quick-consultation",
+    popular: true,
+    category: "consultation",
+  },
+  {
     title: "Blockchain Fundamentals",
     description: "Perfect introduction to blockchain, Bitcoin, and Web3 for complete beginners",
     duration: "4 sessions",
@@ -25,7 +42,7 @@ export const mentorshipServices = [
       "Basic trading concepts",
     ],
     href: "https://calendly.com/starlabman/blockchain-fundamentals",
-    popular: true,
+    popular: false,
     category: "beginner",
   },
   {
@@ -41,7 +58,7 @@ export const mentorshipServices = [
       "Tax optimization strategies",
     ],
     href: "https://calendly.com/starlabman/investment-guidance",
-    popular: true,
+    popular: false,
     category: "investment",
   },
   {
@@ -96,6 +113,43 @@ export const mentorshipServices = [
 
 export const projects = [
   {
+    title: "Phonebook Management System",
+    blurb:
+      "Laravel Livewire application for managing telephone directories with real-time updates and search functionality.",
+    href: "https://github.com/starlabman/phonebook",
+    chips: ["Laravel", "Livewire", "PHP"],
+  },
+  {
+    title: "Alchemy NFT API Integration",
+    blurb: "JavaScript template for integrating Alchemy's NFT API with comprehensive documentation and examples.",
+    href: "https://github.com/starlabman/alchemyAPI_NFT",
+    chips: ["JavaScript", "NFT", "API"],
+  },
+  {
+    title: "Candy Machine Responsive UI",
+    blurb: "TypeScript-based responsive user interface for Solana Candy Machine NFT minting with modern design.",
+    href: "https://github.com/starlabman/Candy-Responsive-Machine-ui",
+    chips: ["TypeScript", "Solana", "UI/UX"],
+  },
+  {
+    title: "Xamarin Firebase Cloud Firestore Plugin",
+    blurb: "Cross-platform plugin for Firebase Cloud Firestore integration in Xamarin.Forms applications.",
+    href: "https://github.com/starlabman/Xamarin-forms-plugincloudfirestore",
+    chips: ["C#", "Xamarin", "Firebase"],
+  },
+  {
+    title: "Xamarin.Forms UI Collection",
+    blurb: "Curated collection of beautiful Xamarin.Forms UI samples and components for mobile development.",
+    href: "https://github.com/starlabman/Xamarin.Forms-UI",
+    chips: ["Xamarin", "Mobile", "UI Components"],
+  },
+  {
+    title: "Developer Resources Hub",
+    blurb: "Collaborative repository of essential resources, tools, and guides for developers across all technologies.",
+    href: "https://github.com/starlabman/dev-resources",
+    chips: ["Resources", "Documentation", "Community"],
+  },
+  {
     title: "Web3.js Educational Content",
     blurb: "Producing bi-weekly educational videos and tutorials for Web3.js developer community.",
     href: "https://youtube.com/@starlabman",
@@ -117,19 +171,59 @@ export const projects = [
 
 export const threads = [
   {
-    title: "Building Web3 communities in Africa — lessons learned",
-    href: "https://twitter.com/starlabman/status/000000",
-    stat: "15k views",
+    title: "Building Web3 Developer Communities in Africa",
+    href: "https://x.com/0xWeb3DevRel/status/1841117454279295099",
+    stat: "25k views",
   },
   {
-    title: "Why most Web3 projects fail in emerging markets",
-    href: "https://twitter.com/starlabman/status/000001",
-    stat: "8.2k likes",
+    title: "Web3.js Ambassador Program: Lessons from Leading Developer Education",
+    href: "https://x.com/0xWeb3DevRel/status/1953526838514303405",
+    stat: "18k likes",
   },
   {
-    title: "From Web2 to Web3: developer transition guide",
-    href: "https://twitter.com/starlabman/status/000002",
+    title: "From Traditional Finance to DeFi: African Market Opportunities",
+    href: "https://x.com/0xWeb3DevRel/status/1950968057146307037",
     stat: "top thread",
+  },
+  {
+    title: "Blockchain Security Best Practices for African Developers",
+    href: "https://x.com/0xWeb3DevRel/status/1948418868658995388",
+    stat: "12k views",
+  },
+  {
+    title: "ETHAfrique: Building Ethereum Ecosystem Across Africa",
+    href: "https://x.com/0xWeb3DevRel/status/1947611741908582746",
+    stat: "15k likes",
+  },
+  {
+    title: "Smart Contract Development: Common Pitfalls and Solutions",
+    href: "https://x.com/0xWeb3DevRel/status/1952081326544232745",
+    stat: "22k views",
+  },
+  {
+    title: "Web3 Career Transition Guide for African Developers",
+    href: "https://x.com/0xWeb3DevRel/status/1939701646734290950",
+    stat: "30k views",
+  },
+  {
+    title: "Binance Campus Lead Experience: Blockchain Education in Togo",
+    href: "https://x.com/0xWeb3DevRel/status/1930007463723708674",
+    stat: "8.5k likes",
+  },
+  {
+    title: "IsyChain Marketing Strategy: Decentralized Solutions for Enterprise",
+    href: "https://x.com/0xWeb3DevRel/status/1926948041363271862",
+    stat: "14k views",
+  },
+  {
+    title: "Africa Blockchain Community: Connecting 10k+ Developers",
+    href: "https://x.com/0xWeb3DevRel/status/1896894917492019596",
+    stat: "top thread",
+  },
+  {
+    title: "Web3 Investment Strategies for Emerging Markets",
+    href: "https://x.com/0xWeb3DevRel/status/1895157668244754768",
+    stat: "19k likes",
   },
 ]
 
@@ -173,6 +267,18 @@ export const achievements = [
     description: "Defining global marketing strategy for blockchain solutions company",
     year: "2023-Present",
     company: "IsyChain",
+  },
+  {
+    title: "Founder - Africa Blockchain Community",
+    description: "Building the largest blockchain community across Africa, connecting developers and entrepreneurs",
+    year: "2023-Present",
+    company: "Africa Blockchain Community",
+  },
+  {
+    title: "Coverner - ETHAfrique",
+    description: "Leading Ethereum ecosystem development and adoption initiatives across African markets",
+    year: "2024-Present",
+    company: "ETHAfrique",
   },
   {
     title: "Blockchain Correspondent",

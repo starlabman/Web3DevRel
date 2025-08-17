@@ -5,6 +5,7 @@ import { Check, Star, Calendar, Users, Code, Briefcase, BookOpen, TrendingUp } f
 import { mentorshipServices } from "@/lib/data"
 
 const iconMap = {
+  "Quick Web3 Consultation": Calendar,
   "Blockchain Fundamentals": BookOpen,
   "Investment Guidance & Portfolio Management": TrendingUp,
   "Technical Web3 Development": Code,

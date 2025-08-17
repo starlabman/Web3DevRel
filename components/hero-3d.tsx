@@ -15,8 +15,7 @@ function AnimatedSphere() {
 
   useFrame((state) => {
     if (meshRef.current) {
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3
-      const scale = 4.0 + Math.sin(state.clock.elapsedTime * 1.5) * 0.1
+      const scale = 2.5 + Math.sin(state.clock.elapsedTime * 1.5) * 0.1
       meshRef.current.scale.setScalar(scale)
     }
 
@@ -26,8 +25,8 @@ function AnimatedSphere() {
   })
 
   return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={1}>
-      <Sphere ref={meshRef} args={[1, 64, 64]} scale={4.0}>
+    <Float speed={2} rotationIntensity={0} floatIntensity={1}>
+      <Sphere ref={meshRef} args={[1, 64, 64]} scale={2.5}>
         <MeshDistortMaterial
           ref={materialRef}
           map={profileTexture}
@@ -51,9 +50,9 @@ function SimpleParticleField() {
   const pointsRef = useRef<THREE.Points>(null)
 
   const particlesPosition = useMemo(() => {
-    const positions = new Float32Array(200 * 3)
-    for (let i = 0; i < 200; i++) {
-      const radius = 4 + Math.random() * 6
+    const positions = new Float32Array(150 * 3)
+    for (let i = 0; i < 150; i++) {
+      const radius = 3 + Math.random() * 4
       const theta = Math.random() * Math.PI * 2
       const phi = Math.random() * Math.PI
       positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta)
@@ -80,7 +79,7 @@ function SimpleParticleField() {
           itemSize={3}
         />
       </bufferGeometry>
-      <pointsMaterial size={0.03} color="#ffffff" transparent opacity={0.8} />
+      <pointsMaterial size={0.02} color="#ffffff" transparent opacity={0.8} />
     </points>
   )
 }
@@ -117,14 +116,14 @@ function BlockchainLogos() {
     <group ref={groupRef}>
       {logos.map((logo, index) => {
         const angle = (index / logos.length) * Math.PI * 2
-        const radius = 7
+        const radius = 5
         const x = Math.cos(angle) * radius
         const z = Math.sin(angle) * radius
-        const y = Math.sin(index) * 0.5
+        const y = Math.sin(index) * 0.3
 
         return (
           <Float key={logo.name} speed={1.5} rotationIntensity={0.5} floatIntensity={0.3}>
-            <mesh position={[x, y, z]} scale={0.5}>
+            <mesh position={[x, y, z]} scale={0.35}>
               <Html
                 center
                 distanceFactor={8}
@@ -135,16 +134,16 @@ function BlockchainLogos() {
               >
                 <div
                   style={{
-                    width: "50px",
-                    height: "50px",
+                    width: "35px",
+                    height: "35px",
                     borderRadius: "50%",
                     backgroundColor: "rgba(255, 255, 255, 0.15)",
                     backdropFilter: "blur(10px)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    boxShadow: `0 0 20px ${logo.color}40, inset 0 0 15px rgba(255,255,255,0.1)`,
-                    border: `2px solid ${logo.color}`,
+                    boxShadow: `0 0 15px ${logo.color}40, inset 0 0 10px rgba(255,255,255,0.1)`,
+                    border: `1.5px solid ${logo.color}`,
                     position: "relative",
                   }}
                 >
@@ -152,8 +151,8 @@ function BlockchainLogos() {
                     src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${logo.id}.png`}
                     alt={logo.name}
                     style={{
-                      width: "32px",
-                      height: "32px",
+                      width: "22px",
+                      height: "22px",
                       objectFit: "contain",
                     }}
                     onError={(e) => {
@@ -164,11 +163,11 @@ function BlockchainLogos() {
                   <div
                     style={{
                       position: "absolute",
-                      bottom: "-20px",
+                      bottom: "-15px",
                       left: "50%",
                       transform: "translateX(-50%)",
                       color: logo.color,
-                      fontSize: "8px",
+                      fontSize: "6px",
                       fontWeight: "600",
                       textShadow: "0 0 8px rgba(0,0,0,0.8)",
                       whiteSpace: "nowrap",
@@ -189,14 +188,14 @@ function BlockchainLogos() {
 export function Hero3D() {
   return (
     <motion.div
-      className="w-full h-full"
+      className="w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px]"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 2, ease: "easeOut" }}
     >
       <Suspense fallback={<div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-blue-900/20" />}>
         <Canvas
-          camera={{ position: [0, 0, 8], fov: 75 }}
+          camera={{ position: [0, 0, 6], fov: window.innerWidth < 768 ? 85 : 75 }}
           style={{ background: "transparent" }}
           gl={{ antialias: true, alpha: true }}
         >
