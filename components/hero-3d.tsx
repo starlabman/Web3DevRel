@@ -1,0 +1,223 @@
+"use client"
+
+import { Canvas, useFrame, useLoader } from "@react-three/fiber"
+import { OrbitControls, Sphere, MeshDistortMaterial, Float, Html } from "@react-three/drei"
+import { useRef, useMemo, Suspense } from "react"
+import { motion } from "framer-motion"
+import { TextureLoader } from "three"
+import type * as THREE from "three"
+
+function AnimatedSphere() {
+  const meshRef = useRef<THREE.Mesh>(null)
+  const materialRef = useRef<any>(null)
+
+  const profileTexture = useLoader(TextureLoader, "/kodjo-labore-profile.png")
+
+  useFrame((state) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3
+      const scale = 4.0 + Math.sin(state.clock.elapsedTime * 1.5) * 0.1
+      meshRef.current.scale.setScalar(scale)
+    }
+
+    if (materialRef.current) {
+      materialRef.current.distort = 0.2 + Math.sin(state.clock.elapsedTime * 1.2) * 0.1
+    }
+  })
+
+  return (
+    <Float speed={2} rotationIntensity={1} floatIntensity={1}>
+      <Sphere ref={meshRef} args={[1, 64, 64]} scale={4.0}>
+        <MeshDistortMaterial
+          ref={materialRef}
+          map={profileTexture}
+          color="#8b5cf6"
+          attach="material"
+          distort={0.2}
+          speed={1.5}
+          roughness={0.2}
+          metalness={0.1}
+          emissive="#4338ca"
+          emissiveIntensity={0.2}
+          transparent
+          opacity={0.95}
+        />
+      </Sphere>
+    </Float>
+  )
+}
+
+function SimpleParticleField() {
+  const pointsRef = useRef<THREE.Points>(null)
+
+  const particlesPosition = useMemo(() => {
+    const positions = new Float32Array(200 * 3)
+    for (let i = 0; i < 200; i++) {
+      const radius = 4 + Math.random() * 6
+      const theta = Math.random() * Math.PI * 2
+      const phi = Math.random() * Math.PI
+      positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta)
+      positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta)
+      positions[i * 3 + 2] = radius * Math.cos(phi)
+    }
+    return positions
+  }, [])
+
+  useFrame((state) => {
+    if (pointsRef.current) {
+      pointsRef.current.rotation.y = state.clock.elapsedTime * 0.05
+      pointsRef.current.rotation.x = state.clock.elapsedTime * 0.02
+    }
+  })
+
+  return (
+    <points ref={pointsRef}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          count={particlesPosition.length / 3}
+          array={particlesPosition}
+          itemSize={3}
+        />
+      </bufferGeometry>
+      <pointsMaterial size={0.03} color="#ffffff" transparent opacity={0.8} />
+    </points>
+  )
+}
+
+function BlockchainLogos() {
+  const groupRef = useRef<THREE.Group>(null)
+
+  const logos = [
+    { name: "Ethereum", id: 1027, color: "#627EEA" },
+    { name: "Bitcoin", id: 1, color: "#F7931A" },
+    { name: "Solana", id: 5426, color: "#9945FF" },
+    { name: "Cardano", id: 2010, color: "#0033AD" },
+    { name: "Polygon", id: 3890, color: "#8247E5" },
+    { name: "Chainlink", id: 1975, color: "#375BD2" },
+    { name: "BNB", id: 1839, color: "#F3BA2F" },
+    { name: "Axelar", id: 17799, color: "#00D2FF" },
+    { name: "Polkadot", id: 6636, color: "#E6007A" },
+    { name: "Lisk", id: 1214, color: "#0981D1" },
+    { name: "Starknet", id: 22691, color: "#FF6B35" },
+    { name: "Avalanche", id: 5805, color: "#E84142" },
+    { name: "Sui", id: 20947, color: "#4DA2FF" },
+    { name: "Aptos", id: 21794, color: "#00D4AA" },
+    { name: "Mantle", id: 27075, color: "#1a1a1a" },
+    { name: "Cosmos", id: 3794, color: "#2E3148" },
+  ]
+
+  useFrame((state) => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y = state.clock.elapsedTime * 0.2
+    }
+  })
+
+  return (
+    <group ref={groupRef}>
+      {logos.map((logo, index) => {
+        const angle = (index / logos.length) * Math.PI * 2
+        const radius = 7
+        const x = Math.cos(angle) * radius
+        const z = Math.sin(angle) * radius
+        const y = Math.sin(index) * 0.5
+
+        return (
+          <Float key={logo.name} speed={1.5} rotationIntensity={0.5} floatIntensity={0.3}>
+            <mesh position={[x, y, z]} scale={0.5}>
+              <Html
+                center
+                distanceFactor={8}
+                style={{
+                  pointerEvents: "none",
+                  userSelect: "none",
+                }}
+              >
+                <div
+                  style={{
+                    width: "50px",
+                    height: "50px",
+                    borderRadius: "50%",
+                    backgroundColor: "rgba(255, 255, 255, 0.15)",
+                    backdropFilter: "blur(10px)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    boxShadow: `0 0 20px ${logo.color}40, inset 0 0 15px rgba(255,255,255,0.1)`,
+                    border: `2px solid ${logo.color}`,
+                    position: "relative",
+                  }}
+                >
+                  <img
+                    src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${logo.id}.png`}
+                    alt={logo.name}
+                    style={{
+                      width: "32px",
+                      height: "32px",
+                      objectFit: "contain",
+                    }}
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement
+                      target.style.display = "none"
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "-20px",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      color: logo.color,
+                      fontSize: "8px",
+                      fontWeight: "600",
+                      textShadow: "0 0 8px rgba(0,0,0,0.8)",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {logo.name}
+                  </div>
+                </div>
+              </Html>
+            </mesh>
+          </Float>
+        )
+      })}
+    </group>
+  )
+}
+
+export function Hero3D() {
+  return (
+    <motion.div
+      className="w-full h-full"
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 2, ease: "easeOut" }}
+    >
+      <Suspense fallback={<div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-blue-900/20" />}>
+        <Canvas
+          camera={{ position: [0, 0, 8], fov: 75 }}
+          style={{ background: "transparent" }}
+          gl={{ antialias: true, alpha: true }}
+        >
+          <ambientLight intensity={0.4} />
+          <pointLight position={[10, 10, 10]} intensity={1.5} color="#8b5cf6" />
+          <pointLight position={[-10, -10, -10]} color="#3b82f6" intensity={1} />
+
+          <SimpleParticleField />
+          <AnimatedSphere />
+          <BlockchainLogos />
+
+          <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            autoRotate
+            autoRotateSpeed={0.8}
+            maxPolarAngle={Math.PI / 1.8}
+            minPolarAngle={Math.PI / 2.2}
+          />
+        </Canvas>
+      </Suspense>
+    </motion.div>
+  )
+}
