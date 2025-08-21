@@ -1,111 +1,97 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { ChevronDown, ChevronUp, Loader2, ExternalLink } from "lucide-react"
 import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react"
 
 interface LoadMoreButtonProps {
   onClick: () => void
   hasMore: boolean
   remainingCount: number
-  loading?: boolean
-  className?: string
-  redirectUrl?: string
-  redirectText?: string
   onUnload?: () => void
   canUnload?: boolean
-  loadMoreText?: string
-  showLessText?: string
+  loadMoreText: string
+  showLessText: string
+  redirectText: string
+  isLoading?: boolean
 }
 
 export function LoadMoreButton({
   onClick,
   hasMore,
   remainingCount,
-  loading = false,
-  className = "",
-  redirectUrl,
-  redirectText = "",
   onUnload,
-  canUnload = false,
-  loadMoreText = "",
-  showLessText = "",
+  canUnload,
+  loadMoreText,
+  showLessText,
+  redirectText,
+  isLoading = false,
 }: LoadMoreButtonProps) {
-  if (!hasMore && redirectUrl) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3 }}
-        className={`flex justify-center mt-6 ${className}`}
-      >
-        <div className="flex gap-3">
-          {canUnload && onUnload && (
-            <Button
-              onClick={onUnload}
-              variant="outline"
-              size="lg"
-              className="bg-white/5 border-white/20 hover:bg-white/10 text-foreground group"
-            >
-              <ChevronUp className="w-4 h-4 mr-2 group-hover:-translate-y-1 transition-transform" />
-              {showLessText}
-            </Button>
-          )}
-          <Button
-            onClick={() => window.open(redirectUrl, "_blank")}
-            variant="default"
-            size="lg"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white group"
-          >
-            <ExternalLink className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-            {redirectText}
-          </Button>
-        </div>
-      </motion.div>
-    )
+  if (!hasMore && !canUnload) {
+    return null
   }
-
-  if (!hasMore) return null
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      className="flex flex-col items-center gap-2 pt-4"
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className={`flex justify-center mt-6 ${className}`}
     >
-      <div className="flex gap-3">
-        {canUnload && onUnload && (
-          <Button
-            onClick={onUnload}
-            variant="outline"
-            size="lg"
-            className="bg-white/5 border-white/20 hover:bg-white/10 text-foreground group"
-          >
-            <ChevronUp className="w-4 h-4 mr-2 group-hover:-translate-y-1 transition-transform" />
-            {showLessText}
-          </Button>
-        )}
+      {canUnload && onUnload ? (
         <Button
-          onClick={onClick}
-          variant="outline"
-          size="lg"
-          disabled={loading}
-          className="bg-white/5 border-white/20 hover:bg-white/10 text-foreground group"
+          onClick={onUnload}
+          variant="ghost"
+          size="sm"
+          className="text-muted-foreground hover:text-foreground"
         >
-          {loading ? (
-            <>
-              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-              {loadMoreText}
-            </>
-          ) : (
-            <>
-              <ChevronDown className="w-4 h-4 mr-2 group-hover:translate-y-1 transition-transform" />
-              {loadMoreText} ({remainingCount} restants)
-            </>
-          )}
+          <ChevronUp className="w-4 h-4 mr-2" />
+          {showLessText}
         </Button>
-      </div>
+      ) : hasMore ? (
+        <div className="flex flex-col items-center gap-2">
+          <Button
+            onClick={onClick}
+            variant="outline"
+            size="sm"
+            disabled={isLoading}
+            className="border-white/20 hover:bg-white/10 bg-transparent min-w-[120px]"
+          >
+            {isLoading ? (
+              <motion.div
+                className="w-4 h-4 border-2 border-current border-t-transparent rounded-full"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+              />
+            ) : (
+              <>
+                <ChevronDown className="w-4 h-4 mr-2" />
+                {loadMoreText}
+              </>
+            )}
+          </Button>
+          
+          {remainingCount > 0 && (
+            <motion.p
+              className="text-xs text-muted-foreground"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              {remainingCount} {remainingCount === 1 ? "item" : "items"} restant{remainingCount > 1 ? "s" : ""}
+            </motion.p>
+          )}
+        </div>
+      ) : (
+        <Button
+          variant="outline"
+          size="sm"
+          className="border-primary/30 text-primary hover:bg-primary/10"
+        >
+          <ExternalLink className="w-4 h-4 mr-2" />
+          {redirectText}
+        </Button>
+      )}
     </motion.div>
   )
 }

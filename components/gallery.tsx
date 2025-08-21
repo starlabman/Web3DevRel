@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { X, ExternalLink, Plus } from "lucide-react"
+import { X, ExternalLink, Plus, Image as ImageIcon } from "lucide-react"
 import Image from "next/image"
 import { useTranslation } from "@/hooks/use-translation"
 import { useLanguage } from "@/components/language-switcher"
@@ -31,6 +31,7 @@ export function Gallery({ images }: GalleryProps) {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null)
   const [filter, setFilter] = useState<string>(t("gallery.filterAll"))
   const [itemsToShow, setItemsToShow] = useState<{ [key: string]: number }>({})
+  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set())
 
   const categories = [t("gallery.filterAll"), ...Array.from(new Set(images.map((img) => getTranslatedContent(img.category, language))))]
 
@@ -66,6 +67,18 @@ export function Gallery({ images }: GalleryProps) {
     }
   }
 
+  const handleImageError = (imageId: number) => {
+    setImageErrors(prev => new Set(prev).add(imageId))
+  }
+
+  const handleImageClick = (image: GalleryImage) => {
+    setSelectedImage(image)
+  }
+
+  const closeModal = () => {
+    setSelectedImage(null)
+  }
+
   return (
     <div className="space-y-8">
       {/* Filter Buttons */}
@@ -98,56 +111,75 @@ export function Gallery({ images }: GalleryProps) {
         {filteredImages.map((image, index) => (
           <motion.div
             key={image.id}
-            layout
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            whileHover={{ y: -5 }}
-            className="group cursor-pointer"
-            onClick={() => setSelectedImage(image)}
+            className="group relative"
           >
-            <div className="glass rounded-xl overflow-hidden border border-white/10 hover:border-primary/30 transition-all duration-300">
-              <div className="relative aspect-[4/3] overflow-hidden">
+            <motion.div
+              className="relative aspect-square rounded-xl overflow-hidden cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handleImageClick(image)}
+            >
+              {imageErrors.has(image.id) ? (
+                <div className="w-full h-full bg-muted/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <ImageIcon className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
+                    <p className="text-sm text-muted-foreground">Image non disponible</p>
+                  </div>
+                </div>
+              ) : (
                 <Image
-                  src={image.imageUrl || "/placeholder.svg"}
+                  src={image.imageUrl}
                   alt={getTranslatedContent(image.title, language)}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  onError={() => handleImageError(image.id)}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <Badge variant="secondary" className="mb-2">
-                    {getTranslatedContent(image.category, language)}
-                  </Badge>
-                  <h3 className="text-white font-semibold text-sm line-clamp-2">{getTranslatedContent(image.title, language)}</h3>
+              )}
+              
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="p-4 w-full">
+                  <h3 className="text-white font-semibold text-sm mb-1 line-clamp-1">
+                    {getTranslatedContent(image.title, language)}
+                  </h3>
+                  <p className="text-white/80 text-xs line-clamp-2">
+                    {getTranslatedContent(image.description, language)}
+                  </p>
+                  <div className="flex items-center justify-between mt-2">
+                    <Badge variant="secondary" className="text-xs">
+                      {getTranslatedContent(image.category, language)}
+                    </Badge>
+                    <span className="text-white/60 text-xs">{image.date}</span>
+                  </div>
                 </div>
               </div>
-              <div className="p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <Badge variant="outline" className="text-xs">
-                    {image.date}
-                  </Badge>
-                </div>
-                <h3 className="font-semibold text-foreground mb-2 line-clamp-1">{getTranslatedContent(image.title, language)}</h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">{getTranslatedContent(image.description, language)}</p>
-              </div>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </motion.div>
 
+      {/* Load More Button */}
       {hasMoreItems() && (
         <motion.div
-          className="flex justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          className="text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <Button onClick={loadMore} variant="outline" className="border-white/20 hover:bg-white/10 bg-transparent">
+          <Button
+            onClick={loadMore}
+            variant="outline"
+            size="lg"
+            className="border-white/20 hover:bg-white/10 bg-transparent"
+          >
             <Plus className="w-4 h-4 mr-2" />
-            {t("gallery.loadMore")}
+            {t("buttons.loadMore")}
           </Button>
         </motion.div>
       )}
@@ -158,45 +190,65 @@ export function Gallery({ images }: GalleryProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          onClick={closeModal}
         >
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
-            className="glass rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+            className="relative max-w-4xl max-h-[90vh] w-full bg-card rounded-xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative">
-              <div className="aspect-[16/10] relative">
-                <Image
-                  src={selectedImage.imageUrl || "/placeholder.svg"}
-                  alt={getTranslatedContent(selectedImage.title, language)}
-                  fill
-                  className="object-cover"
-                />
+            <Button
+              onClick={closeModal}
+              variant="ghost"
+              size="sm"
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white"
+            >
+              <X className="w-5 h-5" />
+            </Button>
+            
+            <div className="grid md:grid-cols-2 gap-0">
+              <div className="relative aspect-square">
+                {imageErrors.has(selectedImage.id) ? (
+                  <div className="w-full h-full bg-muted/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <ImageIcon className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
+                      <p className="text-muted-foreground">Image non disponible</p>
+                    </div>
+                  </div>
+                ) : (
+                  <Image
+                    src={selectedImage.imageUrl}
+                    alt={getTranslatedContent(selectedImage.title, language)}
+                    fill
+                    className="object-cover"
+                    onError={() => handleImageError(selectedImage.id)}
+                  />
+                )}
               </div>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white"
-                onClick={() => setSelectedImage(null)}
-              >
-                <X className="w-4 h-4" />
-              </Button>
-            </div>
-            <div className="p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <Badge variant="secondary">{getTranslatedContent(selectedImage.category, language)}</Badge>
-                <Badge variant="outline">{selectedImage.date}</Badge>
+              
+              <div className="p-6 flex flex-col justify-center">
+                <h2 className="text-2xl font-bold mb-2">
+                  {getTranslatedContent(selectedImage.title, language)}
+                </h2>
+                <p className="text-muted-foreground mb-4">
+                  {getTranslatedContent(selectedImage.description, language)}
+                </p>
+                <div className="flex items-center gap-4 mb-4">
+                  <Badge variant="secondary">
+                    {getTranslatedContent(selectedImage.category, language)}
+                  </Badge>
+                  <span className="text-sm text-muted-foreground">{selectedImage.date}</span>
+                </div>
+                <Button asChild>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Voir plus
+                  </a>
+                </Button>
               </div>
-              <h2 className="text-2xl font-bold text-foreground mb-3">{getTranslatedContent(selectedImage.title, language)}</h2>
-              <p className="text-muted-foreground mb-4">{getTranslatedContent(selectedImage.description, language)}</p>
-              <Button variant="outline" className="border-white/20 hover:bg-white/10 bg-transparent">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                {t("gallery.viewMore")}
-              </Button>
             </div>
           </motion.div>
         </motion.div>

@@ -93,19 +93,19 @@ export default function HomePage() {
 
         {/* Hero Section */}
         <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 pt-20">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="space-y-8"
+              className="space-y-6 lg:space-y-8"
             >
               <div className="space-y-4">
                 <motion.h1
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1.2, delay: 0.3 }}
-                  className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
                 >
                   <motion.span
                     className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent inline-block"
@@ -119,7 +119,7 @@ export default function HomePage() {
                     }}
                     style={{ backgroundSize: "200% 200%" }}
                   >
-                    {"Akouété".split("").map((char, index) => (
+                    {safeT("hero.title").split("").map((char, index) => (
                       <motion.span
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
@@ -143,7 +143,7 @@ export default function HomePage() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5 }}
                   >
-                    {"LARE".split("").map((char, index) => (
+                    {safeT("hero.lastname").split("").map((char, index) => (
                       <motion.span
                         key={index}
                         initial={{ opacity: 0, y: 20 }}
@@ -165,7 +165,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.4 }}
-                  className="text-xl md:text-2xl text-muted-foreground max-w-2xl"
+                  className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl"
                 >
                   {safeT("hero.subtitle")}
                 </motion.p>
@@ -174,9 +174,9 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.6 }}
-                  className="text-lg text-muted-foreground max-w-2xl"
+                  className="text-base sm:text-lg text-muted-foreground max-w-2xl"
                 >
-                  {safeT("hero.subtitle")}
+                  {safeT("hero.description")}
                 </motion.p>
               </div>
 
@@ -184,7 +184,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.2 }}
-                className="flex flex-wrap gap-4"
+                className="flex flex-wrap gap-3 sm:gap-4"
               >
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" className="bg-primary hover:bg-primary/90 glow relative overflow-hidden group">
@@ -194,7 +194,7 @@ export default function HomePage() {
                       whileHover={{ x: "100%" }}
                       transition={{ duration: 0.6 }}
                     />
-                    <Mail className="w-5 h-5 mr-2 relative z-10" />
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 relative z-10" />
                     <span className="relative z-10">{safeT("buttons.contact")}</span>
                   </Button>
                 </motion.div>
@@ -209,14 +209,14 @@ export default function HomePage() {
                       className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100"
                       transition={{ duration: 0.3 }}
                     />
-                    <ExternalLink className="w-5 h-5 mr-2 relative z-10" />
+                    <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 mr-2 relative z-10" />
                     <span className="relative z-10">{safeT("hero.cta")}</span>
                   </Button>
                 </motion.div>
               </motion.div>
             </motion.div>
 
-            <motion.div style={{ y, opacity }} className="relative h-96 lg:h-[500px]">
+            <motion.div style={{ y, opacity }} className="relative h-64 sm:h-80 md:h-96 lg:h-[500px]">
               <Suspense
                 fallback={
                   <motion.div
@@ -224,7 +224,7 @@ export default function HomePage() {
                     animate={{ opacity: [0.5, 1, 0.5] }}
                     transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                   >
-                    <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-primary border-t-transparent rounded-full animate-spin" />
                   </motion.div>
                 }
               >
@@ -235,17 +235,17 @@ export default function HomePage() {
         </section>
 
         {/* Bento Grid Section */}
-        <section id="parcours" className="py-20 px-4">
+        <section id="parcours" className="py-16 sm:py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12 sm:mb-16"
             >
               <motion.h2
-                className="text-3xl md:text-4xl font-bold mb-4"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
                 whileInView={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -264,7 +264,7 @@ export default function HomePage() {
                 {safeT("achievements.title")}
               </motion.h2>
               <motion.p
-                className="text-muted-foreground text-lg max-w-2xl mx-auto"
+                className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -314,7 +314,7 @@ export default function HomePage() {
                       title={link.label}
                       description={link.tag}
                       href={link.href}
-                      icon={<Icon className="w-5 h-5" />}
+                      icon={<Icon className="w-4 h-4 sm:w-5 sm:h-5" />}
                       size="sm"
                       currentLang={currentLang}
                     />
@@ -324,7 +324,7 @@ export default function HomePage() {
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 auto-rows-fr"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -337,246 +337,246 @@ export default function HomePage() {
                 },
               }}
             >
-              {/* Projects Section - Uniform display */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <BentoCard title={safeT("sections.projects")} size="lg" icon={<Code2 className="w-6 h-6" />} currentLang={currentLang}>
-                  <div className="space-y-3">
-                    {projectsLoadMore.visibleItems.map((project, index) => (
-                      <motion.div
-                        key={getTranslatedContent(project.title, currentLang)}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
-                      >
-                        <h4 className="font-semibold text-foreground mb-1 text-sm">{getTranslatedContent(project.title, currentLang)}</h4>
-                        <p className="text-xs text-muted-foreground mb-2 line-clamp-2">{getTranslatedContent(project.blurb, currentLang)}</p>
-                        <div className="flex flex-wrap gap-1">
-                          {project.chips.slice(0, 3).map((chip) => (
-                            <Badge key={chip} variant="secondary" className="text-xs px-2 py-0">
-                              {chip}
-                            </Badge>
-                          ))}
-                          {project.chips.length > 3 && (
-                            <Badge variant="outline" className="text-xs px-2 py-0">
-                              +{project.chips.length - 3}
-                            </Badge>
-                          )}
-                        </div>
-                      </motion.div>
-                    ))}
-                    <LoadMoreButton
-                      onClick={projectsLoadMore.loadMore}
-                      hasMore={projectsLoadMore.hasMore}
-                      remainingCount={projectsLoadMore.remainingCount}
-                      onUnload={projectsLoadMore.unload}
-                      canUnload={projectsLoadMore.canUnload}
-                      loadMoreText={safeT("buttons.loadMore")}
-                      showLessText={safeT("buttons.showLess")}
-                      redirectText={safeT("buttons.viewAllArticles")}
-                    />
-                  </div>
-                </BentoCard>
-              </motion.div>
-
-              {/* Threads Section - Uniform display */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <BentoCard title={safeT("sections.threads")} size="md" icon={<TrendingUp className="w-5 h-5" />} currentLang={currentLang}>
-                  <div className="space-y-2">
-                    {threadsLoadMore.visibleItems.map((thread, index) => (
-                      <motion.a
-                        key={getTranslatedContent(thread.title, currentLang)}
-                        href={thread.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="flex items-center justify-between p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
-                      >
-                        <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors line-clamp-1">
-                          {getTranslatedContent(thread.title, currentLang)}
-                        </span>
-                        <Badge variant="outline" className="text-xs ml-2 flex-shrink-0">
-                          {thread.stat}
-                        </Badge>
-                      </motion.a>
-                    ))}
-                    <LoadMoreButton
-                      onClick={threadsLoadMore.loadMore}
-                      hasMore={threadsLoadMore.hasMore}
-                      remainingCount={threadsLoadMore.remainingCount}
-                      onUnload={threadsLoadMore.unload}
-                      canUnload={threadsLoadMore.canUnload}
-                      loadMoreText={safeT("buttons.loadMore")}
-                      showLessText={safeT("buttons.showLess")}
-                      redirectText={safeT("buttons.viewAllArticles")}
-                    />
-                  </div>
-                </BentoCard>
-              </motion.div>
-
-              {/* LinkedIn Posts - Uniform display */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <BentoCard title={safeT("sections.posts")} size="md" icon={<Users className="w-5 h-5" />} currentLang={currentLang}>
-                  <div className="space-y-2">
-                    {postsLoadMore.visibleItems.map((post, index) => (
-                      <motion.a
-                        key={getTranslatedContent(post.title, currentLang)}
-                        href={post.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="block p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
-                      >
-                        <div className="space-y-1">
-                          <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                            {getTranslatedContent(post.title, currentLang)}
-                          </span>
-                          {post.engagement && (
-                            <Badge variant="outline" className="text-xs bg-blue-500/20 text-blue-400 border-blue-500/30">
-                              {post.engagement}
-                            </Badge>
-                          )}
-                        </div>
-                      </motion.a>
-                    ))}
-                    <LoadMoreButton
-                      onClick={postsLoadMore.loadMore}
-                      hasMore={postsLoadMore.hasMore}
-                      remainingCount={postsLoadMore.remainingCount}
-                      onUnload={postsLoadMore.unload}
-                      canUnload={postsLoadMore.canUnload}
-                      loadMoreText={safeT("buttons.loadMore")}
-                      showLessText={safeT("buttons.showLess")}
-                      redirectText={safeT("buttons.viewAllArticles")}
-                    />
-                  </div>
-                </BentoCard>
-              </motion.div>
-
-              {/* Articles Important Section - Uniform display */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
-                <BentoCard title={safeT("sections.articles")} size="lg" icon={<BookOpen className="w-5 h-5" />} currentLang={currentLang}>
-                  <div className="space-y-3">
-                    {articlesLoadMore.visibleItems.map((article, index) => (
-                      <motion.a
-                        key={getTranslatedContent(article.title, currentLang)}
-                        href={article.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="block p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
-                      >
-                        <div className="space-y-2">
-                          <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm line-clamp-1">
-                            {getTranslatedContent(article.title, currentLang)}
-                          </h4>
-                          <p className="text-xs text-muted-foreground line-clamp-2">{getTranslatedContent(article.description, currentLang)}</p>
-                          <div className="flex items-center justify-between">
-                            <div className="flex flex-wrap gap-1">
-                              {article.tags.slice(0, 2).map((tag) => (
-                                <Badge key={tag} variant="secondary" className="text-xs px-2 py-0">
-                                  {tag}
-                                </Badge>
-                              ))}
-                            </div>
-                            <span className="text-xs text-muted-foreground">{getTranslatedContent(article.readTime, currentLang)}</span>
+                {/* Projects Section - Uniform display */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <BentoCard title={safeT("sections.projects")} size="sm" icon={<Code2 className="w-5 h-5 sm:w-6 sm:h-6" />} currentLang={currentLang}>
+                    <div className="space-y-3">
+                      {projectsLoadMore.visibleItems.map((project, index) => (
+                        <motion.div
+                          key={getTranslatedContent(project.title, currentLang)}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          viewport={{ once: true }}
+                          className="p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                        >
+                          <h4 className="font-semibold text-foreground mb-1 text-sm">{getTranslatedContent(project.title, currentLang)}</h4>
+                          <p className="text-xs text-muted-foreground mb-2 line-clamp-2">{getTranslatedContent(project.blurb, currentLang)}</p>
+                          <div className="flex flex-wrap gap-1">
+                            {project.chips.slice(0, 3).map((chip) => (
+                              <Badge key={chip} variant="secondary" className="text-xs px-2 py-0">
+                                {chip}
+                              </Badge>
+                            ))}
+                            {project.chips.length > 3 && (
+                              <Badge variant="outline" className="text-xs px-2 py-0">
+                                +{project.chips.length - 3}
+                              </Badge>
+                            )}
                           </div>
-                        </div>
-                      </motion.a>
-                    ))}
-                    <LoadMoreButton
-                      onClick={articlesLoadMore.loadMore}
-                      hasMore={articlesLoadMore.hasMore}
-                      remainingCount={articlesLoadMore.remainingCount}
-                      onUnload={articlesLoadMore.unload}
-                      canUnload={articlesLoadMore.canUnload}
-                      loadMoreText={safeT("buttons.loadMore")}
-                      showLessText={safeT("buttons.showLess")}
-                      redirectText={safeT("buttons.viewAllArticles")}
-                    />
-                  </div>
-                </BentoCard>
-              </motion.div>
+                        </motion.div>
+                      ))}
+                      <LoadMoreButton
+                        onClick={projectsLoadMore.loadMore}
+                        hasMore={projectsLoadMore.hasMore}
+                        remainingCount={projectsLoadMore.remainingCount}
+                        onUnload={projectsLoadMore.unload}
+                        canUnload={projectsLoadMore.canUnload}
+                        loadMoreText={safeT("buttons.loadMore")}
+                        showLessText={safeT("buttons.showLess")}
+                        redirectText={safeT("buttons.viewAllArticles")}
+                      />
+                    </div>
+                  </BentoCard>
+                </motion.div>
 
-              {/* Memo Section - Uniform display */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <BentoCard title={safeT("sections.memo")} size="sm" icon={<Zap className="w-5 h-5" />} currentLang={currentLang}>
-                  <div className="space-y-2 text-sm text-muted-foreground">
-                    <p>{safeT("memo.resource")}</p>
-                    <p>{safeT("memo.technical_notes")}</p>
-                    <p>{safeT("memo.project_ideas")}</p>
-                    <p>{safeT("memo.key_contacts")}</p>
-                  </div>
-                </BentoCard>
-              </motion.div>
+                {/* Articles Important Section - Uniform display */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <BentoCard title={safeT("sections.articles")} size="sm" icon={<BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />} currentLang={currentLang}>
+                    <div className="space-y-3">
+                      {articlesLoadMore.visibleItems.map((article, index) => (
+                        <motion.a
+                          key={getTranslatedContent(article.title, currentLang)}
+                          href={article.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          viewport={{ once: true }}
+                          className="block p-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                        >
+                          <div className="space-y-2">
+                            <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm line-clamp-1">
+                              {getTranslatedContent(article.title, currentLang)}
+                            </h4>
+                            <p className="text-xs text-muted-foreground line-clamp-2">{getTranslatedContent(article.description, currentLang)}</p>
+                            <div className="flex items-center justify-between">
+                              <div className="flex flex-wrap gap-1">
+                                {article.tags.slice(0, 2).map((tag) => (
+                                  <Badge key={tag} variant="secondary" className="text-xs px-2 py-0">
+                                    {tag}
+                                  </Badge>
+                                ))}
+                              </div>
+                              <span className="text-xs text-muted-foreground">{getTranslatedContent(article.readTime, currentLang)}</span>
+                            </div>
+                          </div>
+                        </motion.a>
+                      ))}
+                      <LoadMoreButton
+                        onClick={articlesLoadMore.loadMore}
+                        hasMore={articlesLoadMore.hasMore}
+                        remainingCount={articlesLoadMore.remainingCount}
+                        onUnload={articlesLoadMore.unload}
+                        canUnload={articlesLoadMore.canUnload}
+                        loadMoreText={safeT("buttons.loadMore")}
+                        showLessText={safeT("buttons.showLess")}
+                        redirectText={safeT("buttons.viewAllArticles")}
+                      />
+                    </div>
+                  </BentoCard>
+                </motion.div>
 
-              {/* Achievements Section - Uniform display */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <BentoCard title={safeT("sections.keyAchievements")} size="sm" icon={<TrendingUp className="w-5 h-5" />} currentLang={currentLang}>
-                  <div className="space-y-2 text-sm text-muted-foreground">
-                    <p>{safeT("achievements.founder")}</p>
-                    <p>{safeT("achievements.coverner")}</p>
-                    <p>{safeT("achievements.devrel_expert")}</p>
-                    <p>{safeT("achievements.ecosystem_builder")}</p>
-                  </div>
-                </BentoCard>
+                {/* LinkedIn Posts - Uniform display */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <BentoCard title={safeT("sections.posts")} size="sm" icon={<Users className="w-4 h-4 sm:w-5 sm:h-5" />} currentLang={currentLang}>
+                    <div className="space-y-2">
+                      {postsLoadMore.visibleItems.map((post, index) => (
+                        <motion.a
+                          key={getTranslatedContent(post.title, currentLang)}
+                          href={post.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          viewport={{ once: true }}
+                          className="block p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                        >
+                          <div className="space-y-1">
+                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                              {getTranslatedContent(post.title, currentLang)}
+                            </span>
+                            {post.engagement && (
+                              <Badge variant="outline" className="text-xs bg-blue-500/20 text-blue-400 border-blue-500/30">
+                                {post.engagement}
+                              </Badge>
+                            )}
+                          </div>
+                        </motion.a>
+                      ))}
+                      <LoadMoreButton
+                        onClick={postsLoadMore.loadMore}
+                        hasMore={postsLoadMore.hasMore}
+                        remainingCount={postsLoadMore.remainingCount}
+                        onUnload={postsLoadMore.unload}
+                        canUnload={postsLoadMore.canUnload}
+                        loadMoreText={safeT("buttons.loadMore")}
+                        showLessText={safeT("buttons.showLess")}
+                        redirectText={safeT("buttons.viewAllArticles")}
+                      />
+                    </div>
+                  </BentoCard>
+                </motion.div>
+
+                {/* Threads Section - Uniform display */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <BentoCard title={safeT("sections.threads")} size="sm" icon={<TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />} currentLang={currentLang}>
+                    <div className="space-y-2">
+                      {threadsLoadMore.visibleItems.map((thread, index) => (
+                        <motion.a
+                          key={getTranslatedContent(thread.title, currentLang)}
+                          href={thread.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          viewport={{ once: true }}
+                          className="flex items-center justify-between p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                        >
+                          <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors line-clamp-1">
+                            {getTranslatedContent(thread.title, currentLang)}
+                          </span>
+                          <Badge variant="outline" className="text-xs ml-2 flex-shrink-0">
+                            {thread.stat}
+                          </Badge>
+                        </motion.a>
+                      ))}
+                      <LoadMoreButton
+                        onClick={threadsLoadMore.loadMore}
+                        hasMore={threadsLoadMore.hasMore}
+                        remainingCount={threadsLoadMore.remainingCount}
+                        onUnload={threadsLoadMore.unload}
+                        canUnload={threadsLoadMore.canUnload}
+                        loadMoreText={safeT("buttons.loadMore")}
+                        showLessText={safeT("buttons.showLess")}
+                        redirectText={safeT("buttons.viewAllArticles")}
+                      />
+                    </div>
+                  </BentoCard>
+                </motion.div>
+
+                {/* Memo Section - Uniform display */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <BentoCard title={safeT("sections.memo")} size="sm" icon={<Zap className="w-4 h-4 sm:w-5 sm:h-5" />} currentLang={currentLang}>
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      <p>{safeT("memo.resource")}</p>
+                      <p>{safeT("memo.technical_notes")}</p>
+                      <p>{safeT("memo.project_ideas")}</p>
+                      <p>{safeT("memo.key_contacts")}</p>
+                    </div>
+                  </BentoCard>
+                </motion.div>
+
+                {/* Achievements Section - Uniform display */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <BentoCard title={safeT("sections.keyAchievements")} size="sm" icon={<TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />} currentLang={currentLang}>
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      <p>{safeT("achievements.founder")}</p>
+                      <p>{safeT("achievements.coverner")}</p>
+                      <p>{safeT("achievements.devrel_expert")}</p>
+                      <p>{safeT("achievements.ecosystem_builder")}</p>
+                    </div>
+                  </BentoCard>
+                </motion.div>
               </motion.div>
-            </motion.div>
           </div>
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="py-20 px-4">
+        <section id="gallery" className="py-16 sm:py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12 sm:mb-16"
             >
               <motion.h2
-                className="text-3xl md:text-4xl font-bold mb-4"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
                 whileInView={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -592,11 +592,11 @@ export default function HomePage() {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                <Camera className="w-8 h-8 inline-block mr-3 mb-1" />
+                <Camera className="w-6 h-6 sm:w-8 sm:h-8 inline-block mr-3 mb-1" />
                 {safeT("sections.gallery")}
               </motion.h2>
               <motion.p
-                className="text-muted-foreground text-lg max-w-2xl mx-auto"
+                className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -614,24 +614,24 @@ export default function HomePage() {
         </section>
 
         {/* Contact CTA */}
-        <section id="contact" className="py-20 px-4">
+        <section id="contact" className="py-16 sm:py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="glass rounded-3xl p-12 space-y-8"
+              className="glass rounded-3xl p-8 sm:p-12 space-y-6 sm:space-y-8"
             >
-              <h2 className="text-3xl md:text-4xl font-bold">{safeT("contact.title")}</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">{safeT("contact.subtitle")}</p>
-              <div className="flex flex-wrap gap-4 justify-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">{safeT("contact.title")}</h2>
+              <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">{safeT("contact.subtitle")}</p>
+              <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 glow">
-                  <Mail className="w-5 h-5 mr-2" />
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   hello@0xweb3devrel.com
                 </Button>
                 <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/10 bg-transparent">
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                   {safeT("buttons.calendar")}
                 </Button>
               </div>
@@ -645,7 +645,7 @@ export default function HomePage() {
             <p className="text-muted-foreground text-sm">{safeT("footer.copyright")}</p>
             <div className="flex items-center gap-4">
               {[
-                { icon: Twitter, href: "https://twitter.com/starlabman" },
+                { icon: Twitter, href: "https://twitter.com/0xWeb3DevRel" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/starlabman/" },
                 { icon: Github, href: "https://github.com/starlabman" },
                 { icon: Mail, href: "mailto:hello@0xweb3devrel.com" },
