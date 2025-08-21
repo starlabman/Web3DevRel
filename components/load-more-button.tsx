@@ -25,11 +25,11 @@ export function LoadMoreButton({
   loading = false,
   className = "",
   redirectUrl,
-  redirectText = "Voir tous les articles",
+  redirectText = "",
   onUnload,
   canUnload = false,
-  loadMoreText = "Voir plus",
-  showLessText = "Voir moins",
+  loadMoreText = "",
+  showLessText = "",
 }: LoadMoreButtonProps) {
   if (!hasMore && redirectUrl) {
     return (
@@ -96,7 +96,7 @@ export function LoadMoreButton({
           {loading ? (
             <>
               <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-              Chargement...
+              {loadMoreText}
             </>
           ) : (
             <>

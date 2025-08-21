@@ -9,7 +9,7 @@ export const getTranslatedContent = (content: any, language: Language, fallback 
 }
 
 export const quickLinks = [
-  { label: "X / Twitter", tag: "threads impactants", href: "https://twitter.com/starlabman", kind: "twitter" },
+  { label: "X / Twitter", tag: "threads impactants", href: "https://twitter.com/0xWeb3DevRel", kind: "twitter" },
   { label: "LinkedIn", tag: "posts & insights", href: "https://www.linkedin.com/in/starlabman/", kind: "linkedin" },
   { label: "GitHub", tag: "repos", href: "https://github.com/starlabman", kind: "github" },
   { label: "Portfolio", tag: "projects", href: "https://starlabman.netlify.app/", kind: "blog" },
@@ -21,97 +21,269 @@ export const quickLinks = [
 
 export const mentorshipServices = [
   {
-    title: "Quick Web3 Consultation",
-    description: "Affordable one-on-one session exclusively with Kodjo for personalized Web3 guidance",
+    title: {
+      en: "Quick Web3 Consultation",
+      fr: "Consultation Web3 Rapide",
+      ewe: "Web3 Kpekpeɖeŋu Kpuie",
+    },
+    description: {
+      en: "Affordable one-on-one session exclusively with Kodjo for personalized Web3 guidance",
+      fr: "Session individuelle abordable exclusivement avec Kodjo pour un accompagnement Web3 personnalisé",
+      ewe: "Web3 ƒe mɔfiame tẽe kple Kodjo ɖeɖeko",
+    },
     duration: "1 hour",
     price: "$10/session",
     features: [
-      "Direct 1-on-1 consultation with Kodjo",
-      "Personalized Web3 career advice",
-      "Quick project review & feedback",
-      "Technology stack recommendations",
-      "Immediate answers to your questions",
-      "Follow-up resources & next steps",
+      {
+        en: "Direct 1-on-1 consultation with Kodjo",
+        fr: "Consultation directe 1-à-1 avec Kodjo",
+        ewe: "Kpekpeɖeŋu tẽe kple Kodjo",
+      },
+      {
+        en: "Personalized Web3 career advice",
+        fr: "Conseils de carrière Web3 personnalisés",
+        ewe: "Web3 dɔwɔƒe mɔfiame tẽe",
+      },
+      {
+        en: "Quick project review & feedback",
+        fr: "Révision rapide de projet et retours",
+        ewe: "Dɔwɔwɔ kple eƒe nuteƒekpɔkpɔ kpuie",
+      },
+      {
+        en: "Technology stack recommendations",
+        fr: "Recommandations de pile technologique",
+        ewe: "Mɔ̃ɖaŋu kpakpaxɔxɔ ƒe aɖaŋuɖoɖo",
+      },
+      {
+        en: "Immediate answers to your questions",
+        fr: "Réponses immédiates à vos questions",
+        ewe: "Biabiawo gbɔgblɔ kaba",
+      },
+      {
+        en: "Follow-up resources & next steps",
+        fr: "Ressources de suivi et prochaines étapes",
+        ewe: "Ame gbɔgblɔ kple etsɔme dɔwɔwɔwo",
+      },
     ],
     href: "https://calendly.com/starlabman/quick-consultation",
     popular: true,
     category: "consultation",
   },
   {
-    title: "Blockchain Fundamentals",
-    description: "Perfect introduction to blockchain, Bitcoin, and Web3 for complete beginners",
+    title: {
+      en: "Blockchain Fundamentals",
+      fr: "Fondamentaux Blockchain",
+      ewe: "Blockchain Gɔmeɖoanyi",
+    },
+    description: {
+      en: "Perfect introduction to blockchain, Bitcoin, and Web3 for complete beginners",
+      fr: "Introduction parfaite à la blockchain, Bitcoin et Web3 pour débutants complets",
+      ewe: "Blockchain, Bitcoin, kple Web3 gɔmeɖeɖe nyui na ame yeyewo",
+    },
     duration: "4 sessions",
     price: "€150/session",
     features: [
-      "What is blockchain technology",
-      "Understanding Bitcoin & cryptocurrencies",
-      "Web3 ecosystem overview",
-      "Wallet setup & security",
-      "Basic trading concepts",
+      {
+        en: "What is blockchain technology",
+        fr: "Qu'est-ce que la technologie blockchain",
+        ewe: "Blockchain mɔ̃ɖaŋu nye nuka",
+      },
+      {
+        en: "Understanding Bitcoin & cryptocurrencies",
+        fr: "Comprendre Bitcoin & cryptomonnaies",
+        ewe: "Bitcoin & cryptocurrency gɔmesese",
+      },
+      {
+        en: "Web3 ecosystem overview",
+        fr: "Aperçu de l'écosystème Web3",
+        ewe: "Web3 nutome kpɔɖeŋu",
+      },
+      {
+        en: "Wallet setup & security",
+        fr: "Configuration portefeuille & sécurité",
+        ewe: "Gakotoku ɖoɖo & dedinɔnɔ",
+      },
+      {
+        en: "Basic trading concepts",
+        fr: "Concepts de trading de base",
+        ewe: "Asitsatsa gɔmeɖeɖe",
+      },
     ],
     href: "https://calendly.com/starlabman/blockchain-fundamentals",
     popular: false,
     category: "beginner",
   },
   {
-    title: "Investment Guidance & Portfolio Management",
-    description: "Professional crypto investment strategy and portfolio tracking",
+    title: {
+      en: "Investment Guidance & Portfolio Management",
+      fr: "Conseil en Investissement & Gestion de Portefeuille",
+      ewe: "Gakɔkɔ Aɖaŋuɖoɖo & Gakotoku Dzikpɔkpɔ",
+    },
+    description: {
+      en: "Professional crypto investment strategy and portfolio tracking",
+      fr: "Stratégie d'investissement crypto professionnelle et suivi de portefeuille",
+      ewe: "Crypto gakɔkɔ mɔ̃ɖaŋu nyui kple gakotoku dzikpɔkpɔ",
+    },
     duration: "Ongoing",
     price: "€300/month",
     features: [
-      "Portfolio analysis & optimization",
-      "Risk management strategies",
-      "Market analysis & timing",
-      "DeFi opportunities identification",
-      "Tax optimization strategies",
+      {
+        en: "Portfolio analysis & optimization",
+        fr: "Analyse & optimisation de portefeuille",
+        ewe: "Gakotoku me nukpɔkpɔ & nyonyo",
+      },
+      {
+        en: "Risk management strategies",
+        fr: "Stratégies de gestion des risques",
+        ewe: "Afɔku dzikpɔkpɔ mɔ̃ɖaŋuwo",
+      },
+      {
+        en: "Market analysis & timing",
+        fr: "Analyse de marché & timing",
+        ewe: "Asi me nukpɔkpɔ & ɣeyiɣi",
+      },
+      {
+        en: "DeFi opportunities identification",
+        fr: "Identification des opportunités DeFi",
+        ewe: "DeFi mɔnukpɔkpɔwo",
+      },
+      {
+        en: "Tax optimization strategies",
+        fr: "Stratégies d'optimisation fiscale",
+        ewe: "Dzodome nyonyo",
+      },
     ],
     href: "https://calendly.com/starlabman/investment-guidance",
     popular: false,
     category: "investment",
   },
   {
-    title: "Technical Web3 Development",
-    description: "Advanced blockchain development and smart contract programming",
+    title: {
+      en: "Technical Web3 Development",
+      fr: "Développement Web3 Technique",
+      ewe: "Web3 Mɔ̃ɖaŋu Wɔwɔ",
+    },
+    description: {
+      en: "Advanced blockchain development and smart contract programming",
+      fr: "Développement blockchain avancé et programmation de contrats intelligents",
+      ewe: "Blockchain mɔ̃ɖaŋu wɔwɔ kple smart contract ŋɔŋlɔ",
+    },
     duration: "3 months",
     price: "€500/month",
     features: [
-      "Smart contract development",
-      "DApp architecture & design",
-      "Blockchain integration",
-      "Security best practices",
-      "Career guidance & networking",
+      {
+        en: "Smart contract development",
+        fr: "Développement de contrats intelligents",
+        ewe: "Smart contract wɔwɔ",
+      },
+      {
+        en: "DApp architecture & design",
+        fr: "Architecture & conception DApp",
+        ewe: "DApp ɖoɖo",
+      },
+      {
+        en: "Blockchain integration",
+        fr: "Intégration blockchain",
+        ewe: "Blockchain kpekpeɖeŋu",
+      },
+      {
+        en: "Security best practices",
+        fr: "Meilleures pratiques de sécurité",
+        ewe: "Dedinɔnɔ mɔ̃ɖaŋu nyuitɔwo",
+      },
+      {
+        en: "Career guidance & networking",
+        fr: "Orientation de carrière & réseautage",
+        ewe: "Dɔ mɔfiame",
+      },
     ],
     href: "https://calendly.com/starlabman/web3-technical",
     popular: false,
     category: "technical",
   },
   {
-    title: "Web3 Business Strategy",
-    description: "Non-technical guidance for Web3 entrepreneurs and businesses",
+    title: {
+      en: "Web3 Business Strategy",
+      fr: "Stratégie Commerciale Web3",
+      ewe: "Web3 Dɔwɔwɔ ƒe Aɖaŋuɖoɖo",
+    },
+    description: {
+      en: "Non-technical guidance for Web3 entrepreneurs and businesses",
+      fr: "Conseils non-techniques pour entrepreneurs et entreprises Web3",
+      ewe: "Web3 dɔwɔlawo kple dɔwɔƒewo ƒe mɔfiame",
+    },
     duration: "2 months",
     price: "€400/month",
     features: [
-      "Web3 business model design",
-      "Tokenomics & governance",
-      "Community building strategies",
-      "Partnership & funding guidance",
-      "Go-to-market planning",
+      {
+        en: "Web3 business model design",
+        fr: "Conception de modèle économique Web3",
+        ewe: "Web3 dɔwɔwɔ ƒe ɖoɖo",
+      },
+      {
+        en: "Tokenomics & governance",
+        fr: "Tokenomics & gouvernance",
+        ewe: "Tokenomics & dziɖuɖu",
+      },
+      {
+        en: "Community building strategies",
+        fr: "Stratégies de construction de communauté",
+        ewe: "Hamewo tutu ƒe aɖaŋuɖoɖo",
+      },
+      {
+        en: "Partnership & funding guidance",
+        fr: "Conseils en partenariat & financement",
+        ewe: "Kpekpeɖeŋu kple gakɔkɔ ƒe aɖaŋuɖoɖo",
+      },
+      {
+        en: "Go-to-market planning",
+        fr: "Planification de la mise sur le marché",
+        ewe: "Asi ƒe ɖoɖo",
+      },
     ],
     href: "https://calendly.com/starlabman/web3-business",
     popular: false,
     category: "business",
   },
   {
-    title: "Corporate Blockchain Training",
-    description: "Comprehensive Web3 education program for teams and organizations",
+    title: {
+      en: "Corporate Blockchain Training",
+      fr: "Formation Blockchain en Entreprise",
+      ewe: "Blockchain Hehe na Dɔwɔƒe",
+    },
+    description: {
+      en: "Comprehensive Web3 education program for teams and organizations",
+      fr: "Programme complet d'éducation Web3 pour équipes et organisations",
+      ewe: "Web3 nusrɔ̃ɖoɖo blibo na dɔwɔƒe",
+    },
     duration: "6-8 weeks",
     price: "€1500/person",
     features: [
-      "Customized curriculum design",
-      "Group workshops & seminars",
-      "Hands-on project development",
-      "Industry case studies",
-      "Certification & job placement",
+      {
+        en: "Customized curriculum design",
+        fr: "Conception de programme personnalisé",
+        ewe: "Nusrɔ̃ɖoɖo tẽe",
+      },
+      {
+        en: "Group workshops & seminars",
+        fr: "Ateliers de groupe & séminaires",
+        ewe: "Amekoko kple nusrɔ̃ɖoɖowo",
+      },
+      {
+        en: "Hands-on project development",
+        fr: "Développement de projets pratiques",
+        ewe: "Dɔwɔwɔ gbɔgblɔ kple nusrɔ̃ɖoɖo",
+      },
+      {
+        en: "Industry case studies",
+        fr: "Études de cas de l'industrie",
+        ewe: "Dɔwɔwɔwo ƒe nuteƒekpɔkpɔ",
+      },
+      {
+        en: "Certification & job placement",
+        fr: "Certification & placement professionnel",
+        ewe: "Numedzodzro kple dɔwɔƒe gbɔgblɔ",
+      },
     ],
     href: "https://calendly.com/starlabman/corporate-training",
     popular: false,
@@ -121,57 +293,128 @@ export const mentorshipServices = [
 
 export const projects = [
   {
-    title: "Phonebook Management System",
-    blurb:
-      "Laravel Livewire application for managing telephone directories with real-time updates and search functionality.",
+    title: {
+      en: "Phonebook Management System",
+      fr: "Système de Gestion de Répertoire Téléphonique",
+      ewe: "Ameŋkɔwo Dzikpɔkpɔ Habɔbɔ",
+    },
+    blurb: {
+      en: "Laravel Livewire application for managing telephone directories with real-time updates and search functionality.",
+      fr: "Application Laravel Livewire pour la gestion de répertoires téléphoniques avec mises à jour en temps réel et fonction de recherche.",
+      ewe: "Laravel Livewire dɔwɔwɔ na ameŋkɔwo dzikpɔkpɔ kple dzɔtɔŋuɖeɖewo kple kɔmpiuta me nuŋlɔŋlɔwo.",
+    },
     href: "https://github.com/starlabman/phonebook",
     chips: ["Laravel", "Livewire", "PHP"],
   },
   {
-    title: "Alchemy NFT API Integration",
-    blurb: "JavaScript template for integrating Alchemy's NFT API with comprehensive documentation and examples.",
+    title: {
+      en: "Alchemy NFT API Integration",
+      fr: "Intégration API NFT Alchemy",
+      ewe: "Alchemy NFT API Kpekpeɖeŋu",
+    },
+    blurb: {
+      en: "JavaScript template for integrating Alchemy's NFT API with comprehensive documentation and examples.",
+      fr: "Modèle JavaScript pour l'intégration de l'API NFT d'Alchemy avec documentation complète et exemples.",
+      ewe: "JavaScript ƒe agbalẽnyinyi na Alchemy ƒe NFT API kple eŋlisigbe ƒe agbalẽwo kple kpɔɖeŋuwo.",
+    },
     href: "https://github.com/starlabman/alchemyAPI_NFT",
     chips: ["JavaScript", "NFT", "API"],
   },
   {
-    title: "Candy Machine Responsive UI",
-    blurb: "TypeScript-based responsive user interface for Solana Candy Machine NFT minting with modern design.",
+    title: {
+      en: "Candy Machine Responsive UI",
+      fr: "Interface Utilisateur Responsive Candy Machine",
+      ewe: "Candy Machine ƒe UI kpɔɖeŋu",
+    },
+    blurb: {
+      en: "TypeScript-based responsive user interface for Solana Candy Machine NFT minting with modern design.",
+      fr: "Interface utilisateur responsive basée sur TypeScript pour le minting NFT Solana Candy Machine avec un design moderne.",
+      ewe: "TypeScript ƒe UI kpɔɖeŋu na Solana Candy Machine NFT minting kple eŋlisigbe ƒe agbalẽwo.",
+    },
     href: "https://github.com/starlabman/Candy-Responsive-Machine-ui",
     chips: ["TypeScript", "Solana", "UI/UX"],
   },
   {
-    title: "Xamarin Firebase Cloud Firestore Plugin",
-    blurb: "Cross-platform plugin for Firebase Cloud Firestore integration in Xamarin.Forms applications.",
+    title: {
+      en: "Xamarin Firebase Cloud Firestore Plugin",
+      fr: "Plugin Xamarin Firebase Cloud Firestore",
+      ewe: "Xamarin Firebase Cloud Firestore Plugin",
+    },
+    blurb: {
+      en: "Cross-platform plugin for Firebase Cloud Firestore integration in Xamarin.Forms applications.",
+      fr: "Plugin multiplateforme pour l'intégration Firebase Cloud Firestore dans les applications Xamarin.Forms.",
+      ewe: "Cross-platform plugin na Firebase Cloud Firestore kple Xamarin.Forms dɔwɔwɔwo.",
+    },
     href: "https://github.com/starlabman/Xamarin-forms-plugincloudfirestore",
     chips: ["C#", "Xamarin", "Firebase"],
   },
   {
-    title: "Xamarin.Forms UI Collection",
-    blurb: "Curated collection of beautiful Xamarin.Forms UI samples and components for mobile development.",
+    title: {
+      en: "Xamarin.Forms UI Collection",
+      fr: "Collection d'Interfaces Utilisateur Xamarin.Forms",
+      ewe: "Xamarin.Forms UI ƒe Agbalẽwo",
+    },
+    blurb: {
+      en: "Curated collection of beautiful Xamarin.Forms UI samples and components for mobile development.",
+      fr: "Collection organisée d'exemples et de composants UI Xamarin.Forms magnifiques pour le développement mobile.",
+      ewe: "Xamarin.Forms UI ƒe agbalẽwo kple mɔ̃ɖaŋuwo na mobile dɔwɔwɔ.",
+    },
     href: "https://github.com/starlabman/Xamarin.Forms-UI",
     chips: ["Xamarin", "Mobile", "UI Components"],
   },
   {
-    title: "Developer Resources Hub",
-    blurb: "Collaborative repository of essential resources, tools, and guides for developers across all technologies.",
+    title: {
+      en: "Developer Resources Hub",
+      fr: "Centre de Ressources pour Développeurs",
+      ewe: "Nusrɔ̃lawo ƒe Gomekɔwo",
+    },
+    blurb: {
+      en: "Collaborative repository of essential resources, tools, and guides for developers across all technologies.",
+      fr: "Dépôt collaboratif de ressources essentielles, outils et guides pour les développeurs toutes technologies confondues.",
+      ewe: "Dɔwɔwɔ kple nusrɔ̃lawo ƒe gomekɔwo na mɔ̃ɖaŋuwo katã.",
+    },
     href: "https://github.com/starlabman/dev-resources",
     chips: ["Resources", "Documentation", "Community"],
   },
   {
-    title: "Web3.js Educational Content",
-    blurb: "Producing bi-weekly educational videos and tutorials for Web3.js developer community.",
+    title: {
+      en: "Web3.js Educational Content",
+      fr: "Contenu Éducatif Web3.js",
+      ewe: "Web3.js Nusrɔ̃ɖoɖo",
+    },
+    blurb: {
+      en: "Producing bi-weekly educational videos and tutorials for Web3.js developer community.",
+      fr: "Production de vidéos éducatives bihebdomadaires et de tutoriels pour la communauté des développeurs Web3.js.",
+      ewe: "Web3.js nusrɔ̃ɖoɖo kple eƒe nuteƒekpɔkpɔwo na Web3.js nusrɔ̃lawo.",
+    },
     href: "https://youtube.com/@starlabman",
     chips: ["Education", "Web3.js", "Video Content"],
   },
   {
-    title: "IsyChain Marketing Strategy",
-    blurb: "Leading global marketing initiatives for decentralized blockchain solutions.",
+    title: {
+      en: "IsyChain Marketing Strategy",
+      fr: "Stratégie Marketing IsyChain",
+      ewe: "IsyChain Marketing ƒe Aɖaŋuɖoɖo",
+    },
+    blurb: {
+      en: "Leading global marketing initiatives for decentralized blockchain solutions.",
+      fr: "Diriger les initiatives marketing mondiales pour les solutions blockchain décentralisées.",
+      ewe: "IsyChain marketing ƒe aɖaŋuɖoɖo kple decentralized blockchain dɔwɔwɔwo.",
+    },
     href: "#",
     chips: ["Marketing", "Blockchain", "Strategy"],
   },
   {
-    title: "Dollar Store E-Commerce Platform",
-    blurb: "Full-stack web and mobile applications for US product commercialization with inventory management.",
+    title: {
+      en: "Dollar Store E-Commerce Platform",
+      fr: "Plateforme E-Commerce Dollar Store",
+      ewe: "Dollar Store E-Commerce Kpekpeɖeŋu",
+    },
+    blurb: {
+      en: "Full-stack web and mobile applications for US product commercialization with inventory management.",
+      fr: "Applications web et mobiles full-stack pour la commercialisation de produits américains avec gestion des stocks.",
+      ewe: "Full-stack web kple mobile dɔwɔwɔwo na US product commercialization kple eƒe nuŋlɔŋlɔwo.",
+    },
     href: "https://starlabman.netlify.app/",
     chips: ["E-Commerce", "Full-Stack", "Mobile"],
   },
@@ -180,32 +423,72 @@ export const projects = [
 export const allProjects = [
   ...projects,
   {
-    title: "Blockchain Analytics Dashboard",
-    blurb: "Real-time analytics dashboard for tracking blockchain transactions and DeFi protocols performance.",
+    title: {
+      en: "Blockchain Analytics Dashboard",
+      fr: "Tableau de Bord d'Analyse Blockchain",
+      ewe: "Blockchain Analytics Dashboard",
+    },
+    blurb: {
+      en: "Real-time analytics dashboard for tracking blockchain transactions and DeFi protocols performance.",
+      fr: "Tableau de bord d'analyse en temps réel pour le suivi des transactions blockchain et des performances des protocoles DeFi.",
+      ewe: "Blockchain Analytics Dashboard na tracking blockchain transactions kple DeFi protocols performance.",
+    },
     href: "https://github.com/starlabman/blockchain-analytics",
     chips: ["React", "Web3", "Analytics"],
   },
   {
-    title: "Smart Contract Auditing Tool",
-    blurb: "Automated security analysis tool for Ethereum smart contracts with vulnerability detection.",
-    href: "https://github.com/starlabman/contract-auditor",
+    title: {
+      en: "Smart Contract Auditing Tool",
+      fr: "Outil d'Audit de Contrats Intelligents",
+      ewe: "Smart Contract Auditing Tool",
+    },
+    blurb: {
+      en: "Automated security analysis tool for Ethereum smart contracts with vulnerability detection.",
+      fr: "Outil d'analyse de sécurité automatisé pour les contrats intelligents Ethereum avec détection des vulnérabilités.",
+      ewe: "Smart Contract Auditing Tool na Ethereum smart contracts kple vulnerability detection.",
+    },
+    href: "https://github.com/starlabman/blockchain-analytics",
     chips: ["Solidity", "Security", "Automation"],
   },
   {
-    title: "DeFi Yield Farming Bot",
-    blurb: "Automated yield farming strategy bot for optimizing returns across multiple DeFi protocols.",
+    title: {
+      en: "DeFi Yield Farming Bot",
+      fr: "Bot de Yield Farming DeFi",
+      ewe: "DeFi Yield Farming Bot",
+    },
+    blurb: {
+      en: "Automated yield farming strategy bot for optimizing returns across multiple DeFi protocols.",
+      fr: "Bot de stratégie de yield farming automatisé pour optimiser les rendements sur plusieurs protocoles DeFi.",
+      ewe: "DeFi Yield Farming Bot na optimizing returns across multiple DeFi protocols.",
+    },
     href: "https://github.com/starlabman/yield-bot",
     chips: ["Python", "DeFi", "Automation"],
   },
   {
-    title: "NFT Marketplace Template",
-    blurb: "Complete NFT marketplace solution with minting, trading, and royalty management features.",
+    title: {
+      en: "NFT Marketplace Template",
+      fr: "Modèle de Marché NFT",
+      ewe: "NFT Marketplace Template",
+    },
+    blurb: {
+      en: "Complete NFT marketplace solution with minting, trading, and royalty management features.",
+      fr: "Solution complète de marché NFT avec fonctionnalités de minting, de trading et de gestion des redevances.",
+      ewe: "NFT Marketplace Template na minting, trading, and royalty management features.",
+    },
     href: "https://github.com/starlabman/nft-marketplace",
     chips: ["Next.js", "NFT", "Marketplace"],
   },
   {
-    title: "Cross-Chain Bridge Interface",
-    blurb: "User-friendly interface for bridging assets between Ethereum, Polygon, and Binance Smart Chain.",
+    title: {
+      en: "Cross-Chain Bridge Interface",
+      fr: "Interface de Pont Cross-Chain",
+      ewe: "Cross-Chain Bridge Interface",
+    },
+    blurb: {
+      en: "User-friendly interface for bridging assets between Ethereum, Polygon, and Binance Smart Chain.",
+      fr: "Interface conviviale pour le pontage d'actifs entre Ethereum, Polygon et Binance Smart Chain.",
+      ewe: "Cross-Chain Bridge Interface na bridging assets between Ethereum, Polygon, and Binance Smart Chain.",
+    },
     href: "https://github.com/starlabman/cross-chain-bridge",
     chips: ["Web3", "Cross-Chain", "Bridge"],
   },
@@ -213,57 +496,101 @@ export const allProjects = [
 
 export const threads = [
   {
-    title: "Building Web3 Developer Communities in Africa",
+    title: {
+      en: "Building Web3 Developer Communities in Africa",
+      fr: "Construire des Communautés de Développeurs Web3 en Afrique",
+      ewe: "Web3 Nusrɔ̃la Hamewo Tutu le Afrika",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1841117454279295099",
     stat: "25k views",
   },
   {
-    title: "Web3.js Ambassador Program: Latest Updates & Insights",
+    title: {
+      en: "Web3.js Ambassador Program: Latest Updates & Insights",
+      fr: "Programme Ambassadeur Web3.js : Dernières Mises à Jour & Insights",
+      ewe: "Web3.js Ambassador Dɔwɔwɔ: Nya Yeye Kple Sidzedzewo",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1953526838514303405",
     stat: "18k likes",
   },
   {
-    title: "DeFi Opportunities in Emerging Markets",
+    title: {
+      en: "DeFi Opportunities in Emerging Markets",
+      fr: "Opportunités DeFi dans les Marchés Émergents",
+      ewe: "DeFi Mɔnukpɔkpɔwo le Asia Dziŋɔwɔlawo Me",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1950968057146307037",
     stat: "top thread",
   },
   {
-    title: "Blockchain Security Best Practices for Developers",
+    title: {
+      en: "Blockchain Security Best Practices for Developers",
+      fr: "Meilleures Pratiques de Sécurité Blockchain pour les Développeurs",
+      ewe: "Blockchain Dzigbɔkpɔ Dɔwɔwɔ Nyuitɔwo na Nusrɔ̃lawo",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1948418868658995388",
     stat: "12k views",
   },
   {
-    title: "ETHAfrique: Building Ethereum Ecosystem Across Africa",
+    title: {
+      en: "ETHAfrique: Building Ethereum Ecosystem Across Africa",
+      fr: "ETHAfrique: Construire l'Écosystème Ethereum à Travers l'Afrique",
+      ewe: "ETHAfrique: Ethereum Dɔwɔwɔ Fefe le Afrika",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1947611741908582746",
     stat: "15k likes",
   },
   {
-    title: "Smart Contract Development: Advanced Techniques",
+    title: {
+      en: "Smart Contract Development: Advanced Techniques",
+      fr: "Développement de Contrats Intelligents : Techniques Avancées",
+      ewe: "Smart Contract Dɔwɔwɔ: Mɔ̃ɖaŋu Yeyewo",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1952081326544232745",
     stat: "22k views",
   },
   {
-    title: "Web3 Career Transition Guide for African Developers",
+    title: {
+      en: "Web3 Career Transition Guide for African Developers",
+      fr: "Guide de Transition de Carrière Web3 pour les Développeurs Africains",
+      ewe: "Web3 Dɔwɔƒe Gbɔgblɔ Mɔfiame na Afrika Nusrɔ̃lawo",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1939701646734290950",
     stat: "30k views",
   },
   {
-    title: "Blockchain Education & Community Building Strategies",
+    title: {
+      en: "Blockchain Education & Community Building Strategies",
+      fr: "Éducation Blockchain & Stratégies de Construction de Communauté",
+      ewe: "Blockchain Nusrɔ̃ɖoɖo & Hamewo Tutu ƒe Aɖaŋuɖoɖo",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1930007463723708674",
     stat: "8.5k likes",
   },
   {
-    title: "IsyChain Marketing Strategy & Decentralized Solutions",
+    title: {
+      en: "IsyChain Marketing Strategy & Decentralized Solutions",
+      fr: "Stratégie Marketing IsyChain & Solutions Décentralisées",
+      ewe: "IsyChain Marketing ƒe Aɖaŋuɖoɖo & Decentralized Dɔwɔwɔwo",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1926948041363271862",
     stat: "14k views",
   },
   {
-    title: "Africa Blockchain Community: Connecting 10k+ Developers",
+    title: {
+      en: "Africa Blockchain Community: Connecting 10k+ Developers",
+      fr: "Communauté Blockchain Afrique : Connecter plus de 10k Développeurs",
+      ewe: "Afrika Blockchain Habɔbɔ: Nusrɔ̃lawo Kpekpe ɖe 10k+",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1896894917492019596",
     stat: "top thread",
   },
   {
-    title: "Web3 Investment Strategies for Emerging Markets",
+    title: {
+      en: "Web3 Investment Strategies for Emerging Markets",
+      fr: "Stratégies d'Investissement Web3 pour les Marchés Émergents",
+      ewe: "Web3 Gakɔkɔ Aɖaŋuɖoɖo na Asia Dziŋɔwɔlawo",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1895157668244754768",
     stat: "19k likes",
   },
@@ -272,32 +599,56 @@ export const threads = [
 export const allThreads = [
   ...threads,
   {
-    title: "The Future of Decentralized Finance in Africa",
+    title: {
+      en: "The Future of Decentralized Finance in Africa",
+      fr: "L'Avenir de la Finance Décentralisée en Afrique",
+      ewe: "Decentralized Finance ƒe Etsɔme le Afrika",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1940000000000000000",
     stat: "35k views",
   },
   {
-    title: "Building Sustainable Blockchain Communities",
+    title: {
+      en: "Building Sustainable Blockchain Communities",
+      fr: "Construire des Communautés Blockchain Durables",
+      ewe: "Blockchain Hamewo Tutu Kple Nɔnɔmewo",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1941000000000000000",
     stat: "28k likes",
   },
   {
-    title: "Web3 Security: Protecting Your Digital Assets",
+    title: {
+      en: "Web3 Security: Protecting Your Digital Assets",
+      fr: "Sécurité Web3 : Protéger Vos Actifs Numériques",
+      ewe: "Web3 Dzigbɔkpɔ: Digital Nuwo Kpekpeɖeŋu",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1942000000000000000",
     stat: "20k views",
   },
   {
-    title: "Smart Contract Development Best Practices 2024",
+    title: {
+      en: "Smart Contract Development Best Practices 2024",
+      fr: "Meilleures Pratiques de Développement de Contrats Intelligents 2024",
+      ewe: "Smart Contract Dɔwɔwɔ Dzigbɔkpɔ Dɔwɔwɔ Nyuitɔwo 2024",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1943000000000000000",
     stat: "15k likes",
   },
   {
-    title: "Tokenomics Design for Sustainable Projects",
+    title: {
+      en: "Tokenomics Design for Sustainable Projects",
+      fr: "Conception de Tokenomics pour des Projets Durables",
+      ewe: "Tokenomics Dɔwɔwɔ na Nɔnɔmewo",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1944000000000000000",
     stat: "18k views",
   },
   {
-    title: "Layer 2 Solutions: Scaling Ethereum for Mass Adoption",
+    title: {
+      en: "Layer 2 Solutions: Scaling Ethereum for Mass Adoption",
+      fr: "Solutions Layer 2 : Scaler Ethereum pour une Adoption Massive",
+      ewe: "Layer 2 Dɔwɔwɔwo: Ethereum Gbalã Ðe Amewo Katã Gbɔ",
+    },
     href: "https://x.com/0xWeb3DevRel/status/1945000000000000000",
     stat: "25k views",
   },
@@ -305,28 +656,59 @@ export const allThreads = [
 
 export const posts = [
   {
-    title: "Lead des Ambassadeurs Web3.js - Building Developer Communities",
+    title: {
+      en: "Lead of Web3.js Ambassadors - Building Developer Communities",
+      fr: "Lead des Ambassadeurs Web3.js - Construire des Communautés de Développeurs",
+      ewe: "Web3.js Ambassador Kplɔla - Nusrɔ̃la Hamewo Tutu",
+    },
     href: "https://www.linkedin.com/posts/starlabman/",
-    description:
-      "Leading Web3.js ambassador program, producing bi-weekly educational videos and recruiting new ambassadors",
+    description: {
+      en: "Leading Web3.js ambassador program, producing bi-weekly educational videos and recruiting new ambassadors",
+      fr: "Diriger le programme ambassadeur Web3.js, produire des vidéos éducatives bihebdomadaires et recruter de nouveaux ambassadeurs",
+      ewe: "Web3.js ambassador dɔwɔwɔ kplɔla, videos kple tutorials wɔwɔ na nusrɔ̃la yeyewo",
+    },
     engagement: "120+ likes",
   },
   {
-    title: "Chief Marketing Officer at IsyChain - Blockchain Solutions",
+    title: {
+      en: "Chief Marketing Officer at IsyChain - Blockchain Solutions",
+      fr: "Directeur Marketing chez IsyChain - Solutions Blockchain",
+      ewe: "IsyChain Marketing Dɔwɔla Kplɔla - Blockchain Dɔwɔwɔwo",
+    },
     href: "https://www.linkedin.com/posts/starlabman/",
-    description: "Defining global marketing strategy and leading teams for decentralized industry solutions",
+    description: {
+      en: "Defining global marketing strategy and leading teams for decentralized industry solutions",
+      fr: "Définir la stratégie marketing mondiale et diriger des équipes pour les solutions industrielles décentralisées",
+      ewe: "Global marketing strategy ɖoɖo kple kplɔlawo na decentralized industry solutions",
+    },
     engagement: "85+ likes",
   },
   {
-    title: "Blockchain Correspondent",
+    title: {
+      en: "Blockchain Correspondent",
+      fr: "Correspondant Blockchain",
+      ewe: "Blockchain Nyaŋlɔla",
+    },
     href: "https://www.linkedin.com/posts/starlabman/",
-    description: "Writing articles and conducting interviews with crypto industry experts",
+    description: {
+      en: "Writing articles and conducting interviews with crypto industry experts",
+      fr: "Écrire des articles et mener des entretiens avec des experts de l'industrie crypto",
+      ewe: "Nyatakakawo ŋɔŋlɔ kple biabiawo wɔwɔ kple crypto industry experts",
+    },
     engagement: "95+ likes",
   },
   {
-    title: "Binance Campus Ambassador Lead - Blockchain Education",
+    title: {
+      en: "Binance Campus Ambassador Lead - Blockchain Education",
+      fr: "Lead Ambassadeur Campus Binance - Éducation Blockchain",
+      ewe: "Binance Campus Ambassador Kplɔla - Blockchain Nusrɔ̃ɖoɖo",
+    },
     href: "https://www.linkedin.com/posts/starlabman/",
-    description: "Increasing blockchain adoption through education and awareness in Togo",
+    description: {
+      en: "Increasing blockchain adoption through education and awareness in Togo",
+      fr: "Augmenter l'adoption de la blockchain par l'éducation et la sensibilisation au Togo",
+      ewe: "Blockchain ƒe gbɔgblɔ kple nusrɔ̃ɖoɖo le Togo",
+    },
     engagement: "150+ likes",
   },
 ]
@@ -334,77 +716,173 @@ export const posts = [
 export const allPosts = [
   ...posts,
   {
-    title: "Web3 Developer Roadmap 2024 - Complete Guide",
+    title: {
+      en: "Web3 Developer Roadmap 2024 - Complete Guide",
+      fr: "Feuille de Route Développeur Web3 2024 - Guide Complet",
+      ewe: "Web3 Nusrɔ̃la Mɔzɔzɔ 2024 - Mɔfiame Blibo",
+    },
     href: "https://www.linkedin.com/posts/starlabman/web3-roadmap-2024",
-    description: "Comprehensive roadmap for developers transitioning to Web3 with practical steps and resources",
+    description: {
+      en: "Comprehensive roadmap for developers transitioning to Web3 with practical steps and resources",
+      fr: "Feuille de route complète pour les développeurs en transition vers le Web3 avec des étapes pratiques et des ressources",
+      ewe: "Nusrɔ̃lawo ƒe Web3 mɔzɔzɔ kple eƒe nuteƒekpɔkpɔwo",
+    },
     engagement: "200+ likes",
   },
   {
-    title: "Building Africa's Largest Blockchain Community",
+    title: {
+      en: "Building Africa's Largest Blockchain Community",
+      fr: "Construire la Plus Grande Communauté Blockchain d'Afrique",
+      ewe: "Afrika Blockchain Hamewo Tutu Gãtɔ",
+    },
     href: "https://www.linkedin.com/posts/starlabman/africa-blockchain-community",
-    description: "Journey of building a 10,000+ member blockchain community across African countries",
+    description: {
+      en: "Journey of building a 10,000+ member blockchain community across African countries",
+      fr: "Parcours de construction d'une communauté blockchain de plus de 10 000 membres à travers les pays africains",
+      ewe: "Afrika Blockchain Habɔbɔ: Nusrɔ̃lawo Kpekpe ɖe 10k+",
+    },
     engagement: "180+ likes",
   },
   {
-    title: "DeFi Investment Strategies for Emerging Markets",
+    title: {
+      en: "DeFi Investment Strategies for Emerging Markets",
+      fr: "Stratégies d'Investissement DeFi pour les Marchés Émergents",
+      ewe: "DeFi Gakɔkɔ Aɖaŋuɖoɖo na Asia Dziŋɔwɔlawo",
+    },
     href: "https://www.linkedin.com/posts/starlabman/defi-investment-strategies",
-    description: "Risk management and investment approaches for DeFi protocols in developing economies",
+    description: {
+      en: "Risk management and investment approaches for DeFi protocols in developing economies",
+      fr: "Approches de gestion des risques et d'investissement pour les protocoles DeFi dans les économies en développement",
+      ewe: "Afɔku dzikpɔkpɔ kple gakɔkɔ ƒe aɖaŋuɖoɖowo na DeFi protocols le developing economies",
+    },
     engagement: "160+ likes",
   },
   {
-    title: "Smart Contract Security: Lessons from Major Hacks",
+    title: {
+      en: "Smart Contract Security: Lessons from Major Hacks",
+      fr: "Sécurité des Contrats Intelligents : Leçons des Hacks Majeurs",
+      ewe: "Smart Contract Dzigbɔkpɔ: Hacks Gãtɔwo Gbɔgblɔ",
+    },
     href: "https://www.linkedin.com/posts/starlabman/smart-contract-security",
-    description: "Analysis of major DeFi hacks and how to prevent common smart contract vulnerabilities",
+    description: {
+      en: "Analysis of major DeFi hacks and how to prevent common smart contract vulnerabilities",
+      fr: "Analyse des hacks DeFi majeurs et comment prévenir les vulnérabilités courantes des contrats intelligents",
+      ewe: "DeFi hacks gãtɔwo kple Smart Contract vulnerabilities gbɔgblɔ",
+    },
     engagement: "140+ likes",
   },
   {
-    title: "The Rise of African Blockchain Startups",
+    title: {
+      en: "The Rise of African Blockchain Startups",
+      fr: "L'Essor des Startups Blockchain Africaines",
+      ewe: "Afrika Blockchain Startups Dziɖuɖu",
+    },
     href: "https://www.linkedin.com/posts/starlabman/african-blockchain-startups",
-    description: "Spotlight on innovative blockchain startups emerging from the African continent",
+    description: {
+      en: "Spotlight on innovative blockchain startups emerging from the African continent",
+      fr: "Pleins feux sur les startups blockchain innovantes émergentes du continent africain",
+      ewe: "Afrika Blockchain Startups ƒe kpɔɖeŋuwo",
+    },
     engagement: "220+ likes",
   },
 ]
 
 export const achievements = [
   {
-    title: "Lead Web3.js Ambassador",
-    description: "Leading ambassador program, creating educational content and recruiting developers",
+    title: {
+      en: "Lead Web3.js Ambassador",
+      fr: "Lead Ambassadeur Web3.js",
+      ewe: "Web3.js Ambassador Kplɔla",
+    },
+    description: {
+      en: "Leading ambassador program, creating educational content and recruiting developers",
+      fr: "Diriger le programme ambassadeur, créer du contenu éducatif et recruter des développeurs",
+      ewe: "Ambassador dɔwɔwɔ kplɔla, nusrɔ̃ɖoɖo wɔwɔ kple nusrɔ̃lawo gbɔgblɔ",
+    },
     year: "2024-Present",
     company: "Web3.js",
   },
   {
-    title: "Chief Marketing Officer",
-    description: "Defining global marketing strategy for blockchain solutions company",
+    title: {
+      en: "Chief Marketing Officer",
+      fr: "Directeur Marketing",
+      ewe: "Marketing Dɔwɔla Kplɔla",
+    },
+    description: {
+      en: "Defining global marketing strategy for blockchain solutions company",
+      fr: "Définir la stratégie marketing mondiale pour une entreprise de solutions blockchain",
+      ewe: "Global marketing strategy ɖoɖo na blockchain dɔwɔwɔwo",
+    },
     year: "2023-Present",
     company: "IsyChain",
   },
   {
-    title: "Founder - Africa Blockchain Community",
-    description: "Building the largest blockchain community across Africa, connecting developers and entrepreneurs",
+    title: {
+      en: "Founder - Africa Blockchain Community",
+      fr: "Fondateur - Communauté Blockchain Afrique",
+      ewe: "Afrika Blockchain Habɔbɔ ƒe Gɔmeɖoanyila",
+    },
+    description: {
+      en: "Building the largest blockchain community across Africa, connecting developers and entrepreneurs",
+      fr: "Construire la plus grande communauté blockchain d'Afrique, connecter les développeurs et les entrepreneurs",
+      ewe: "Blockchain habɔbɔ gãtɔ le Afrika, nusrɔ̃lawo kple dɔwɔlawo kpekpe ɖe wo nɔewo gbɔ",
+    },
     year: "2023-Present",
     company: "Africa Blockchain Community",
   },
   {
-    title: "Coverner - ETHAfrique",
-    description: "Leading Ethereum ecosystem development and adoption initiatives across African markets",
+    title: {
+      en: "Coverner - ETHAfrique",
+      fr: "Gouverneur - ETHAfrique",
+      ewe: "ETHAfrique Kplɔla",
+    },
+    description: {
+      en: "Leading Ethereum ecosystem development and adoption initiatives across African markets",
+      fr: "Diriger le développement de l'écosystème Ethereum et les initiatives d'adoption sur les marchés africains",
+      ewe: "Ethereum dɔwɔwɔ kple eƒe gbɔgblɔ le Afrika dziŋɔwɔlawo me",
+    },
     year: "2024-Present",
     company: "ETHAfrique",
   },
   {
-    title: "Blockchain Correspondent",
-    description: "Writing crypto analysis and interviewing industry experts",
+    title: {
+      en: "Blockchain Correspondent",
+      fr: "Correspondant Blockchain",
+      ewe: "Blockchain Nyaŋlɔla",
+    },
+    description: {
+      en: "Writing crypto analysis and interviewing industry experts",
+      fr: "Écrire des analyses crypto et interviewer des experts de l'industrie",
+      ewe: "Crypto analysis ŋɔŋlɔ kple biabiawo wɔwɔ kple industry experts",
+    },
     year: "2024-Present",
     company: "WallCrypt",
   },
   {
-    title: "Binance Campus Lead",
-    description: "Leading blockchain education initiatives across Togo",
+    title: {
+      en: "Binance Campus Lead",
+      fr: "Lead Campus Binance",
+      ewe: "Binance Campus Kplɔla",
+    },
+    description: {
+      en: "Leading blockchain education initiatives across Togo",
+      fr: "Diriger les initiatives d'éducation blockchain à travers le Togo",
+      ewe: "Blockchain nusrɔ̃ɖoɖo kplɔla le Togo",
+    },
     year: "2023-Present",
     company: "Binance",
   },
   {
-    title: "Software Engineering Degree",
-    description: "Professional license in Software Engineering",
+    title: {
+      en: "Software Engineering Degree",
+      fr: "Diplôme en Génie Logiciel",
+      ewe: "Software Engineering Nusrɔ̃ɖoɖo",
+    },
+    description: {
+      en: "Professional license in Software Engineering",
+      fr: "Licence professionnelle en Génie Logiciel",
+      ewe: "Software Engineering ƒe numedzodzro",
+    },
     year: "Completed",
     company: "Université de Lomé",
   },

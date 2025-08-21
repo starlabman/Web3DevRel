@@ -8,12 +8,14 @@ import { X, ExternalLink, Plus } from "lucide-react"
 import Image from "next/image"
 import { useTranslation } from "@/hooks/use-translation"
 import { useLanguage } from "@/components/language-switcher"
+import { getTranslatedContent } from "@/lib/data"
+import { Language } from "@/lib/translations"
 
 interface GalleryImage {
   id: number
-  title: string
-  description: string
-  category: string
+  title: string | { [key in Language]: string }
+  description: string | { [key in Language]: string }
+  category: string | { [key in Language]: string }
   imageUrl: string
   date: string
 }
@@ -30,7 +32,7 @@ export function Gallery({ images }: GalleryProps) {
   const [filter, setFilter] = useState<string>(t("gallery.filterAll"))
   const [itemsToShow, setItemsToShow] = useState<{ [key: string]: number }>({})
 
-  const categories = [t("gallery.filterAll"), ...Array.from(new Set(images.map((img) => img.category)))]
+  const categories = [t("gallery.filterAll"), ...Array.from(new Set(images.map((img) => getTranslatedContent(img.category, language))))]
 
   const getFilteredImages = () => {
     if (filter === t("gallery.filterAll")) {
@@ -38,7 +40,7 @@ export function Gallery({ images }: GalleryProps) {
       return images.slice(0, totalToShow)
     } else {
       const categoryToShow = itemsToShow[filter] || 4
-      return images.filter((img) => img.category === filter).slice(0, categoryToShow)
+      return images.filter((img) => getTranslatedContent(img.category, language) === filter).slice(0, categoryToShow)
     }
   }
 
@@ -59,7 +61,7 @@ export function Gallery({ images }: GalleryProps) {
       return images.length > currentCount
     } else {
       const currentCount = itemsToShow[filter] || 4
-      const categoryImages = images.filter((img) => img.category === filter)
+      const categoryImages = images.filter((img) => getTranslatedContent(img.category, language) === filter)
       return categoryImages.length > currentCount
     }
   }
@@ -109,16 +111,16 @@ export function Gallery({ images }: GalleryProps) {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={image.imageUrl || "/placeholder.svg"}
-                  alt={image.title}
+                  alt={getTranslatedContent(image.title, language)}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <Badge variant="secondary" className="mb-2">
-                    {image.category}
+                    {getTranslatedContent(image.category, language)}
                   </Badge>
-                  <h3 className="text-white font-semibold text-sm line-clamp-2">{image.title}</h3>
+                  <h3 className="text-white font-semibold text-sm line-clamp-2">{getTranslatedContent(image.title, language)}</h3>
                 </div>
               </div>
               <div className="p-4">
@@ -127,8 +129,8 @@ export function Gallery({ images }: GalleryProps) {
                     {image.date}
                   </Badge>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2 line-clamp-1">{image.title}</h3>
-                <p className="text-sm text-muted-foreground line-clamp-2">{image.description}</p>
+                <h3 className="font-semibold text-foreground mb-2 line-clamp-1">{getTranslatedContent(image.title, language)}</h3>
+                <p className="text-sm text-muted-foreground line-clamp-2">{getTranslatedContent(image.description, language)}</p>
               </div>
             </div>
           </motion.div>
@@ -170,7 +172,7 @@ export function Gallery({ images }: GalleryProps) {
               <div className="aspect-[16/10] relative">
                 <Image
                   src={selectedImage.imageUrl || "/placeholder.svg"}
-                  alt={selectedImage.title}
+                  alt={getTranslatedContent(selectedImage.title, language)}
                   fill
                   className="object-cover"
                 />
@@ -186,11 +188,11 @@ export function Gallery({ images }: GalleryProps) {
             </div>
             <div className="p-6">
               <div className="flex items-center gap-2 mb-4">
-                <Badge variant="secondary">{selectedImage.category}</Badge>
+                <Badge variant="secondary">{getTranslatedContent(selectedImage.category, language)}</Badge>
                 <Badge variant="outline">{selectedImage.date}</Badge>
               </div>
-              <h2 className="text-2xl font-bold text-foreground mb-3">{selectedImage.title}</h2>
-              <p className="text-muted-foreground mb-4">{selectedImage.description}</p>
+              <h2 className="text-2xl font-bold text-foreground mb-3">{getTranslatedContent(selectedImage.title, language)}</h2>
+              <p className="text-muted-foreground mb-4">{getTranslatedContent(selectedImage.description, language)}</p>
               <Button variant="outline" className="border-white/20 hover:bg-white/10 bg-transparent">
                 <ExternalLink className="w-4 h-4 mr-2" />
                 {t("gallery.viewMore")}

@@ -8,7 +8,7 @@ export const translations = {
   en: {
     hero: {
       title: "AGBETSIASSI KODJO LABORE",
-      subtitle: "DevRel & Community Builder | Web3.js Ambassador Lead",
+      subtitle: "DevRel & Ecosystem Builder | Founder Africa Blockchain Community & Coverner ETHAfrique",
       description:
         "Passionate about blockchain innovation, developer education, and building Web3 communities across Africa. Helping individuals and businesses navigate the decentralized future.",
       cta: "Explore Services",
@@ -37,6 +37,8 @@ export const translations = {
       showLess: "Show Less",
       calendar: "Calendar",
       bookSession: "Book Session",
+      loading: "Loading...",
+      viewAllArticles: "View all articles",
     },
     mentorship: {
       title: "Mentorship & Coaching",
@@ -95,12 +97,13 @@ export const translations = {
       filterAll: "All",
       loadMore: "Load More",
       viewMore: "View More",
+      description: "Discover my highlights, events, and achievements through this image collection",
     },
   },
   fr: {
     hero: {
       title: "AGBETSIASSI KODJO LABORE",
-      subtitle: "DevRel & Créateur de Communautés | Lead Ambassadeur Web3.js",
+      subtitle: "DevRel & Créateur d'Écosystèmes | Fondateur de la Communauté Africa Blockchain & Gouverneur ETHAfrique",
       description:
         "Passionné par l'innovation blockchain, l'éducation des développeurs et la création de communautés Web3 en Afrique. J'aide les individus et entreprises à naviguer vers l'avenir décentralisé.",
       cta: "Découvrir les Services",
@@ -129,6 +132,8 @@ export const translations = {
       showLess: "Voir moins",
       calendar: "Calendly",
       bookSession: "Réserver une Session",
+      loading: "Chargement...",
+      viewAllArticles: "Voir tous les articles",
     },
     mentorship: {
       title: "Mentorat & Coaching",
@@ -187,12 +192,13 @@ export const translations = {
       filterAll: "Tout",
       loadMore: "Voir plus",
       viewMore: "Voir plus",
+      description: "Découvrez mes moments marquants, événements et réalisations à travers cette collection d'images",
     },
   },
   ewe: {
     hero: {
       title: "AGBETSIASSI KODJO LABORE",
-      subtitle: "DevRel & Hamewo Tutu | Web3.js Ambassador Kplɔla",
+      subtitle: "DevRel & Hamewo Tutu | Africa Blockchain Habɔbɔ Kplɔla & ETHAfrique Kplɔla",
       description:
         "Melɔ̃a blockchain yeyewo, nusrɔ̃lawo fia mɔ kple Web3 hamewo tutu le Afrika. Mekpena ame ɖekaɖekawo kple dɔwɔƒewo be woazɔ mɔ si yi etsɔme si me decentralization le.",
       cta: "Kpɔ Dɔwɔnawo",
@@ -221,6 +227,8 @@ export const translations = {
       showLess: "Ɖe Suetɔwo",
       calendar: "Ɣeyiɣi Ɖoɖo",
       bookSession: "Ɖo Nusrɔ̃ɖoɖo",
+      loading: "Dɔwɔwɔ le edzi...",
+      viewAllArticles: "Kpɔ nyatakakawo katã",
     },
     mentorship: {
       title: "Mɔfiame & Hehe",
@@ -279,6 +287,7 @@ export const translations = {
       filterAll: "Katã",
       loadMore: "Kpɔ Bubuwo",
       viewMore: "Kpɔ Bubuwo",
+      description: "Kpɔ nye nu vevitɔwo, nuɖuɖuwo kple dzidzedzekpɔkpɔwo le nɔnɔmetatawo ƒe agbalẽ sia me",
     },
   },
 }

@@ -1,17 +1,18 @@
 "use client"
 
-import type React from "react"
+import type React, { ReactNode } from "react"
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowUpRight } from "lucide-react"
-import type { ReactNode } from "react"
 import { useRef } from "react"
+import { getTranslatedContent } from "@/lib/data"
+import type { Language } from "@/lib/translations"
 
 interface BentoCardProps {
-  title: string
-  description?: string
+  title: string | { [key in Language]: string }
+  description?: string | { [key in Language]: string }
   href?: string
   icon?: ReactNode
   badges?: string[]
@@ -19,6 +20,7 @@ interface BentoCardProps {
   children?: ReactNode
   size?: "sm" | "md" | "lg"
   engagement?: string
+  currentLang: Language
 }
 
 export function BentoCard({
@@ -31,6 +33,7 @@ export function BentoCard({
   children,
   size = "md",
   engagement,
+  currentLang,
 }: BentoCardProps) {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -132,7 +135,7 @@ export function BentoCard({
                 </motion.div>
               )}
               <motion.h3 className="font-semibold text-lg text-foreground" style={{ transform: "translateZ(20px)" }}>
-                {title}
+                {getTranslatedContent(title, currentLang)}
               </motion.h3>
             </div>
             {href && (
@@ -151,7 +154,7 @@ export function BentoCard({
 
           {description && (
             <motion.p className="text-muted-foreground text-sm mb-4 flex-1" style={{ transform: "translateZ(10px)" }}>
-              {description}
+              {getTranslatedContent(description, currentLang)}
             </motion.p>
           )}
 

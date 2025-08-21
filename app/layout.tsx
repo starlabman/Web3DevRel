@@ -1,6 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { DM_Sans } from "next/font/google"
+import { LanguageHtmlWrapper } from "./language-html-wrapper"
+
 import "./globals.css"
 
 const dmSans = DM_Sans({
@@ -22,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr" className={`${dmSans.variable} dark`}>
+    <html lang="fr" className={`${dmSans.variable} dark`}> {/* Keep original lang="fr" for initial render */}
       <head>
         <style>{`
 html {
@@ -31,7 +33,9 @@ html {
 }
         `}</style>
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <LanguageHtmlWrapper>{children}</LanguageHtmlWrapper>
+      </body>
     </html>
   )
 }
