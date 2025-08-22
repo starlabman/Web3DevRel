@@ -1,6 +1,6 @@
 "use client"
 
-import type React, { ReactNode } from "react"
+import React, { ReactNode } from "react"
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 import { Card } from "@/components/ui/card"

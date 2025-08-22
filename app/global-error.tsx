@@ -11,6 +11,9 @@ export default function GlobalError({
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  // Log error for debugging purposes
+  console.error('Global error occurred:', error)
+  
   return (
     <html>
       <body>

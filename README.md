@@ -1,6 +1,6 @@
-# Portfolio AGBETSIASSI KODJO LABORE
+# AGBETSIASSI KODJO LABORE - Portfolio Web3
 
-Portfolio professionnel moderne et responsive pour AGBETSIASSI KODJO LABORE, expert en Web3 et DevRel.
+Un portfolio moderne et responsive pour AGBETSIASSI KODJO LABORE, expert DevRel et écosystème builder dans l'espace Web3 et blockchain.
 
 ## 🚀 Fonctionnalités
 

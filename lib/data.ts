@@ -3,7 +3,7 @@
 import type { Language } from "./translations"
 
 // Translation helper function
-export const getTranslatedContent = (content: any, language: Language, fallback = "fr") => {
+export const getTranslatedContent = (content: string | Record<string, string> | undefined, language: Language, fallback = "fr") => {
   if (typeof content === "string") return content
   if (!content) return ""
   
@@ -968,57 +968,141 @@ export const galleryImages = [
   },
   {
     id: 2,
-    title: "Web3 Conference Keynote",
-    description: "Keynote presentation on Web3 adoption in emerging markets",
-    category: "Speaking",
+    title: {
+      fr: "Conférence Web3 - Présentation Principale",
+      en: "Web3 Conference Keynote",
+      ewe: "Web3 Nuƒoƒo - Nuƒoƒo Gã",
+    },
+    description: {
+      fr: "Présentation principale sur l'adoption Web3 dans les marchés émergents",
+      en: "Keynote presentation on Web3 adoption in emerging markets",
+      ewe: "Nuƒoƒo gã le Web3 ɖoɖo le nuƒoƒo yeyewo me",
+    },
+    category: {
+      fr: "Conférence",
+      en: "Speaking",
+      ewe: "Nuƒoƒo",
+    },
     imageUrl: "/web3-conference-speaking.png",
     date: "2024",
   },
   {
     id: 3,
-    title: "Ethereum Workshop Training",
-    description: "Hands-on Ethereum development workshop for university students",
-    category: "Speaking",
+    title: {
+      fr: "Formation Atelier Ethereum",
+      en: "Ethereum Workshop Training",
+      ewe: "Ethereum Dɔwɔƒe Nusrɔ̃ɖoɖo",
+    },
+    description: {
+      fr: "Atelier pratique de développement Ethereum pour les étudiants universitaires",
+      en: "Hands-on Ethereum development workshop for university students",
+      ewe: "Ethereum dɔwɔƒe nusrɔ̃ɖoɖo na sukulawo",
+    },
+    category: {
+      fr: "Conférence",
+      en: "Speaking",
+      ewe: "Nuƒoƒo",
+    },
     imageUrl: "/ethereum-workshop-training.png",
     date: "2024",
   },
   {
     id: 4,
-    title: "Africa Blockchain Summit",
-    description: "Panel discussion on blockchain infrastructure in Africa",
-    category: "Speaking",
+    title: {
+      fr: "Sommet Blockchain Afrique",
+      en: "Africa Blockchain Summit",
+      ewe: "Afrika Blockchain Nuƒoƒo Gã",
+    },
+    description: {
+      fr: "Discussion de panel sur l'infrastructure blockchain en Afrique",
+      en: "Panel discussion on blockchain infrastructure in Africa",
+      ewe: "Blockchain infrastructure nuƒoƒo le Afrika me",
+    },
+    category: {
+      fr: "Conférence",
+      en: "Speaking",
+      ewe: "Nuƒoƒo",
+    },
     imageUrl: "/africa-blockchain-summit.png",
     date: "2024",
   },
   {
     id: 5,
-    title: "DeFi Protocol Launch",
-    description: "Speaking at major DeFi protocol launch event",
-    category: "Speaking",
+    title: {
+      fr: "Lancement Protocole DeFi",
+      en: "DeFi Protocol Launch",
+      ewe: "DeFi Protocol ƒe Dɔwɔwɔ",
+    },
+    description: {
+      fr: "Intervention lors du lancement d'un protocole DeFi majeur",
+      en: "Speaking at major DeFi protocol launch event",
+      ewe: "DeFi protocol gã ƒe dɔwɔwɔ nuƒoƒo",
+    },
+    category: {
+      fr: "Conférence",
+      en: "Speaking",
+      ewe: "Nuƒoƒo",
+    },
     imageUrl: "/defi-protocol-launch.png",
     date: "2024",
   },
   {
     id: 6,
-    title: "Web3 Startup Pitch",
-    description: "Presenting Web3 startup ideas to investors",
-    category: "Speaking",
+    title: {
+      fr: "Présentation Startup Web3",
+      en: "Web3 Startup Pitch",
+      ewe: "Web3 Startup ƒe Nuƒoƒo",
+    },
+    description: {
+      fr: "Présentation d'idées de startups Web3 aux investisseurs",
+      en: "Presenting Web3 startup ideas to investors",
+      ewe: "Web3 startup susuwo nuƒoƒo na investorwo",
+    },
+    category: {
+      fr: "Conférence",
+      en: "Speaking",
+      ewe: "Nuƒoƒo",
+    },
     imageUrl: "/web3-startup-pitch.png",
     date: "2024",
   },
   {
     id: 7,
-    title: "Blockchain Security Conference",
-    description: "Speaking about smart contract security best practices",
-    category: "Speaking",
+    title: {
+      fr: "Conférence Sécurité Blockchain",
+      en: "Blockchain Security Conference",
+      ewe: "Blockchain Kɔkɔe Nuƒoƒo",
+    },
+    description: {
+      fr: "Intervention sur les meilleures pratiques de sécurité des smart contracts",
+      en: "Speaking about smart contract security best practices",
+      ewe: "Smart contract kɔkɔe nuƒoƒo",
+    },
+    category: {
+      fr: "Conférence",
+      en: "Speaking",
+      ewe: "Nuƒoƒo",
+    },
     imageUrl: "/blockchain-security-conference.png",
     date: "2024",
   },
   {
     id: 8,
-    title: "NFT Marketplace Workshop",
-    description: "Building NFT marketplaces from scratch",
-    category: "Speaking",
+    title: {
+      fr: "Atelier Marketplace NFT",
+      en: "NFT Marketplace Workshop",
+      ewe: "NFT Marketplace Dɔwɔƒe",
+    },
+    description: {
+      fr: "Construction de marketplaces NFT à partir de zéro",
+      en: "Building NFT marketplaces from scratch",
+      ewe: "NFT marketplace wɔwɔ le susu me",
+    },
+    category: {
+      fr: "Conférence",
+      en: "Speaking",
+      ewe: "Nuƒoƒo",
+    },
     imageUrl: "/nft-marketplace-workshop.png",
     date: "2024",
   },

@@ -13,6 +13,8 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { useLoadMore } from "@/hooks/use-load-more"
 import { useTranslation } from "@/hooks/use-translation"
+import { PerformanceOptimizer } from "@/components/performance-optimizer"
+import { AccessibilityEnhancer } from "@/components/accessibility-enhancer"
 import {
   Code2,
   Twitter,
@@ -48,10 +50,16 @@ export default function HomePage() {
           return result
         }
         // If result is an object or not a valid string, return a fallback
-        console.warn(`Translation missing or invalid for key: ${key}`)
+        // Silently handle missing translations in production
+        if (process.env.NODE_ENV === 'development') {
+          console.warn(`Translation missing or invalid for key: ${key}`)
+        }
         return key.split(".").pop() || key // Return last part of key as fallback
       } catch (error) {
-        console.error(`Error getting translation for key: ${key}`, error)
+        // Silently handle translation errors in production
+        if (process.env.NODE_ENV === 'development') {
+          console.error(`Error getting translation for key: ${key}`, error)
+        }
         return key.split(".").pop() || key
       }
     }
@@ -84,12 +92,13 @@ export default function HomePage() {
 
   return (
     <LanguageProvider value={{ language: currentLang, setLanguage: setCurrentLang }}>
-      <div className="min-h-screen">
-        <Navigation />
+      <AccessibilityEnhancer>
+        <div className="min-h-screen" id="main-content">
+          <Navigation />
 
-        <div className="fixed top-4 right-4 z-50">
-          <LanguageSwitcher currentLang={currentLang} onLanguageChange={(lang) => setCurrentLang(lang as Language)} />
-        </div>
+          <div className="fixed top-4 right-4 z-50">
+            <LanguageSwitcher currentLang={currentLang} onLanguageChange={(lang) => setCurrentLang(lang as Language)} />
+          </div>
 
         {/* Hero Section */}
         <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 pt-20">
@@ -605,7 +614,9 @@ export default function HomePage() {
               </motion.p>
             </motion.div>
 
-            <Gallery images={galleryImages} />
+            <PerformanceOptimizer>
+              <Gallery images={galleryImages} />
+            </PerformanceOptimizer>
           </div>
         </section>
 
@@ -666,6 +677,7 @@ export default function HomePage() {
           </div>
         </footer>
       </div>
+      </AccessibilityEnhancer>
     </LanguageProvider>
   )
 }

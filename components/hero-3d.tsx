@@ -5,11 +5,11 @@ import { OrbitControls, Sphere, MeshDistortMaterial, Float, Html } from "@react-
 import { useRef, useMemo, Suspense } from "react"
 import { motion } from "framer-motion"
 import { TextureLoader } from "three"
+import Image from "next/image"
 import type * as THREE from "three"
 
 function AnimatedSphere() {
   const meshRef = useRef<THREE.Mesh>(null)
-  const materialRef = useRef<any>(null)
 
   const profileTexture = useLoader(TextureLoader, "/kodjo-labore-profile.png")
 
@@ -18,21 +18,16 @@ function AnimatedSphere() {
       const scale = 2.5 + Math.sin(state.clock.elapsedTime * 1.5) * 0.1
       meshRef.current.scale.setScalar(scale)
     }
-
-    if (materialRef.current) {
-      materialRef.current.distort = 0.2 + Math.sin(state.clock.elapsedTime * 1.2) * 0.1
-    }
   })
 
   return (
     <Float speed={2} rotationIntensity={0} floatIntensity={1}>
       <Sphere ref={meshRef} args={[1, 64, 64]} scale={2.5}>
         <MeshDistortMaterial
-          ref={materialRef}
           map={profileTexture}
           color="#8b5cf6"
           attach="material"
-          distort={0.2}
+          distort={0.2 + Math.sin(Date.now() * 0.001 * 1.2) * 0.1}
           speed={1.5}
           roughness={0.2}
           metalness={0.1}
@@ -74,6 +69,7 @@ function SimpleParticleField() {
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"
+          args={[particlesPosition, 3]}
           count={particlesPosition.length / 3}
           array={particlesPosition}
           itemSize={3}
@@ -161,12 +157,12 @@ function BlockchainLogos() {
                     target.style.boxShadow = `0 0 15px ${logo.color}40, inset 0 0 10px rgba(255,255,255,0.1)`
                   }}
                 >
-                  <img
+                  <Image
                     src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${logo.id}.png`}
                     alt={logo.name}
+                    width={22}
+                    height={22}
                     style={{
-                      width: "22px",
-                      height: "22px",
                       objectFit: "contain",
                     }}
                     onError={(e) => {

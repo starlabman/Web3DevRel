@@ -7,7 +7,7 @@ export const size = {
   height: 32,
 }
 
-export const contentType = 'image/png'
+export const contentType = 'image/x-icon'
 
 export default function Icon() {
   return new ImageResponse(
@@ -35,4 +35,3 @@ export default function Icon() {
     }
   )
 }
-
