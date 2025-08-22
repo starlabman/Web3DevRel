@@ -2,7 +2,7 @@
 
 import { Canvas, useFrame, useLoader } from "@react-three/fiber"
 import { OrbitControls, Sphere, MeshDistortMaterial, Float, Html } from "@react-three/drei"
-import { useRef, useMemo, Suspense } from "react"
+import { useRef, useMemo, Suspense, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { TextureLoader } from "three"
 import Image from "next/image"
@@ -197,7 +197,30 @@ function BlockchainLogos() {
   )
 }
 
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: typeof window !== 'undefined' ? window.innerWidth : 1024,
+    height: typeof window !== 'undefined' ? window.innerHeight : 768,
+  })
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      })
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  return windowSize
+}
+
 export function Hero3D() {
+  const { width } = useWindowSize()
+  
   return (
     <motion.div
       className="w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px]"
@@ -207,7 +230,7 @@ export function Hero3D() {
     >
       <Suspense fallback={<div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-blue-900/20" />}>
         <Canvas
-          camera={{ position: [0, 0, 6], fov: window.innerWidth < 768 ? 85 : 75 }}
+          camera={{ position: [0, 0, 6], fov: width < 768 ? 85 : 75 }}
           style={{ background: "transparent" }}
           gl={{ antialias: true, alpha: true }}
         >

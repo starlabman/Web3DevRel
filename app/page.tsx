@@ -570,6 +570,7 @@ export default function HomePage() {
                     </div>
                   </BentoCard>
                 </motion.div>
+                
               </motion.div>
           </div>
         </section>

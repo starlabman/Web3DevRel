@@ -1043,7 +1043,7 @@ export const galleryImages = [
       en: "Speaking",
       ewe: "Nuƒoƒo",
     },
-    imageUrl: "/defi-protocol-launch.png",
+    imageUrl: "/defi-masterclass-session.png",
     date: "2024",
   },
   {
@@ -1063,7 +1063,7 @@ export const galleryImages = [
       en: "Speaking",
       ewe: "Nuƒoƒo",
     },
-    imageUrl: "/web3-startup-pitch.png",
+    imageUrl: "/web3-ambassador-program.png",
     date: "2024",
   },
   {
@@ -1083,7 +1083,7 @@ export const galleryImages = [
       en: "Speaking",
       ewe: "Nuƒoƒo",
     },
-    imageUrl: "/blockchain-security-conference.png",
+    imageUrl: "/blockchain-security-smart-contract-presentation.png",
     date: "2024",
   },
   {
@@ -1103,7 +1103,7 @@ export const galleryImages = [
       en: "Speaking",
       ewe: "Nuƒoƒo",
     },
-    imageUrl: "/nft-marketplace-workshop.png",
+    imageUrl: "/smart-contract-workshop.png",
     date: "2024",
   },
   {
