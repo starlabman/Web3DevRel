@@ -2,10 +2,7 @@
 const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
-    instrumentationHook: false,
   },
-  // Disable tracing to avoid permission issues
-  tracing: false,
   images: {
     remotePatterns: [
       {

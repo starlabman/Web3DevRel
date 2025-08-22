@@ -40,6 +40,9 @@ export const translations = {
       bookSession: "Book Session",
       loading: "Loading...",
       viewAllArticles: "View all articles",
+      viewAllProjects: "View all projects",
+      viewAllPosts: "View all posts",
+      viewAllThreads: "View all threads",
     },
     mentorship: {
       title: "Mentorship & Coaching",
@@ -148,6 +151,9 @@ export const translations = {
       bookSession: "Réserver une Session",
       loading: "Chargement...",
       viewAllArticles: "Voir tous les articles",
+      viewAllProjects: "Voir tous les projets",
+      viewAllPosts: "Voir tous les posts",
+      viewAllThreads: "Voir tous les threads",
     },
     mentorship: {
       title: "Mentorat & Coaching",
@@ -256,6 +262,9 @@ export const translations = {
       bookSession: "Session ƒe Agbalẽ",
       loading: "Gbɔgblɔ...",
       viewAllArticles: "Nyatakakawo katã kpɔɖeŋu",
+      viewAllProjects: "Dɔwɔwɔwo katã kpɔɖeŋu",
+      viewAllPosts: "Posts katã kpɔɖeŋu",
+      viewAllThreads: "Threads katã kpɔɖeŋu",
     },
     mentorship: {
       title: "Mɔfiame & Kplɔla",

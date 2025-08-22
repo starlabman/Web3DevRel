@@ -8,7 +8,6 @@ import { BentoCard } from "@/components/bento-card"
 import { MentorshipSection } from "@/components/mentorship-section"
 import { Gallery } from "@/components/gallery"
 import { LanguageSwitcher } from "@/components/language-switcher"
-import { LoadMoreButton } from "@/components/load-more-button"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { useLoadMore } from "@/hooks/use-load-more"
@@ -68,22 +67,22 @@ export default function HomePage() {
   const projectsLoadMore = useLoadMore({
     items: allProjects,
     initialCount: 3,
-    loadMoreCount: 2,
+    loadMoreCount: 3,
   })
   const threadsLoadMore = useLoadMore({
     items: allThreads,
     initialCount: 3,
-    loadMoreCount: 2,
+    loadMoreCount: 3,
   })
   const postsLoadMore = useLoadMore({
     items: allPosts,
     initialCount: 3,
-    loadMoreCount: 2,
+    loadMoreCount: 3,
   })
   const articlesLoadMore = useLoadMore({
     items: importantArticles,
     initialCount: 3,
-    loadMoreCount: 2,
+    loadMoreCount: 3,
   })
 
   const { scrollYProgress } = useScroll()
@@ -380,16 +379,37 @@ export default function HomePage() {
                           </div>
                         </motion.div>
                       ))}
-                      <LoadMoreButton
-                        onClick={projectsLoadMore.loadMore}
-                        hasMore={projectsLoadMore.hasMore}
-                        remainingCount={projectsLoadMore.remainingCount}
-                        onUnload={projectsLoadMore.unload}
-                        canUnload={projectsLoadMore.canUnload}
-                        loadMoreText={safeT("buttons.loadMore")}
-                        showLessText={safeT("buttons.showLess")}
-                        redirectText={safeT("buttons.viewAllArticles")}
-                      />
+                      <div className="pt-4 text-center">
+                        {projectsLoadMore.hasMore ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={projectsLoadMore.loadMore}
+                          >
+                            {safeT("buttons.loadMore")} ({projectsLoadMore.remainingCount})
+                          </Button>
+                        ) : projectsLoadMore.canUnload ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={projectsLoadMore.unload}
+                          >
+                            {safeT("buttons.showLess")}
+                          </Button>
+                        ) : (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={() => window.open('https://github.com/starlabman', '_blank')}
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            {safeT("buttons.viewAllProjects")}
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </BentoCard>
                 </motion.div>
@@ -433,16 +453,37 @@ export default function HomePage() {
                           </div>
                         </motion.a>
                       ))}
-                      <LoadMoreButton
-                        onClick={articlesLoadMore.loadMore}
-                        hasMore={articlesLoadMore.hasMore}
-                        remainingCount={articlesLoadMore.remainingCount}
-                        onUnload={articlesLoadMore.unload}
-                        canUnload={articlesLoadMore.canUnload}
-                        loadMoreText={safeT("buttons.loadMore")}
-                        showLessText={safeT("buttons.showLess")}
-                        redirectText={safeT("buttons.viewAllArticles")}
-                      />
+                      <div className="pt-4 text-center">
+                        {articlesLoadMore.hasMore ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={articlesLoadMore.loadMore}
+                          >
+                            {safeT("buttons.loadMore")} ({articlesLoadMore.remainingCount})
+                          </Button>
+                        ) : articlesLoadMore.canUnload ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={articlesLoadMore.unload}
+                          >
+                            {safeT("buttons.showLess")}
+                          </Button>
+                        ) : (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={() => window.open('https://starlabman.hashnode.dev', '_blank')}
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            {safeT("buttons.viewAllArticles")}
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </BentoCard>
                 </motion.div>
@@ -480,16 +521,37 @@ export default function HomePage() {
                           </div>
                         </motion.a>
                       ))}
-                      <LoadMoreButton
-                        onClick={postsLoadMore.loadMore}
-                        hasMore={postsLoadMore.hasMore}
-                        remainingCount={postsLoadMore.remainingCount}
-                        onUnload={postsLoadMore.unload}
-                        canUnload={postsLoadMore.canUnload}
-                        loadMoreText={safeT("buttons.loadMore")}
-                        showLessText={safeT("buttons.showLess")}
-                        redirectText={safeT("buttons.viewAllArticles")}
-                      />
+                      <div className="pt-4 text-center">
+                        {postsLoadMore.hasMore ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={postsLoadMore.loadMore}
+                          >
+                            {safeT("buttons.loadMore")} ({postsLoadMore.remainingCount})
+                          </Button>
+                        ) : postsLoadMore.canUnload ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={postsLoadMore.unload}
+                          >
+                            {safeT("buttons.showLess")}
+                          </Button>
+                        ) : (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={() => window.open('https://www.linkedin.com/in/starlabman', '_blank')}
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            {safeT("buttons.viewAllPosts")}
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </BentoCard>
                 </motion.div>
@@ -523,16 +585,37 @@ export default function HomePage() {
                           </Badge>
                         </motion.a>
                       ))}
-                      <LoadMoreButton
-                        onClick={threadsLoadMore.loadMore}
-                        hasMore={threadsLoadMore.hasMore}
-                        remainingCount={threadsLoadMore.remainingCount}
-                        onUnload={threadsLoadMore.unload}
-                        canUnload={threadsLoadMore.canUnload}
-                        loadMoreText={safeT("buttons.loadMore")}
-                        showLessText={safeT("buttons.showLess")}
-                        redirectText={safeT("buttons.viewAllArticles")}
-                      />
+                      <div className="pt-4 text-center">
+                        {threadsLoadMore.hasMore ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={threadsLoadMore.loadMore}
+                          >
+                            {safeT("buttons.loadMore")} ({threadsLoadMore.remainingCount})
+                          </Button>
+                        ) : threadsLoadMore.canUnload ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={threadsLoadMore.unload}
+                          >
+                            {safeT("buttons.showLess")}
+                          </Button>
+                        ) : (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-white/20 hover:bg-white/10 bg-transparent"
+                            onClick={() => window.open('https://x.com/0xWeb3DevRel', '_blank')}
+                          >
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            {safeT("buttons.viewAllThreads")}
+                          </Button>
+                        )}
+                      </div>
                     </div>
                   </BentoCard>
                 </motion.div>
