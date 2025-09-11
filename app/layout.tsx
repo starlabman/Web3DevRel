@@ -96,7 +96,7 @@ export default function RootLayout({
         <SkipLink />
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

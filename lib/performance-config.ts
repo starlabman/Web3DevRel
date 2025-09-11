@@ -80,7 +80,7 @@ export const PERFORMANCE_METRICS = {
 // Performance utilities
 export const performanceUtils = {
   // Debounce function
-  debounce: <T extends (...args: any[]) => any>(
+  debounce: <T extends (...args: unknown[]) => void>(
     func: T,
     wait: number
   ): ((...args: Parameters<T>) => void) => {
@@ -92,7 +92,7 @@ export const performanceUtils = {
   },
   
   // Throttle function
-  throttle: <T extends (...args: any[]) => any>(
+  throttle: <T extends (...args: unknown[]) => void>(
     func: T,
     limit: number
   ): ((...args: Parameters<T>) => void) => {
@@ -115,7 +115,7 @@ export const performanceUtils = {
   // Check if user is on a slow connection
   isSlowConnection: (): boolean => {
     if (typeof navigator === 'undefined') return false
-    const connection = (navigator as any).connection
+    const connection = (navigator as unknown as { connection?: { effectiveType?: string } }).connection
     return connection?.effectiveType === 'slow-2g' || 
            connection?.effectiveType === '2g' ||
            connection?.effectiveType === '3g'

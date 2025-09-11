@@ -44,12 +44,12 @@ export function ImageWithFallback({
     <Image
       src={src}
       alt={alt}
-      width={width}
-      height={height}
-      fill={fill}
+      {...(width !== undefined ? { width } : {})}
+      {...(height !== undefined ? { height } : {})}
+      {...(fill ? { fill } : {})}
       className={className}
-      sizes={sizes}
-      priority={priority}
+      {...(sizes !== undefined ? { sizes } : {})}
+      {...(priority ? { priority } : {})}
       onError={() => setHasError(true)}
     />
   )

@@ -71,6 +71,7 @@ export function Gallery({ images }: GalleryProps) {
     setImageErrors(prev => new Set(prev).add(imageId))
   }
 
+
   const handleImageClick = (image: GalleryImage) => {
     setSelectedImage(image)
   }
@@ -131,33 +132,35 @@ export function Gallery({ images }: GalleryProps) {
                   </div>
                 </div>
               ) : (
-                <Image
-                  src={image.imageUrl}
-                  alt={getTranslatedContent(image.title, language)}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  onError={() => handleImageError(image.id)}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                />
-              )}
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                <div className="p-4 w-full">
-                  <h3 className="text-white font-semibold text-sm mb-1 line-clamp-1">
-                    {getTranslatedContent(image.title, language)}
-                  </h3>
-                  <p className="text-white/80 text-xs line-clamp-2">
-                    {getTranslatedContent(image.description, language)}
-                  </p>
-                  <div className="flex items-center justify-between mt-2">
-                    <Badge variant="secondary" className="text-xs">
-                      {getTranslatedContent(image.category, language)}
-                    </Badge>
-                    <span className="text-white/60 text-xs">{image.date}</span>
+                <>
+                  <Image
+                    src={image.imageUrl}
+                    alt={getTranslatedContent(image.title, language)}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    onError={() => handleImageError(image.id)}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  />
+                  
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-4 w-full">
+                      <h3 className="text-white font-semibold text-sm mb-1 line-clamp-1">
+                        {getTranslatedContent(image.title, language)}
+                      </h3>
+                      <p className="text-white/80 text-xs line-clamp-2">
+                        {getTranslatedContent(image.description, language)}
+                      </p>
+                      <div className="flex items-center justify-between mt-2">
+                        <Badge variant="secondary" className="text-xs">
+                          {getTranslatedContent(image.category, language)}
+                        </Badge>
+                        <span className="text-white/60 text-xs">{image.date}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+                </>
+              )}
             </motion.div>
           </motion.div>
         ))}

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from 'react'
+import NextImage from 'next/image'
 import { useInView } from 'framer-motion'
 
 interface PerformanceOptimizerProps {
@@ -32,8 +33,8 @@ export function PerformanceOptimizer({
       ]
       
       preloadImages.forEach(src => {
-        const img = new Image()
-        img.src = src
+        const img = typeof window !== 'undefined' ? new window.Image() : null
+        if (img) img.src = src
       })
     }
   }, [isInView])
@@ -72,16 +73,15 @@ export function LazyLoadImage({
   return (
     <div ref={ref} className={className}>
       {isInView ? (
-        <img
+        <NextImage
           src={src}
           alt={alt}
           width={width}
           height={height}
-          loading={priority ? "eager" : "lazy"}
+          priority={priority}
           className="w-full h-full object-cover rounded-lg"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement
-            target.src = '/placeholder.jpg'
+          onError={() => {
+            /* no-op with next/image; consider placeholder prop */
           }}
         />
       ) : (
