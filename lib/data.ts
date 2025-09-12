@@ -1007,13 +1007,12 @@ export const galleryImages = [
     imageUrl: "/ethsafari2025.jpg",
     date: "2025",
   },
-
   {
     id: 4,
     title: {
-      fr: "ETHSafari 2025 - Speaker",
-      en: "ETHSafari 2025 - Speaker",
-      ewe: "ETHSafari 2025 - Nuƒoƒola",
+      fr: "ETHAFrique 2025 - Speaker",
+      en: "ETHAFrique 2025 - Speaker",
+      ewe: "ETHAFrique 2025 - Nuƒoƒola",
     },
     description: {
       fr: "Africa's Largest ETH Event - DevRel & Ecosystem Builder",
@@ -1046,7 +1045,7 @@ export const galleryImages = [
       en: "Education",
       ewe: "Nusrɔ̃ɖoɖo",
     },
-    imageUrl: "/trezoracademy2025.jpg",
+    imageUrl: "/trezoracademylome2025.jpg",
     date: "2024",
   },
   {
@@ -1066,7 +1065,7 @@ export const galleryImages = [
       en: "Education",
       ewe: "Nusrɔ̃ɖoɖo",
     },
-    imageUrl: "/daytonatour2025.jpg",
+    imageUrl: "/daytonatourlome2025.jpg",
     date: "2024",
   },
   {
@@ -1086,7 +1085,7 @@ export const galleryImages = [
       en: "Education",
       ewe: "Nusrɔ̃ɖoɖo",
     },
-    imageUrl: "/ethafrique2025.jpg",
+    imageUrl: "/10yearseth.jpg",
     date: "2025",
   },
   {
@@ -1187,7 +1186,7 @@ export const galleryImages = [
       en: "Event",
       ewe: "Nuƒoƒo",
     },
-    imageUrl: "/ethafrique2025.jpg",
+    imageUrl: "/ethafriqueconf.jpg",
     date: "2024",
   },
 ]
