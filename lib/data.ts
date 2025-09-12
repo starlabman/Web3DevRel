@@ -83,8 +83,8 @@ export const mentorshipServices = [
       fr: "Introduction parfaite à la blockchain, Bitcoin et Web3 pour débutants complets",
       ewe: "Blockchain, Bitcoin, kple Web3 gɔmeɖeɖe nyui na ame yeyewo",
     },
-    duration: "4 sessions",
-    price: "€150/session",
+    duration: "4 weeks",
+    price: "150/month",
     features: [
       {
         en: "What is blockchain technology",
@@ -128,7 +128,7 @@ export const mentorshipServices = [
       ewe: "Crypto gakɔkɔ mɔ̃ɖaŋu nyui kple gakotoku dzikpɔkpɔ",
     },
     duration: "Ongoing",
-    price: "€300/month",
+    price: "$200/month",
     features: [
       {
         en: "Portfolio analysis & optimization",
@@ -172,7 +172,7 @@ export const mentorshipServices = [
       ewe: "Blockchain mɔ̃ɖaŋu wɔwɔ kple smart contract ŋɔŋlɔ",
     },
     duration: "3 months",
-    price: "€500/month",
+    price: "$500/month",
     features: [
       {
         en: "Smart contract development",
@@ -215,8 +215,8 @@ export const mentorshipServices = [
       fr: "Conseils non-techniques pour entrepreneurs et entreprises Web3",
       ewe: "Web3 dɔwɔlawo kple dɔwɔƒewo ƒe mɔfiame",
     },
-    duration: "2 months",
-    price: "€400/month",
+    duration: "3 months",
+    price: "$300/month",
     features: [
       {
         en: "Web3 business model design",
@@ -260,7 +260,7 @@ export const mentorshipServices = [
       ewe: "Web3 nusrɔ̃ɖoɖo blibo na dɔwɔƒe",
     },
     duration: "6-8 weeks",
-    price: "€1500/person",
+    price: "$1500/person",
     features: [
       {
         en: "Customized curriculum design",
@@ -946,7 +946,7 @@ export const achievements = [
 ]
 
 export const galleryImages = [
-  // Conférences (3 images)
+  // Conférences (4 images)
   {
     id: 1,
     title: {
@@ -1007,9 +1007,30 @@ export const galleryImages = [
     imageUrl: "/ethsafari2025.jpg",
     date: "2025",
   },
-  // Éducation (3 images)
+
   {
     id: 4,
+    title: {
+      fr: "ETHSafari 2025 - Speaker",
+      en: "ETHSafari 2025 - Speaker",
+      ewe: "ETHSafari 2025 - Nuƒoƒola",
+    },
+    description: {
+      fr: "Africa's Largest ETH Event - DevRel & Ecosystem Builder",
+      en: "Africa's Largest ETH Event - DevRel & Ecosystem Builder",
+      ewe: "Afrika ETH Nuƒoƒo Gãtɔ - DevRel & Nutome Wɔwɔla",
+    },
+    category: {
+      fr: "Conférence",
+      en: "Conference",
+      ewe: "Nuƒoƒo",
+    },
+    imageUrl: "/ethafrique2025.jpg",
+    date: "2025",
+  },
+  // Éducation (4 images)
+  {
+    id: 5,
     title: {
       fr: "Formation Blockchain - Éducation",
       en: "Blockchain Education Training",
@@ -1025,11 +1046,11 @@ export const galleryImages = [
       en: "Education",
       ewe: "Nusrɔ̃ɖoɖo",
     },
-    imageUrl: "/placeholder.jpg",
+    imageUrl: "/trezoracademy2025.jpg",
     date: "2024",
   },
   {
-    id: 5,
+    id: 6,
     title: {
       fr: "Atelier Web3 - Formation",
       en: "Web3 Workshop Training",
@@ -1045,11 +1066,11 @@ export const galleryImages = [
       en: "Education",
       ewe: "Nusrɔ̃ɖoɖo",
     },
-    imageUrl: "/placeholder.jpg",
+    imageUrl: "/daytonatour2025.jpg",
     date: "2024",
   },
   {
-    id: 6,
+    id: 7,
     title: {
       fr: "Communauté Blockchain Afrique",
       en: "Africa Blockchain Community",
@@ -1065,12 +1086,32 @@ export const galleryImages = [
       en: "Education",
       ewe: "Nusrɔ̃ɖoɖo",
     },
-    imageUrl: "/placeholder.jpg",
-    date: "2024",
+    imageUrl: "/ethafrique2025.jpg",
+    date: "2025",
   },
-  // Événements (3 images)
   {
-    id: 7,
+    id: 8,
+    title: {
+      fr: "Communauté Blockchain Afrique",
+      en: "Africa Blockchain Community",
+      ewe: "Afrika Blockchain Habɔbɔ",
+    },
+    description: {
+      fr: "Construction de la plus grande communauté blockchain d'Afrique",
+      en: "Building Africa's largest blockchain community",
+      ewe: "Afrika blockchain habɔbɔ gãtɔ wɔwɔ",
+    },
+    category: {
+      fr: "Éducation",
+      en: "Education",
+      ewe: "Nusrɔ̃ɖoɖo",
+    },
+    imageUrl: "/emmissionradio.jpg",
+    date: "2025",
+  },
+  // Événements (4 images)
+  {
+    id: 9,
     title: {
       fr: "Événement Blockchain - Networking",
       en: "Blockchain Event Networking",
@@ -1086,11 +1127,11 @@ export const galleryImages = [
       en: "Event",
       ewe: "Nuƒoƒo",
     },
-    imageUrl: "/placeholder.jpg",
-    date: "2024",
+    imageUrl: "/bitcoinpizzapartylome2025.jpg",
+    date: "2025",
   },
   {
-    id: 8,
+    id: 10,
     title: {
       fr: "Sommet Innovation Blockchain",
       en: "Blockchain Innovation Summit",
@@ -1106,11 +1147,11 @@ export const galleryImages = [
       en: "Event",
       ewe: "Nuƒoƒo",
     },
-    imageUrl: "/placeholder.jpg",
-    date: "2024",
+    imageUrl: "/trustwalletmeetuplome2025.jpg",
+    date: "2025",
   },
   {
-    id: 9,
+    id: 11,
     title: {
       fr: "Conférence Web3 - Présentation",
       en: "Web3 Conference Presentation",
@@ -1126,7 +1167,27 @@ export const galleryImages = [
       en: "Event",
       ewe: "Nuƒoƒo",
     },
-    imageUrl: "/placeholder.jpg",
+    imageUrl: "/ethafriquetourcalavi2025.jpg",
+    date: "2025",
+  },
+  {
+    id: 11,
+    title: {
+      fr: "Conférence Web3 - Présentation",
+      en: "Web3 Conference Presentation",
+      ewe: "Web3 Nuƒoƒo - Nuƒoƒo",
+    },
+    description: {
+      fr: "Présentation sur l'adoption Web3 dans les marchés émergents",
+      en: "Presentation on Web3 adoption in emerging markets",
+      ewe: "Web3 ɖoɖo nuƒoƒo le nuƒoƒo yeyewo me",
+    },
+    category: {
+      fr: "Événement",
+      en: "Event",
+      ewe: "Nuƒoƒo",
+    },
+    imageUrl: "/ethafrique2025.jpg",
     date: "2024",
   },
 ]
