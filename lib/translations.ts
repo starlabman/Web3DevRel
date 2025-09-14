@@ -100,7 +100,7 @@ export const translations = {
       title: "Professional Journey",
       subtitle: "Leading Web3 innovation across Africa",
       founder: "Founder - Africa Blockchain Community",
-      coverner: "Coverner - ETHAfrique - First Ethereum conference in francophone africa",
+      coverner: "Coverner - ETHAfrique - 1st Ethereum conf Fr Africa",
       devrel_expert: "DevRel ( Developer Relations) & Ecosystem Builder",
       ecosystem_builder: "Co-Founder, CEO & Backend Developer  - OrgaAfrica",
       web3_ambassador: "Prev Lead Web3.js Ambassador",
