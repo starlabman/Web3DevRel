@@ -92,6 +92,9 @@ export const translations = {
       technical_notes: "Technical Notes & Learnings",
       project_ideas: "Project Ideas & Brainstorm",
       key_contacts: "Key Contacts",
+      blockchain_education: "Intensive Blockchain Training",
+      community_building: "Web3 Community Building",
+      content_creation: "Educational Content Creation",
     },
     achievements: {
       title: "Professional Journey",
@@ -100,6 +103,9 @@ export const translations = {
       coverner: "Coverner - ETHAfrique",
       devrel_expert: "DevRel Expert",
       ecosystem_builder: "Ecosystem Builder",
+      web3_ambassador: "Lead Web3.js Ambassador",
+      cmo: "Chief Marketing Officer - IsyChain",
+      correspondent: "Blockchain Correspondent - WallCrypt",
     },
     contact: {
       title: "Let's Build Something Amazing Together",
@@ -204,6 +210,9 @@ export const translations = {
       technical_notes: "Notes Techniques & Apprentissages",
       project_ideas: "Idées de Projets & Brainstorming",
       key_contacts: "Contacts Clés",
+      blockchain_education: "Formation Blockchain Intensive",
+      community_building: "Construction de Communautés Web3",
+      content_creation: "Création de Contenu Éducatif",
     },
     achievements: {
       title: "Parcours Professionnel",
@@ -212,6 +221,9 @@ export const translations = {
       coverner: "Gouverneur - ETHAfrique",
       devrel_expert: "Expert DevRel",
       ecosystem_builder: "Constructeur d'Écosystème",
+      web3_ambassador: "Lead Ambassadeur Web3.js",
+      cmo: "Directeur Marketing - IsyChain",
+      correspondent: "Correspondant Blockchain - WallCrypt",
     },
     contact: {
       title: "Construisons Quelque Chose d'Incroyable Ensemble",
@@ -316,6 +328,9 @@ export const translations = {
       technical_notes: "Mɔ̃ɖaŋu Nyatakakawo & Nusrɔ̃lawo",
       project_ideas: "Dɔwɔwɔ ƒe Nukpɔkpɔwo & Brainstorm",
       key_contacts: "Nuƒoƒo Yeyewo",
+      blockchain_education: "Blockchain Nusrɔ̃ɖoɖo Sesẽ",
+      community_building: "Web3 Habɔbɔ Wɔwɔ",
+      content_creation: "Nusrɔ̃ɖoɖo Wɔwɔ Wɔwɔ",
     },
     achievements: {
       title: "Dɔwɔƒe Mɔzɔzɔ",
@@ -324,6 +339,9 @@ export const translations = {
       coverner: "Kplɔla - ETHAfrique",
       devrel_expert: "DevRel Mɔ̃ɖaŋu",
       ecosystem_builder: "Nutome Tutula",
+      web3_ambassador: "Web3.js Ambassador Kplɔla",
+      cmo: "Marketing Dɔwɔla Kplɔla - IsyChain",
+      correspondent: "Blockchain Nyaŋlɔla - WallCrypt",
     },
     contact: {
       title: "Miaɖe Nu Yeye Wɔwɔ Kple",

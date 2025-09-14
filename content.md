@@ -23,6 +23,7 @@ https://x.com/0xWeb3DevRel/status/1870902690714152964
 
 Linkedin's Post:
 
+https://www.linkedin.com/posts/starlabman_ethaccra-ethereum-web3africa-activity-7371879096919818240-A3Jq
 https://www.linkedin.com/posts/starlabman_3-people-3-countries-activity-7315744661485031425-gN1C?utm_source=share&utm_medium=member_desktop&rcm=ACoAACv4WO8B0loT1O-3Cuk_8LE4fQwmsFdDXz8
 https://www.linkedin.com/posts/starlabman_day1-day18-web3-activity-7300546249521324032-W3dD?utm_source=share&utm_medium=member_desktop&rcm=ACoAACv4WO8B0loT1O-3Cuk_8LE4fQwmsFdDXz8
 

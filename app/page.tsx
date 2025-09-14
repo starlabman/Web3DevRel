@@ -629,6 +629,9 @@ export default function HomePage() {
                       <p>{safeT("memo.technical_notes")}</p>
                       <p>{safeT("memo.project_ideas")}</p>
                       <p>{safeT("memo.key_contacts")}</p>
+                      <p>{safeT("memo.blockchain_education")}</p>
+                      <p>{safeT("memo.community_building")}</p>
+                      <p>{safeT("memo.content_creation")}</p>
                     </div>
                   </BentoCard>
                 </motion.div>
@@ -646,6 +649,9 @@ export default function HomePage() {
                       <p>{safeT("achievements.coverner")}</p>
                       <p>{safeT("achievements.devrel_expert")}</p>
                       <p>{safeT("achievements.ecosystem_builder")}</p>
+                      <p>{safeT("achievements.web3_ambassador")}</p>
+                      <p>{safeT("achievements.cmo")}</p>
+                      <p>{safeT("achievements.correspondent")}</p>
                     </div>
                   </BentoCard>
                 </motion.div>
