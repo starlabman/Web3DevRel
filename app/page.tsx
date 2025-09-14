@@ -7,7 +7,6 @@ import { Hero3D } from "@/components/hero-3d"
 import { BentoCard } from "@/components/bento-card"
 import { MentorshipSection } from "@/components/mentorship-section"
 import { Gallery } from "@/components/gallery"
-import { LanguageSwitcher } from "@/components/language-switcher"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { useLoadMore } from "@/hooks/use-load-more"
@@ -94,11 +93,7 @@ export default function HomePage() {
     <LanguageProvider value={{ language: currentLang, setLanguage: setCurrentLang }}>
       <AccessibilityEnhancer>
         <div className="min-h-screen" id="main-content">
-          <Navigation />
-
-          <div className="fixed top-4 right-4 z-50">
-            <LanguageSwitcher currentLang={currentLang} onLanguageChange={(lang) => setCurrentLang(lang as Language)} />
-          </div>
+          <Navigation currentLang={currentLang} onLanguageChange={(lang) => setCurrentLang(lang as Language)} />
 
         {/* Hero Section */}
         <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 pt-20">

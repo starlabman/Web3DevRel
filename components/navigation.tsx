@@ -2,15 +2,22 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Twitter, Mail, Menu, X } from "lucide-react"
+import { Github, Linkedin, Twitter, Mail, Menu, X, Globe } from "lucide-react"
 import { useTranslation } from "@/hooks/use-translation"
 import { useLanguage } from "@/components/language-switcher"
 import { useState } from "react"
+import { Language } from "@/lib/translations"
 
-export function Navigation() {
+interface NavigationProps {
+  currentLang: Language
+  onLanguageChange: (lang: Language) => void
+}
+
+export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
   const { language } = useLanguage()
   const { t } = useTranslation(language)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLangOpen, setIsLangOpen] = useState(false)
 
   const navItems = [
     { label: t("nav.home"), href: "#hero" },
@@ -27,12 +34,26 @@ export function Navigation() {
     { icon: Mail, href: "mailto:hello@0xweb3devrel.com", label: "Email" },
   ]
 
+  const languages = [
+    { code: "en", name: "English", flag: "🇺🇸" },
+    { code: "fr", name: "Français", flag: "🇫🇷" },
+    { code: "ewe", name: "Eʋegbe", flag: "🇹🇬" },
+  ]
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
   const closeMenu = () => {
     setIsMenuOpen(false)
+  }
+
+  const toggleLangMenu = () => {
+    setIsLangOpen(!isLangOpen)
+  }
+
+  const closeLangMenu = () => {
+    setIsLangOpen(false)
   }
 
   return (
@@ -65,7 +86,7 @@ export function Navigation() {
               ))}
             </div>
 
-            {/* Desktop Social Links */}
+            {/* Desktop Social Links & Language */}
             <div className="hidden md:flex items-center gap-2">
               {socialLinks.map((social) => (
                 <Button
@@ -80,6 +101,44 @@ export function Navigation() {
                   </a>
                 </Button>
               ))}
+              
+              {/* Language Switcher */}
+              <div className="relative">
+                <motion.button
+                  onClick={toggleLangMenu}
+                  className="flex items-center gap-1 px-3 py-2 rounded-full text-muted-foreground hover:text-primary hover:bg-primary/20 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Globe className="w-4 h-4" />
+                  <span className="text-sm font-medium">{languages.find((lang) => lang.code === currentLang)?.flag}</span>
+                </motion.button>
+
+                {isLangOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute top-full mt-2 right-0 bg-background/95 backdrop-blur-md border border-border rounded-lg overflow-hidden z-50 min-w-[120px]"
+                  >
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          onLanguageChange(lang.code as Language)
+                          closeLangMenu()
+                        }}
+                        className={`w-full px-4 py-2 text-left hover:bg-accent transition-colors flex items-center gap-3 ${
+                          currentLang === lang.code ? "bg-accent" : ""
+                        }`}
+                      >
+                        <span>{lang.flag}</span>
+                        <span className="text-sm">{lang.name}</span>
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -116,20 +175,60 @@ export function Navigation() {
                     <a href={item.href} onClick={closeMenu}>{item.label}</a>
                   </Button>
                 ))}
-                <div className="flex items-center gap-2 pt-2">
-                  {socialLinks.map((social) => (
-                    <Button
-                      key={social.label}
-                      variant="ghost"
-                      size="sm"
-                      asChild
-                      className="text-muted-foreground hover:text-primary hover:bg-primary/20"
+                <div className="flex items-center justify-between pt-2">
+                  <div className="flex items-center gap-2">
+                    {socialLinks.map((social) => (
+                      <Button
+                        key={social.label}
+                        variant="ghost"
+                        size="sm"
+                        asChild
+                        className="text-muted-foreground hover:text-primary hover:bg-primary/20"
+                      >
+                        <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                          <social.icon className="w-4 h-4" />
+                        </a>
+                      </Button>
+                    ))}
+                  </div>
+                  
+                  {/* Mobile Language Switcher */}
+                  <div className="relative">
+                    <motion.button
+                      onClick={toggleLangMenu}
+                      className="flex items-center gap-1 px-3 py-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/20 transition-colors"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                     >
-                      <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-                        <social.icon className="w-4 h-4" />
-                      </a>
-                    </Button>
-                  ))}
+                      <Globe className="w-4 h-4" />
+                      <span className="text-sm font-medium">{languages.find((lang) => lang.code === currentLang)?.flag}</span>
+                    </motion.button>
+
+                    {isLangOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute top-full mt-2 right-0 bg-background/95 backdrop-blur-md border border-border rounded-lg overflow-hidden z-50 min-w-[120px]"
+                      >
+                        {languages.map((lang) => (
+                          <button
+                            key={lang.code}
+                            onClick={() => {
+                              onLanguageChange(lang.code as Language)
+                              closeLangMenu()
+                            }}
+                            className={`w-full px-4 py-2 text-left hover:bg-accent transition-colors flex items-center gap-3 ${
+                              currentLang === lang.code ? "bg-accent" : ""
+                            }`}
+                          >
+                            <span>{lang.flag}</span>
+                            <span className="text-sm">{lang.name}</span>
+                          </button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
