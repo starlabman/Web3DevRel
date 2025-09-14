@@ -965,6 +965,7 @@ export const galleryImages = [
       ewe: "Nuƒoƒo",
     },
     imageUrl: "/onedev2025.jpg",
+    link: "https://x.com/_one_dev/status/1915363135512301920",
     date: "2025",
   },
   {
@@ -985,6 +986,7 @@ export const galleryImages = [
       ewe: "Nuƒoƒo",
     },
     imageUrl: "/web3lagosconference2025.jpg",
+    link: "https://x.com/Web3LagosCon/status/1953158740040991185",
     date: "2024",
   },
   {
@@ -1005,6 +1007,7 @@ export const galleryImages = [
       ewe: "Nuƒoƒo",
     },
     imageUrl: "/ethsafari2025.jpg",
+    link: "https://x.com/ETHSafari/status/1963874745176248710",
     date: "2025",
   },
   {
@@ -1025,6 +1028,7 @@ export const galleryImages = [
       ewe: "Nuƒoƒo",
     },
     imageUrl: "/ethafrique2025.jpg",
+    link: "https://x.com/0xWeb3DevRel/status/1924974335346737321",
     date: "2025",
   },
   // Éducation (4 images)
@@ -1046,6 +1050,7 @@ export const galleryImages = [
       ewe: "Nusrɔ̃ɖoɖo",
     },
     imageUrl: "/trezoracademylome2025.jpg",
+    link: "https://x.com/0xWeb3DevRel/status/1950949216374641087",
     date: "2024",
   },
   {
@@ -1066,6 +1071,7 @@ export const galleryImages = [
       ewe: "Nusrɔ̃ɖoɖo",
     },
     imageUrl: "/daytonatourlome2025.jpg",
+    link: "https://x.com/0xWeb3DevRel/status/1907107566120800357",
     date: "2024",
   },
   {
@@ -1086,6 +1092,7 @@ export const galleryImages = [
       ewe: "Nusrɔ̃ɖoɖo",
     },
     imageUrl: "/10yearseth.jpg",
+    link: "https://x.com/0xWeb3DevRel/status/1896894917492019596",
     date: "2025",
   },
   {
@@ -1106,6 +1113,7 @@ export const galleryImages = [
       ewe: "Nusrɔ̃ɖoɖo",
     },
     imageUrl: "/emmissionradio.jpg",
+    link: "https://x.com/0xWeb3DevRel/status/1950949216374641087",
     date: "2025",
   },
   // Événements (4 images)
@@ -1127,6 +1135,7 @@ export const galleryImages = [
       ewe: "Nuƒoƒo",
     },
     imageUrl: "/bitcoinpizzapartylome2025.jpg",
+    link: "https://x.com/0xWeb3DevRel/status/1926948041363271862",
     date: "2025",
   },
   {
@@ -1147,6 +1156,7 @@ export const galleryImages = [
       ewe: "Nuƒoƒo",
     },
     imageUrl: "/trustwalletmeetuplome2025.jpg",
+    link: "https://x.com/0xWeb3DevRel/status/1930007463723708674",
     date: "2025",
   },
   {
@@ -1167,10 +1177,11 @@ export const galleryImages = [
       ewe: "Nuƒoƒo",
     },
     imageUrl: "/ethafriquetourcalavi2025.jpg",
+    link: "https://x.com/0xWeb3DevRel/status/1950463537949618685",
     date: "2025",
   },
   {
-    id: 11,
+    id: 12,
     title: {
       fr: "Conférence Web3 - Présentation",
       en: "Web3 Conference Presentation",
@@ -1187,6 +1198,7 @@ export const galleryImages = [
       ewe: "Nuƒoƒo",
     },
     imageUrl: "/ethafriqueconf.jpg",
+    link: "https://x.com/0xWeb3DevRel/status/1950463537949618685",
     date: "2024",
   },
 ]

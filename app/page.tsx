@@ -51,6 +51,7 @@ export default function HomePage() {
         // If result is an object or not a valid string, return a fallback
         // Silently handle missing translations in production
         if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
           console.warn(`Translation missing or invalid for key: ${key}`)
         }
         return key.split(".").pop() || key // Return last part of key as fallback

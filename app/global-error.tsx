@@ -12,6 +12,7 @@ export default function GlobalError({
   reset: () => void
 }) {
   // Log error for debugging purposes
+  // eslint-disable-next-line no-console
   console.error('Global error occurred:', error)
   
   return (

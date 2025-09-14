@@ -43,6 +43,7 @@ export const translations = {
       viewAllProjects: "View all projects",
       viewAllPosts: "View all posts",
       viewAllThreads: "View all threads",
+      viewMore: "View More",
     },
     mentorship: {
       title: "Mentorship & Coaching",
@@ -154,6 +155,7 @@ export const translations = {
       viewAllProjects: "Voir tous les projets",
       viewAllPosts: "Voir tous les posts",
       viewAllThreads: "Voir tous les threads",
+      viewMore: "Voir plus",
     },
     mentorship: {
       title: "Mentorat & Coaching",
@@ -265,6 +267,7 @@ export const translations = {
       viewAllProjects: "Dɔwɔwɔwo katã kpɔɖeŋu",
       viewAllPosts: "Posts katã kpɔɖeŋu",
       viewAllThreads: "Threads katã kpɔɖeŋu",
+      viewMore: "Kpɔɖeŋu Gbɔgblɔ",
     },
     mentorship: {
       title: "Mɔfiame & Kplɔla",

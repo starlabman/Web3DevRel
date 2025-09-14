@@ -15,6 +15,7 @@ export default function Error({
   useEffect(() => {
     // Only log errors in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error(error)
     }
   }, [error])

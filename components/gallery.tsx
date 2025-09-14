@@ -17,6 +17,7 @@ interface GalleryImage {
   description: string | { [key in Language]: string }
   category: string | { [key in Language]: string }
   imageUrl: string
+  link?: string
   date: string
 }
 
@@ -246,9 +247,9 @@ export function Gallery({ images }: GalleryProps) {
                   <span className="text-sm text-muted-foreground">{selectedImage.date}</span>
                 </div>
                 <Button asChild>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href={selectedImage.link || "#"} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Voir plus
+                    {t("buttons.viewMore")}
                   </a>
                 </Button>
               </div>
