@@ -612,33 +612,6 @@ export const allThreads = [
   },
   {
     title: {
-      en: "Twitter Thread: Web3.js Ambassador Program Update",
-      fr: "Thread Twitter : Mise à Jour du Programme Ambassadeur Web3.js",
-      ewe: "Twitter Nya: Web3.js Ambassador Dɔwɔwɔ ƒe Nya Yeye",
-    },
-    href: "https://x.com/0xWeb3DevRel/status/1953526838514303405",
-    stat: "N/A",
-  },
-  {
-    title: {
-      en: "Twitter Thread: DeFi Opportunities in Emerging Markets",
-      fr: "Thread Twitter : Opportunités DeFi dans les Marchés Émergents",
-      ewe: "Twitter Nya: DeFi Mɔnukpɔkpɔwo ƒe Nya le Asia Dziŋɔwɔlawo Me",
-    },
-    href: "https://x.com/0xWeb3DevRel/status/1950968057146307037",
-    stat: "N/A",
-  },
-  {
-    title: {
-      en: "Twitter Thread: Blockchain Security Best Practices",
-      fr: "Thread Twitter : Meilleures Pratiques de Sécurité Blockchain",
-      ewe: "Twitter Nya: Blockchain Dzigbɔkpɔ Dɔwɔwɔ Nyuitɔwo ƒe Nya",
-    },
-    href: "https://x.com/0xWeb3DevRel/status/1948418868658995388",
-    stat: "N/A",
-  },
-  {
-    title: {
       en: "Twitter Thread: ETHAfrique Ecosystem Building",
       fr: "Thread Twitter : Construction de l'Écosystème ETHAfrique",
       ewe: "Twitter Nya: ETHAfrique Dɔwɔwɔ Fefe ƒe Nya",
@@ -648,47 +621,74 @@ export const allThreads = [
   },
   {
     title: {
-      en: "Twitter Thread: Smart Contract Development Techniques",
-      fr: "Thread Twitter : Techniques de Développement de Contrats Intelligents",
-      ewe: "Twitter Nya: Smart Contract Dɔwɔwɔ ƒe Nya",
+      en: "Twitter Thread: Web3 Education & Community Building",
+      fr: "Thread Twitter : Éducation Web3 & Construction de Communauté",
+      ewe: "Twitter Nya: Web3 Nusrɔ̃ɖoɖo & Hamewo Tutu ƒe Nya",
     },
-    href: "https://x.com/0xWeb3DevRel/status/1952081326544232745",
+    href: "https://x.com/0xWeb3DevRel/status/1910008213640016069",
     stat: "N/A",
   },
   {
     title: {
-      en: "Twitter Thread: Web3 Career Transition Guide",
-      fr: "Thread Twitter : Guide de Transition de Carrière Web3",
-      ewe: "Twitter Nya: Web3 Dɔwɔƒe Gbɔgblɔ Mɔfiame ƒe Nya",
+      en: "Twitter Thread: Blockchain Innovation in Africa",
+      fr: "Thread Twitter : Innovation Blockchain en Afrique",
+      ewe: "Twitter Nya: Blockchain Yeye le Afrika",
     },
-    href: "https://t.co/t5uO1F3b77",
+    href: "https://x.com/0xWeb3DevRel/status/1880238960980709520",
     stat: "N/A",
   },
   {
     title: {
-      en: "Twitter Thread: Blockchain Education & Community Building Strategies",
-      fr: "Thread Twitter : Éducation Blockchain & Stratégies de Construction de Communauté",
-      ewe: "Twitter Nya: Blockchain Nusrɔ̃ɖoɖo & Hamewo Tutu ƒe Nya",
+      en: "Twitter Thread: ETHSafari 2025 - Africa's Largest ETH Event",
+      fr: "Thread Twitter : ETHSafari 2025 - Le Plus Grand Événement ETH d'Afrique",
+      ewe: "Twitter Nya: ETHSafari 2025 - Afrika ETH Nuƒoƒo Gãtɔ",
     },
-    href: "https://x.com/0xWeb3DevRel/status/1939701646734290950",
+    href: "https://x.com/ETHSafari/status/1963874745176248710",
     stat: "N/A",
   },
   {
     title: {
-      en: "Twitter Thread: IsyChain Marketing Strategy",
-      fr: "Thread Twitter : Stratégie Marketing IsyChain",
-      ewe: "Twitter Nya: IsyChain Marketing ƒe Nya",
+      en: "Twitter Thread: ETHAfrique 2025 Speaker Announcement",
+      fr: "Thread Twitter : Annonce Speaker ETHAfrique 2025",
+      ewe: "Twitter Nya: ETHAfrique 2025 Speaker ƒe Nya",
+    },
+    href: "https://x.com/0xWeb3DevRel/status/1924974335346737321",
+    stat: "N/A",
+  },
+  {
+    title: {
+      en: "Twitter Thread: Blockchain Education & Training",
+      fr: "Thread Twitter : Éducation & Formation Blockchain",
+      ewe: "Twitter Nya: Blockchain Nusrɔ̃ɖoɖo & Nusrɔ̃ɖoɖo",
+    },
+    href: "https://x.com/0xWeb3DevRel/status/1950949216374641087",
+    stat: "N/A",
+  },
+  {
+    title: {
+      en: "Twitter Thread: Web3 Community Events & Meetups",
+      fr: "Thread Twitter : Événements & Meetups Communauté Web3",
+      ewe: "Twitter Nya: Web3 Habɔbɔ Nuƒoƒo & Meetups",
     },
     href: "https://x.com/0xWeb3DevRel/status/1930007463723708674",
     stat: "N/A",
   },
   {
     title: {
-      en: "Twitter Thread: Decentralized Solutions & IsyChain",
-      fr: "Thread Twitter : Solutions Décentralisées & IsyChain",
-      ewe: "Twitter Nya: Decentralized Dɔwɔwɔwo & IsyChain ƒe Nya",
+      en: "Twitter Thread: Blockchain Events & Networking",
+      fr: "Thread Twitter : Événements Blockchain & Networking",
+      ewe: "Twitter Nya: Blockchain Nuƒoƒo & Kpekpeɖeŋu",
     },
     href: "https://x.com/0xWeb3DevRel/status/1926948041363271862",
+    stat: "N/A",
+  },
+  {
+    title: {
+      en: "Twitter Thread: Web3 Education & Learning Path",
+      fr: "Thread Twitter : Éducation Web3 & Parcours d'Apprentissage",
+      ewe: "Twitter Nya: Web3 Nusrɔ̃ɖoɖo & Nusrɔ̃ɖoɖo Mɔzɔzɔ",
+    },
+    href: "https://x.com/0xWeb3DevRel/status/1907107566120800357",
     stat: "N/A",
   },
   {
@@ -702,11 +702,29 @@ export const allThreads = [
   },
   {
     title: {
-      en: "Twitter Thread: Web3 Investment Strategies",
-      fr: "Thread Twitter : Stratégies d'Investissement Web3",
-      ewe: "Twitter Nya: Web3 Gakɔkɔ Aɖaŋuɖoɖo ƒe Nya",
+      en: "Twitter Thread: Web3 Investment & Opportunities",
+      fr: "Thread Twitter : Investissement Web3 & Opportunités",
+      ewe: "Twitter Nya: Web3 Gakɔkɔ & Mɔnukpɔkpɔwo",
     },
     href: "https://x.com/0xWeb3DevRel/status/1895157668244754768",
+    stat: "N/A",
+  },
+  {
+    title: {
+      en: "Twitter Thread: Blockchain Development & Innovation",
+      fr: "Thread Twitter : Développement & Innovation Blockchain",
+      ewe: "Twitter Nya: Blockchain Dɔwɔwɔ & Yeye",
+    },
+    href: "https://x.com/0xWeb3DevRel/status/1887898662363160959",
+    stat: "N/A",
+  },
+  {
+    title: {
+      en: "Twitter Thread: Web3 Community Building Strategies",
+      fr: "Thread Twitter : Stratégies de Construction de Communauté Web3",
+      ewe: "Twitter Nya: Web3 Habɔbɔ Tutu ƒe Nya",
+    },
+    href: "https://x.com/0xWeb3DevRel/status/1870902690714152964",
     stat: "N/A",
   },
 ]
@@ -714,134 +732,106 @@ export const allThreads = [
 export const posts = [
   {
     title: {
-      en: "Lead of Web3.js Ambassadors - Building Developer Communities",
-      fr: "Lead des Ambassadeurs Web3.js - Construire des Communautés de Développeurs",
-      ewe: "Web3.js Ambassador Kplɔla - Nusrɔ̃la Hamewo Tutu",
+      en: "ETHAccra - Ethereum Web3 Africa Conference",
+      fr: "ETHAccra - Conférence Ethereum Web3 Afrique",
+      ewe: "ETHAccra - Ethereum Web3 Afrika Nuƒoƒo",
     },
-    href: "https://www.linkedin.com/posts/starlabman/",
+    href: "https://www.linkedin.com/posts/starlabman_ethaccra-ethereum-web3africa-activity-7371879096919818240-A3Jq",
     description: {
-      en: "Leading Web3.js ambassador program, producing bi-weekly educational videos and recruiting new ambassadors",
-      fr: "Diriger le programme ambassadeur Web3.js, produire des vidéos éducatives bihebdomadaires et recruter de nouveaux ambassadeurs",
-      ewe: "Web3.js ambassador dɔwɔwɔ kplɔla, videos kple tutorials wɔwɔ na nusrɔ̃la yeyewo",
+      en: "Participating in ETHAccra, one of Africa's premier Ethereum and Web3 conferences",
+      fr: "Participation à ETHAccra, l'une des principales conférences Ethereum et Web3 d'Afrique",
+      ewe: "ETHAccra me nuƒoƒo, Afrika Ethereum kple Web3 nuƒoƒo gãtɔwo dometɔ",
+    },
+    engagement: "150+ likes",
+  },
+  {
+    title: {
+      en: "3 People, 3 Countries - Web3 Global Impact",
+      fr: "3 Personnes, 3 Pays - Impact Mondial Web3",
+      ewe: "Ame 3, Dukɔ 3 - Web3 Global Impact",
+    },
+    href: "https://www.linkedin.com/posts/starlabman_3-people-3-countries-activity-7315744661485031425-gN1C",
+    description: {
+      en: "Showcasing the global reach and impact of Web3 education across different countries",
+      fr: "Mise en avant de la portée mondiale et de l'impact de l'éducation Web3 à travers différents pays",
+      ewe: "Web3 nusrɔ̃ɖoɖo ƒe global reach kple impact le dukɔ yeyewo me",
     },
     engagement: "120+ likes",
   },
   {
     title: {
-      en: "Chief Marketing Officer at IsyChain - Blockchain Solutions",
-      fr: "Directeur Marketing chez IsyChain - Solutions Blockchain",
-      ewe: "IsyChain Marketing Dɔwɔla Kplɔla - Blockchain Dɔwɔwɔwo",
+      en: "Day 1 to Day 18 - Web3 Learning Journey",
+      fr: "Jour 1 à Jour 18 - Parcours d'Apprentissage Web3",
+      ewe: "Ŋkeke 1 ɖe Ŋkeke 18 - Web3 Nusrɔ̃ɖoɖo Mɔzɔzɔ",
     },
-    href: "https://www.linkedin.com/posts/starlabman/",
+    href: "https://www.linkedin.com/posts/starlabman_day1-day18-web3-activity-7300546249521324032-W3dD",
     description: {
-      en: "Defining global marketing strategy and leading teams for decentralized industry solutions",
-      fr: "Définir la stratégie marketing mondiale et diriger des équipes pour les solutions industrielles décentralisées",
-      ewe: "Global marketing strategy ɖoɖo kple kplɔlawo na decentralized industry solutions",
-    },
-    engagement: "85+ likes",
-  },
-  {
-    title: {
-      en: "Blockchain Correspondent",
-      fr: "Correspondant Blockchain",
-      ewe: "Blockchain Nyaŋlɔla",
-    },
-    href: "https://www.linkedin.com/posts/starlabman/",
-    description: {
-      en: "Writing articles and conducting interviews with crypto industry experts",
-      fr: "Écrire des articles et mener des entretiens avec des experts de l'industrie crypto",
-      ewe: "Nyatakakawo ŋɔŋlɔ kple biabiawo wɔwɔ kple crypto industry experts",
-    },
-    engagement: "95+ likes",
-  },
-  {
-    title: {
-      en: "Binance Campus Ambassador Lead - Blockchain Education",
-      fr: "Lead Ambassadeur Campus Binance - Éducation Blockchain",
-      ewe: "Binance Campus Ambassador Kplɔla - Blockchain Nusrɔ̃ɖoɖo",
-    },
-    href: "https://www.linkedin.com/posts/starlabman/",
-    description: {
-      en: "Increasing blockchain adoption through education and awareness in Togo",
-      fr: "Augmenter l'adoption de la blockchain par l'éducation et la sensibilisation au Togo",
-      ewe: "Blockchain ƒe gbɔgblɔ kple nusrɔ̃ɖoɖo le Togo",
-    },
-    engagement: "150+ likes",
-  },
-]
-
-export const allPosts = [
-  ...posts,
-  {
-    title: {
-      en: "Web3 Developer Roadmap 2024 - Complete Guide",
-      fr: "Feuille de Route Développeur Web3 2024 - Guide Complet",
-      ewe: "Web3 Nusrɔ̃la Mɔzɔzɔ 2024 - Mɔfiame Blibo",
-    },
-    href: "https://www.linkedin.com/posts/starlabman/web3-roadmap-2024",
-    description: {
-      en: "Comprehensive roadmap for developers transitioning to Web3 with practical steps and resources",
-      fr: "Feuille de route complète pour les développeurs en transition vers le Web3 avec des étapes pratiques et des ressources",
-      ewe: "Nusrɔ̃lawo ƒe Web3 mɔzɔzɔ kple eƒe nuteƒekpɔkpɔwo",
-    },
-    engagement: "200+ likes",
-  },
-  {
-    title: {
-      en: "Building Africa's Largest Blockchain Community",
-      fr: "Construire la Plus Grande Communauté Blockchain d'Afrique",
-      ewe: "Afrika Blockchain Hamewo Tutu Gãtɔ",
-    },
-    href: "https://www.linkedin.com/posts/starlabman/africa-blockchain-community",
-    description: {
-      en: "Journey of building a 10,000+ member blockchain community across African countries",
-      fr: "Parcours de construction d'une communauté blockchain de plus de 10 000 membres à travers les pays africains",
-      ewe: "Afrika Blockchain Habɔbɔ: Nusrɔ̃lawo Kpekpe ɖe 10k+",
+      en: "Documenting the daily progress and learnings in Web3 development and education",
+      fr: "Documentation des progrès quotidiens et des apprentissages en développement et éducation Web3",
+      ewe: "Web3 dɔwɔwɔ kple nusrɔ̃ɖoɖo me ŋkeke ŋkeke dziɖuɖu kple nusrɔ̃lawo",
     },
     engagement: "180+ likes",
   },
   {
     title: {
-      en: "DeFi Investment Strategies for Emerging Markets",
-      fr: "Stratégies d'Investissement DeFi pour les Marchés Émergents",
-      ewe: "DeFi Gakɔkɔ Aɖaŋuɖoɖo na Asia Dziŋɔwɔlawo",
+      en: "Web3 Community Building & Lifelong Learning",
+      fr: "Construction de Communauté Web3 & Apprentissage Continu",
+      ewe: "Web3 Habɔbɔ Tutu & Nusrɔ̃ɖoɖo ƒe Mɔzɔzɔ",
     },
-    href: "https://www.linkedin.com/posts/starlabman/defi-investment-strategies",
+    href: "https://www.linkedin.com/posts/starlabman_web3-communitybuilding-lifelonglearning-activity-7277007166438334464-iAg4",
     description: {
-      en: "Risk management and investment approaches for DeFi protocols in developing economies",
-      fr: "Approches de gestion des risques et d'investissement pour les protocoles DeFi dans les économies en développement",
-      ewe: "Afɔku dzikpɔkpɔ kple gakɔkɔ ƒe aɖaŋuɖoɖowo na DeFi protocols le developing economies",
+      en: "Sharing insights on building strong Web3 communities and continuous learning",
+      fr: "Partage d'insights sur la construction de communautés Web3 solides et l'apprentissage continu",
+      ewe: "Web3 habɔbɔ gãtɔ tutu kple nusrɔ̃ɖoɖo ƒe mɔzɔzɔ gbɔgblɔ",
+    },
+    engagement: "200+ likes",
+  },
+  {
+    title: {
+      en: "Anniversary - Gratitude & Support",
+      fr: "Anniversaire - Gratitude & Soutien",
+      ewe: "Dzidzɔkuku - Akpe & Kpekpeɖeŋu",
+    },
+    href: "https://www.linkedin.com/posts/starlabman_anniversaire-gratitude-soutien-activity-7266778840872468480-T_4V",
+    description: {
+      en: "Celebrating milestones and expressing gratitude for community support",
+      fr: "Célébration des étapes importantes et expression de gratitude pour le soutien communautaire",
+      ewe: "Dzidzɔkuku ƒe kpɔɖeŋuwo kple akpe gbɔgblɔ na habɔbɔ ƒe kpekpeɖeŋu",
     },
     engagement: "160+ likes",
   },
   {
     title: {
-      en: "Smart Contract Security: Lessons from Major Hacks",
-      fr: "Sécurité des Contrats Intelligents : Leçons des Hacks Majeurs",
-      ewe: "Smart Contract Dzigbɔkpɔ: Hacks Gãtɔwo Gbɔgblɔ",
+      en: "Great News - Major Achievement Unlocked",
+      fr: "Excellente Nouvelle - Réussite Majeure Débloquée",
+      ewe: "Nya Yeye - Dzidzedzekpɔkpɔ Gãtɔ Wɔwɔ",
     },
-    href: "https://www.linkedin.com/posts/starlabman/smart-contract-security",
+    href: "https://www.linkedin.com/posts/starlabman_grande-nouvelle-je-viens-de-r%C3%A9aliser-activity-7230206683111690240-NdLL",
     description: {
-      en: "Analysis of major DeFi hacks and how to prevent common smart contract vulnerabilities",
-      fr: "Analyse des hacks DeFi majeurs et comment prévenir les vulnérabilités courantes des contrats intelligents",
-      ewe: "DeFi hacks gãtɔwo kple Smart Contract vulnerabilities gbɔgblɔ",
+      en: "Announcing a significant milestone in the Web3 and blockchain journey",
+      fr: "Annonce d'une étape importante dans le parcours Web3 et blockchain",
+      ewe: "Web3 kple blockchain mɔzɔzɔ me dzidzedzekpɔkpɔ gãtɔ ƒe nya",
     },
     engagement: "140+ likes",
   },
   {
     title: {
-      en: "The Rise of African Blockchain Startups",
-      fr: "L'Essor des Startups Blockchain Africaines",
-      ewe: "Afrika Blockchain Startups Dziɖuɖu",
+      en: "Binance Meetup Lomé - Blockchain Education",
+      fr: "Binance Meetup Lomé - Éducation Blockchain",
+      ewe: "Binance Meetup Lomé - Blockchain Nusrɔ̃ɖoɖo",
     },
-    href: "https://www.linkedin.com/posts/starlabman/african-blockchain-startups",
+    href: "https://www.linkedin.com/posts/starlabman_binancemeetuplome-binance-meetup-activity-7209154497812606976-2eVJ",
     description: {
-      en: "Spotlight on innovative blockchain startups emerging from the African continent",
-      fr: "Pleins feux sur les startups blockchain innovantes émergentes du continent africain",
-      ewe: "Afrika Blockchain Startups ƒe kpɔɖeŋuwo",
+      en: "Organizing and leading Binance meetup in Lomé for blockchain education",
+      fr: "Organisation et direction du meetup Binance à Lomé pour l'éducation blockchain",
+      ewe: "Binance meetup ƒe wɔwɔ kple kplɔla le Lomé na blockchain nusrɔ̃ɖoɖo",
     },
-    engagement: "220+ likes",
+    engagement: "190+ likes",
   },
+]
+
+export const allPosts = [
+  ...posts,
 ]
 
 export const achievements = [
@@ -1206,6 +1196,146 @@ export const galleryImages = [
 export const importantArticles = [
   {
     title: {
+      en: "Creating Your First Unique Digital Token: A Beginner's Guide to NFTs",
+      fr: "Créer Votre Premier Jeton Numérique Unique : Un Guide pour Débutants sur les NFTs",
+      ewe: "Digital Token Yeyewo Wɔwɔ: NFT Gɔmeɖeɖe na Ame Yeyewo",
+    },
+    description: {
+      en: "A beginner-friendly guide to understanding and creating Non-Fungible Tokens (NFTs).",
+      fr: "Un guide convivial pour les débutants afin de comprendre et créer des Tokens Non Fongibles (NFTs).",
+      ewe: "Mɔfiame bɔbɔe na ame yeyewo be woase gɔme kple woawɔ NFTs.",
+    },
+    href: "https://starlabman.hashnode.dev/creating-your-first-unique-digital-token-a-beginners-guide-to-nfts",
+    publishedAt: "N/A",
+    readTime: {
+      en: "8 min read",
+      fr: "8 min de lecture",
+      ewe: "Xlẽ miniti 8",
+    },
+    tags: ["NFTs", "Blockchain", "Beginner", "Digital Token"],
+  },
+  {
+    title: {
+      en: "My DevRel Uni Cohort 6 Journey: Learnings, Achievements, and Future Plans",
+      fr: "Mon Parcours DevRel Uni Cohort 6 : Apprentissages, Réussites et Plans d'Avenir",
+      ewe: "Nye DevRel Uni Cohort 6 Mɔzɔzɔ: Nusrɔ̃lawo, Dzidzedzekpɔkpɔwo, kple ɣeyiɣi Dɔwɔwɔwo",
+    },
+    description: {
+      en: "Reflecting on the DevRel University Cohort 6 experience and future goals.",
+      fr: "Réflexion sur l'expérience DevRel University Cohort 6 et les objectifs futurs.",
+      ewe: "DevRel University Cohort 6 ƒe nuŋlɔŋlɔ kple ɣeyiɣi dɔwɔwɔwo.",
+    },
+    href: "https://starlabman.hashnode.dev/my-devrel-uni-cohort-6-journey-learnings-achievements-and-future-plans",
+    publishedAt: "N/A",
+    readTime: {
+      en: "12 min read",
+      fr: "12 min de lecture",
+      ewe: "Xlẽ miniti 12",
+    },
+    tags: ["DevRel", "Education", "Career", "Blockchain"],
+  },
+  {
+    title: {
+      en: "Building a Scalable DApp on Arbitrum with Stylus: A Complete Guide",
+      fr: "Construire une DApp Évolutive sur Arbitrum avec Stylus : Guide Complet",
+      ewe: "Scalable DApp Wɔwɔ le Arbitrum Me Kple Stylus: Mɔfiame Blibo",
+    },
+    description: {
+      en: "Complete guide to building scalable decentralized applications on Arbitrum using Stylus.",
+      fr: "Guide complet pour construire des applications décentralisées évolutives sur Arbitrum avec Stylus.",
+      ewe: "Scalable decentralized applications wɔwɔ le Arbitrum me kple Stylus.",
+    },
+    href: "https://starlabman.hashnode.dev/building-a-scalable-dapp-on-arbitrum-with-stylus-a-complete-guide",
+    publishedAt: "N/A",
+    readTime: {
+      en: "15 min read",
+      fr: "15 min de lecture",
+      ewe: "Xlẽ miniti 15",
+    },
+    tags: ["Arbitrum", "Stylus", "DApp", "Blockchain", "Development"],
+  },
+  {
+    title: {
+      en: "My 30-60-90 Day Plan as a Developer Advocate at Arbitrum Foundation",
+      fr: "Mon Plan 30-60-90 Jours en tant que Developer Advocate chez Arbitrum Foundation",
+      ewe: "Nye 30-60-90 Ŋkeke Dɔwɔwɔ le Developer Advocate le Arbitrum Foundation Me",
+    },
+    description: {
+      en: "Strategic plan for the first 90 days as a Developer Advocate at Arbitrum Foundation.",
+      fr: "Plan stratégique pour les 90 premiers jours en tant que Developer Advocate chez Arbitrum Foundation.",
+      ewe: "Strategic plan na 90 ŋkeke yeyewo le Developer Advocate le Arbitrum Foundation me.",
+    },
+    href: "https://starlabman.hashnode.dev/my-30-60-90-day-plan-as-a-developer-advocate-at-arbitrum-foundation",
+    publishedAt: "N/A",
+    readTime: {
+      en: "10 min read",
+      fr: "10 min de lecture",
+      ewe: "Xlẽ miniti 10",
+    },
+    tags: ["Arbitrum", "Developer Advocate", "Career", "Strategy"],
+  },
+  {
+    title: {
+      en: "Innovative Proposals to Educate and Engage Developers with Arbitrum and Stylus",
+      fr: "Propositions Innovantes pour Éduquer et Engager les Développeurs avec Arbitrum et Stylus",
+      ewe: "Yeye Dɔwɔwɔwo na Nusrɔ̃lawo Nusrɔ̃ɖoɖo kple Kpekpeɖeŋu kple Arbitrum kple Stylus",
+    },
+    description: {
+      en: "Creative strategies to educate and engage developers in the Arbitrum and Stylus ecosystem.",
+      fr: "Stratégies créatives pour éduquer et engager les développeurs dans l'écosystème Arbitrum et Stylus.",
+      ewe: "Creative strategies na nusrɔ̃lawo nusrɔ̃ɖoɖo kple kpekpeɖeŋu le Arbitrum kple Stylus nutome me.",
+    },
+    href: "https://starlabman.hashnode.dev/innovative-proposals-to-educate-and-engage-developers-with-arbitrum-and-stylus",
+    publishedAt: "N/A",
+    readTime: {
+      en: "14 min read",
+      fr: "14 min de lecture",
+      ewe: "Xlẽ miniti 14",
+    },
+    tags: ["Arbitrum", "Stylus", "Education", "Developer Engagement"],
+  },
+  {
+    title: {
+      en: "What is Developer Relations?",
+      fr: "Qu'est-ce que les Relations Développeurs ?",
+      ewe: "Nuka Wɔlawo ƒe Kpekpeɖeŋu?",
+    },
+    description: {
+      en: "Understanding the role and importance of Developer Relations in the tech industry.",
+      fr: "Comprendre le rôle et l'importance des Relations Développeurs dans l'industrie tech.",
+      ewe: "Developer Relations ƒe nuŋlɔŋlɔ kple eƒe yeye le tech industry me.",
+    },
+    href: "https://starlabman.hashnode.dev/what-is-developer-relations",
+    publishedAt: "N/A",
+    readTime: {
+      en: "6 min read",
+      fr: "6 min de lecture",
+      ewe: "Xlẽ miniti 6",
+    },
+    tags: ["DevRel", "Developer Relations", "Tech", "Community"],
+  },
+  {
+    title: {
+      en: "Smart Contracts",
+      fr: "Contrats Intelligents",
+      ewe: "Smart Contracts",
+    },
+    description: {
+      en: "Understanding the fundamentals of smart contracts and their applications.",
+      fr: "Comprendre les fondamentaux des contrats intelligents et leurs applications.",
+      ewe: "Smart contracts ƒe gɔmesese kple eƒe dɔwɔwɔwo.",
+    },
+    href: "https://starlabman.hashnode.dev/smart-contracts",
+    publishedAt: "N/A",
+    readTime: {
+      en: "7 min read",
+      fr: "7 min de lecture",
+      ewe: "Xlẽ miniti 7",
+    },
+    tags: ["Smart Contracts", "Blockchain", "Development"],
+  },
+  {
+    title: {
       en: "What is Open Source?",
       fr: "Qu'est-ce que l'Open Source?",
       ewe: "Nuka Wɔlawo Gbɔŋlɔ Ƒe Nuwo?",
@@ -1238,151 +1368,11 @@ export const importantArticles = [
     href: "https://starlabman.hashnode.dev/to-do-list-blockchain-dapp-avec-nextjs-solidity-web3js-tutoriel-pas-a-pas",
     publishedAt: "N/A",
     readTime: {
-      en: "N/A",
-      fr: "N/A",
-      ewe: "N/A",
+      en: "20 min read",
+      fr: "20 min de lecture",
+      ewe: "Xlẽ miniti 20",
     },
     tags: ["Blockchain", "DApp", "Next.js", "Solidity", "Web3.js"],
-  },
-  {
-    title: {
-      en: "Non-Tech: Navigating the Web3 Space for Non-Technical Professionals",
-      fr: "Non-Tech : Naviguer dans l'Espace Web3 pour les Professionnels Non-Techniques",
-      ewe: "Non-Tech: Web3 Nutiwɔwɔ na Mɔ̃ɖaŋu Meguwo",
-    },
-    description: {
-      en: "A guide for non-technical individuals to understand and thrive in the Web3 ecosystem.",
-      fr: "Un guide pour les individus non-techniques afin de comprendre et prospérer dans l'écosystème Web3.",
-      ewe: "Mɔfiame na mɔ̃ɖaŋu meguwo be woase gɔme kple woawɔ dɔ nyuie le Web3 nutome.",
-    },
-    href: "https://starlabman.hashnode.dev/non-tech",
-    publishedAt: "N/A",
-    readTime: {
-      en: "N/A",
-      fr: "N/A",
-      ewe: "N/A",
-    },
-    tags: ["Web3", "Non-Technical", "Beginner"],
-  },
-  {
-    title: {
-      en: "How Stellar and Soroban Are Revolutionizing Finance: A Simple Guide",
-      fr: "Comment Stellar et Soroban Révolutionnent la Finance : Un Guide Simple",
-      ewe: "Alesi Stellar Kple Soroban Le Gadzraɖoƒe Wɔm yeye: Mɔfiame Bɔbɔe",
-    },
-    description: {
-      en: "A straightforward explanation of how Stellar and Soroban are changing the financial landscape.",
-      fr: "Une explication simple de la manière dont Stellar et Soroban transforment le paysage financier.",
-      ewe: "Alesi Stellar kple Soroban le gadzraɖoƒe wɔm yeye gbɔgblɔ bɔbɔe.",
-    },
-    href: "https://starlabman.hashnode.dev/how-stellar-and-soroban-are-revolutionizing-finance-a-simple-guide",
-    publishedAt: "N/A",
-    readTime: {
-      en: "N/A",
-      fr: "N/A",
-      ewe: "N/A",
-    },
-    tags: ["Stellar", "Soroban", "Finance", "Blockchain"],
-  },
-  {
-    title: {
-      en: "Simplify Blockchain with Stellar and Soroban",
-      fr: "Simplifier la Blockchain avec Stellar et Soroban",
-      ewe: "Blockchain ƒe Nu Bɔbɔe Kple Stellar Kple Soroban",
-    },
-    description: {
-      en: "Making blockchain technology more accessible and understandable using Stellar and Soroban.",
-      fr: "Rendre la technologie blockchain plus accessible et compréhensible avec Stellar et Soroban.",
-      ewe: "Blockchain mɔ̃ɖaŋu wɔwɔ bɔbɔe kple Stellar kple Soroban.",
-    },
-    href: "https://starlabman.hashnode.dev/simplify-blockchain-with-stellar-and-soroban",
-    publishedAt: "N/A",
-    readTime: {
-      en: "N/A",
-      fr: "N/A",
-      ewe: "N/A",
-    },
-    tags: ["Stellar", "Soroban", "Blockchain", "Simplification"],
-  },
-  {
-    title: {
-      en: "Reinventing Collaboration and Innovation in Web3",
-      fr: "Réinventer la Collaboration et l'Innovation dans le Web3",
-      ewe: "Yeye Yeye wɔwɔ Kple Dɔwɔwɔwo le Web3 Me",
-    },
-    description: {
-      en: "Exploring new paradigms for collaborative innovation within the Web3 ecosystem.",
-      fr: "Exploration de nouveaux paradigmes pour l'innovation collaborative au sein de l'écosystème Web3.",
-      ewe: "Dɔwɔwɔ yeyewo kple eƒe nuŋlɔŋlɔwo le Web3 nutome.",
-    },
-    href: "https://starlabman.hashnode.dev/reinventing-collaboration-and-innovation",
-    publishedAt: "N/A",
-    readTime: {
-      en: "N/A",
-      fr: "N/A",
-      ewe: "N/A",
-    },
-    tags: ["Web3", "Collaboration", "Innovation"],
-  },
-  {
-    title: {
-      en: "Blockchain and NFTs: Unlocking Creative Potential in the Digital Age",
-      fr: "Blockchain et NFTs : Libérer le Potentiel Créatif à l'Ère Numérique",
-      ewe: "Blockchain kple NFTs: Nu yeyewo Gbɔŋlɔ le Digital Ɣeyiɣi Me",
-    },
-    description: {
-      en: "How blockchain and NFTs are transforming creative industries and digital ownership.",
-      fr: "Comment la blockchain et les NFTs transforment les industries créatives et la propriété numérique.",
-      ewe: "Alesi blockchain kple NFTs le nu yeyewo wɔm le digital ɣeyiɣi me.",
-    },
-    href: "https://starlabman.hashnode.dev/blockchain-and-nfts-unlocking-creative-potential-in-the-digital-age",
-    publishedAt: "N/A",
-    readTime: {
-      en: "N/A",
-      fr: "N/A",
-      ewe: "N/A",
-    },
-    tags: ["Blockchain", "NFTs", "Digital Art", "Creative Industry"],
-  },
-  {
-    title: {
-      en: "Smart Contracts: Transforming Agreements in a Digital World",
-      fr: "Contrats Intelligents : Transformer les Accords dans un Monde Numérique",
-      ewe: "Smart Contracts: Nudodowo Kɔkɔ le Digital Xexeme",
-    },
-    description: {
-      en: "Understanding the power of smart contracts to automate and secure agreements.",
-      fr: "Comprendre le pouvoir des contrats intelligents pour automatiser et sécuriser les accords.",
-      ewe: "Smart Contracts ƒe ŋusẽ le nudodowo kple dedinɔnɔ me.",
-    },
-    href: "https://starlabman.hashnode.dev/smart-contracts",
-    publishedAt: "N/A",
-    readTime: {
-      en: "N/A",
-      fr: "N/A",
-      ewe: "N/A",
-    },
-    tags: ["Smart Contracts", "Blockchain", "Automation", "Legal Tech"],
-  },
-  {
-    title: {
-      en: "What is Developer Relations (DevRel)?",
-      fr: "Qu'est-ce que le Developer Relations (DevRel) ?",
-      ewe: "Nuka Nye Nusrɔ̃lawo Kple Nuƒoƒo (DevRel)?",
-    },
-    description: {
-      en: "An introduction to the field of Developer Relations and its importance in tech.",
-      fr: "Une introduction au domaine du Developer Relations et son importance dans la technologie.",
-      ewe: "Nuƒoƒo kple eƒe nuŋlɔŋlɔwo le mɔ̃ɖaŋu me.",
-    },
-    href: "https://starlabman.hashnode.dev/what-is-developer-relations",
-    publishedAt: "N/A",
-    readTime: {
-      en: "N/A",
-      fr: "N/A",
-      ewe: "N/A",
-    },
-    tags: ["DevRel", "Developer Relations", "Community"],
   },
   {
     title: {

@@ -24,14 +24,18 @@ https://x.com/0xWeb3DevRel/status/1870902690714152964
 Linkedin's Post:
 
 https://www.linkedin.com/posts/starlabman_ethaccra-ethereum-web3africa-activity-7371879096919818240-A3Jq
-https://www.linkedin.com/posts/starlabman_3-people-3-countries-activity-7315744661485031425-gN1C?utm_source=share&utm_medium=member_desktop&rcm=ACoAACv4WO8B0loT1O-3Cuk_8LE4fQwmsFdDXz8
-https://www.linkedin.com/posts/starlabman_day1-day18-web3-activity-7300546249521324032-W3dD?utm_source=share&utm_medium=member_desktop&rcm=ACoAACv4WO8B0loT1O-3Cuk_8LE4fQwmsFdDXz8
 
-https://www.linkedin.com/posts/starlabman_web3-communitybuilding-lifelonglearning-activity-7277007166438334464-iAg4?utm_source=share&utm_medium=member_desktop&rcm=ACoAACv4WO8B0loT1O-3Cuk_8LE4fQwmsFdDXz8
-https://www.linkedin.com/posts/starlabman_anniversaire-gratitude-soutien-activity-7266778840872468480-T_4V?utm_source=share&utm_medium=member_desktop&rcm=ACoAACv4WO8B0loT1O-3Cuk_8LE4fQwmsFdDXz8
-https://www.linkedin.com/posts/starlabman_grande-nouvelle-je-viens-de-r%C3%A9aliser-activity-7230206683111690240-NdLL?utm_source=share&utm_medium=member_desktop&rcm=ACoAACv4WO8B0loT1O-3Cuk_8LE4fQwmsFdDXz8
-https://www.linkedin.com/posts/starlabman_binancemeetuplome-binance-meetup-activity-7209154497812606976-2eVJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAACv4WO8B0loT1O-3Cuk_8LE4fQwmsFdDXz8
+https://www.linkedin.com/posts/starlabman_3-people-3-countries-activity-7315744661485031425-gN1C
 
+https://www.linkedin.com/posts/starlabman_day1-day18-web3-activity-7300546249521324032-W3dD
+
+https://www.linkedin.com/posts/starlabman_web3-communitybuilding-lifelonglearning-activity-7277007166438334464-iAg4
+
+https://www.linkedin.com/posts/starlabman_anniversaire-gratitude-soutien-activity-7266778840872468480-T_4V
+
+https://www.linkedin.com/posts/starlabman_grande-nouvelle-je-viens-de-r%C3%A9aliser-activity-7230206683111690240-NdLL
+
+https://www.linkedin.com/posts/starlabman_binancemeetuplome-binance-meetup-activity-7209154497812606976-2eVJ
 
 
 Blog's Post:

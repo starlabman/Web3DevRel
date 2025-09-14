@@ -76,7 +76,7 @@ export default function HomePage() {
   })
   const postsLoadMore = useLoadMore({
     items: allPosts,
-    initialCount: 3,
+    initialCount: 5,
     loadMoreCount: 3,
   })
   const articlesLoadMore = useLoadMore({
@@ -648,10 +648,10 @@ export default function HomePage() {
                       <p>{safeT("achievements.founder")}</p>
                       <p>{safeT("achievements.coverner")}</p>
                       <p>{safeT("achievements.devrel_expert")}</p>
-                      <p>{safeT("achievements.ecosystem_builder")}</p>
-                      <p>{safeT("achievements.web3_ambassador")}</p>
                       <p>{safeT("achievements.cmo")}</p>
                       <p>{safeT("achievements.correspondent")}</p>
+                      <p>{safeT("achievements.ecosystem_builder")}</p>
+                      <p>{safeT("achievements.web3_ambassador")}</p>
                     </div>
                   </BentoCard>
                 </motion.div>
