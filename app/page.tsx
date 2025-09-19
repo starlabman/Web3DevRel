@@ -57,6 +57,7 @@ export default function HomePage() {
       } catch (error) {
         // Silently handle translation errors in production
         if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
           console.error(`Error getting translation for key: ${key}`, error)
         }
         return key.split(".").pop() || key

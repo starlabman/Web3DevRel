@@ -22,7 +22,7 @@ describe('Navigation Component', () => {
   it('renders navigation with logo', () => {
     render(
       <LanguageProvider value={{ language: 'fr', setLanguage: jest.fn() }}>
-        <Navigation />
+        <Navigation currentLang="en" onLanguageChange={jest.fn()} />
       </LanguageProvider>
     )
     
@@ -32,7 +32,7 @@ describe('Navigation Component', () => {
   it('renders navigation items', () => {
     render(
       <LanguageProvider value={{ language: 'fr', setLanguage: jest.fn() }}>
-        <Navigation />
+        <Navigation currentLang="en" onLanguageChange={jest.fn()} />
       </LanguageProvider>
     )
     
