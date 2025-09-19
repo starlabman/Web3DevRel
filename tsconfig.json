@@ -18,8 +18,7 @@
     "incremental": true,
     "types": [
       "jest",
-      "@testing-library/jest-dom",
-      "three"
+      "@testing-library/jest-dom"
     ],
     "plugins": [
       {
