@@ -58,7 +58,7 @@ export const translations = {
       subtitle: "Comprehensive blockchain education and consulting services",
       beginnerTitle: "Blockchain Fundamentals",
       beginnerDesc: "Perfect introduction to blockchain, Bitcoin, and Web3 for complete beginners",
-      beginnerPrice: "€150/session",
+      beginnerPrice: "$150/session",
       beginnerFeatures: [
         "What is blockchain technology",
         "Understanding Bitcoin & cryptocurrencies",
@@ -68,7 +68,7 @@ export const translations = {
       ],
       investmentTitle: "Investment Guidance",
       investmentDesc: "Professional crypto investment strategy and portfolio management",
-      investmentPrice: "€300/month",
+      investmentPrice: "$300/month",
       investmentFeatures: [
         "Portfolio analysis & optimization",
         "Risk management strategies",
@@ -78,7 +78,7 @@ export const translations = {
       ],
       technicalTitle: "Technical Web3 Development",
       technicalDesc: "Advanced blockchain development and smart contract programming",
-      technicalPrice: "€500/month",
+      technicalPrice: "$500/month",
       technicalFeatures: [
         "Smart contract development",
         "DApp architecture",
@@ -101,11 +101,11 @@ export const translations = {
       subtitle: "Leading Web3 innovation across Africa",
       founder: "Founder - Africa Blockchain Community",
       coverner: "Coverner - ETHAfrique - 1st Ethereum conf Fr Africa",
-      devrel_expert: "DevRel ( Developer Relations) & Ecosystem Builder",
-      ecosystem_builder: "Co-Founder, CEO & Backend Developer  - OrgaAfrica",
+      devrel_expert: "DevRel (Developer Relations) & Ecosystem Builder",
+      ecosystem_builder: "Co-Founder, CEO & Backend Developer - OrgaAfrica",
       web3_ambassador: "Prev Lead Web3.js Ambassador",
       cmo: "Chief of Stuff & Consultant - Senchange",
-      correspondent: "Co-Founder & Backend Developer  - Chaapa Ride",
+      correspondent: "Co-Founder & Backend Developer - Chaapa Ride",
     },
     contact: {
       title: "Let's Build Something Amazing Together",
@@ -186,7 +186,7 @@ export const translations = {
       ],
       investmentTitle: "Conseil en Investissement",
       investmentDesc: "Stratégie d'investissement crypto professionnelle et gestion de portefeuille",
-      investmentPrice: "€300/mois",
+      investmentPrice: "$300/mois",
       investmentFeatures: [
         "Analyse & optimisation de portefeuille",
         "Stratégies de gestion des risques",
@@ -196,7 +196,7 @@ export const translations = {
       ],
       technicalTitle: "Développement Web3 Technique",
       technicalDesc: "Développement blockchain avancé et programmation de contrats intelligents",
-      technicalPrice: "€500/mois",
+      technicalPrice: "$500/mois",
       technicalFeatures: [
         "Développement de contrats intelligents",
         "Architecture DApp",
@@ -209,21 +209,21 @@ export const translations = {
       resource: "Curateur de Ressources",
       technical_notes: "Notes Techniques & Apprentissages",
       project_ideas: "Idées de Projets & Brainstorming",
-      key_contacts: "Contacts Clés",
-      blockchain_education: "Formation Blockchain Intensive",
-      community_building: "Construction de Communautés Web3",
+      key_contacts: "Relations Développeurs",
+      blockchain_education: "Formation Intensive Blockchain",
+      community_building: "Construction de Communauté Web3",
       content_creation: "Création de Contenu Éducatif",
     },
     achievements: {
       title: "Parcours Professionnel",
       subtitle: "Diriger l'innovation Web3 à travers l'Afrique",
       founder: "Fondateur - Communauté Blockchain Afrique",
-      coverner: "Gouverneur - ETHAfrique",
-      devrel_expert: "Expert DevRel",
-      ecosystem_builder: "Constructeur d'Écosystème",
-      web3_ambassador: "Lead Ambassadeur Web3.js",
-      cmo: "Directeur Marketing - IsyChain",
-      correspondent: "Correspondant Blockchain - WallCrypt",
+      coverner: "Gouverneur - ETHAfrique - 1ère conférence Ethereum Fr Afrique",
+      devrel_expert: "DevRel (Relations Développeurs) & Constructeur d'Écosystème",
+      ecosystem_builder: "Co-Fondateur, PDG & Développeur Backend - OrgaAfrica",
+      web3_ambassador: "Ancien Ambassadeur Principal Web3.js",
+      cmo: "Directeur Général & Consultant - Senchange",
+      correspondent: "Co-Fondateur & Développeur Backend - Chaapa Ride",
     },
     contact: {
       title: "Construisons Quelque Chose d'Incroyable Ensemble",
@@ -238,7 +238,7 @@ export const translations = {
       filterEvents: "Événements",
     },
     footer: {
-      copyright: "© 2024 AGBETSIASSI KODJO LABORE. Tous droits réservés.",
+      copyright: "© 2025 AGBETSIASSI KODJO LABORE. Tous droits réservés.",
     },
   },
   ewe: {
@@ -294,7 +294,7 @@ export const translations = {
       subtitle: "Blockchain nusrɔ̃ɖoɖo kple mɔfiame dɔwɔwɔwo blibo",
       beginnerTitle: "Blockchain Gɔmeɖoanyi",
       beginnerDesc: "Blockchain, Bitcoin, kple Web3 gɔmeɖeɖe nyui na ame yeyewo",
-      beginnerPrice: "€150/session",
+      beginnerPrice: "$150/session",
       beginnerFeatures: [
         "Blockchain mɔ̃ɖaŋu nye nuka",
         "Bitcoin & cryptocurrency gɔmesese",
@@ -304,7 +304,7 @@ export const translations = {
       ],
       investmentTitle: "Gakɔkɔ Aɖaŋuɖoɖo",
       investmentDesc: "Crypto gakɔkɔ mɔ̃ɖaŋu nyui kple gakotoku dzikpɔkpɔ",
-      investmentPrice: "€300/month",
+      investmentPrice: "$300/month",
       investmentFeatures: [
         "Gakotoku me nukpɔkpɔ & nyonyo",
         "Afɔku dzikpɔkpɔ mɔ̃ɖaŋuwo",
@@ -314,7 +314,7 @@ export const translations = {
       ],
       technicalTitle: "Web3 Mɔ̃ɖaŋu Wɔwɔ",
       technicalDesc: "Blockchain mɔ̃ɖaŋu wɔwɔ kple smart contract ŋɔŋlɔ",
-      technicalPrice: "€500/month",
+      technicalPrice: "$500/month",
       technicalFeatures: [
         "Smart contract wɔwɔ",
         "DApp ɖoɖo",
@@ -356,7 +356,7 @@ export const translations = {
       filterEvents: "Dɔwɔwɔwo",
     },
     footer: {
-      copyright: "© 2024 AGBETSIASSI KODJO LABORE. Wo katã ƒe nyawo.",
+      copyright: "© 2025 AGBETSIASSI KODJO LABORE. Wo katã ƒe nyawo.",
     },
   },
 }

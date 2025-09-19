@@ -84,7 +84,7 @@ export const mentorshipServices = [
       ewe: "Blockchain, Bitcoin, kple Web3 gɔmeɖeɖe nyui na ame yeyewo",
     },
     duration: "4 weeks",
-    price: "150/month",
+    price: "$150/month",
     features: [
       {
         en: "What is blockchain technology",
