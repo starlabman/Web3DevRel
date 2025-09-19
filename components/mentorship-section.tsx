@@ -116,7 +116,7 @@ export function MentorshipSection({ currentLang }: MentorshipSectionProps) {
         >
           <p className="text-gray-400 mb-4">{t.mentorship.notSure}</p>
           <motion.a
-            href="https://calendly.com/starlabman/discovery-call"
+            href="https://calendly.com/starlabman/30min"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}

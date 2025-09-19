@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cross-env NEXT_DISABLE_OUTPUT_TRACE=1 next build",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
@@ -17,7 +17,7 @@
     "optimize-images": "node scripts/optimize-images.js",
     "check-and-fix": "node scripts/check-and-fix.js",
     "analyze": "ANALYZE=true npm run build",
-    "clean": "rm -rf .next out dist",
+    "clean": "rm -rf .next build out dist",
     "prebuild": "npm run type-check && npm run lint",
     "postbuild": "npm run optimize-images"
   },
@@ -84,6 +84,7 @@
     "zod": "3.25.67"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/postcss": "^4.1.9",
     "@tailwindcss/typography": "^0.5.10",

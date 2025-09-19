@@ -6,10 +6,10 @@ import { useRef, useMemo, Suspense, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { TextureLoader } from "three"
 import Image from "next/image"
-import type * as THREE from "three"
 
 function AnimatedSphere() {
-  const meshRef = useRef<THREE.Mesh>(null)
+  // Minimal type: object with a scale.setScalar method used by the animation
+  const meshRef = useRef<{ scale: { setScalar: (n: number) => void } } | null>(null)
 
   const profileTexture = useLoader(TextureLoader, "/kodjo-labore-profile.png")
 
@@ -42,7 +42,8 @@ function AnimatedSphere() {
 }
 
 function SimpleParticleField() {
-  const pointsRef = useRef<THREE.Points>(null)
+  // Minimal type: object with rotation.x/y used by the animation
+  const pointsRef = useRef<{ rotation: { x: number; y: number } } | null>(null)
 
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(150 * 3)
@@ -81,7 +82,8 @@ function SimpleParticleField() {
 }
 
 function BlockchainLogos() {
-  const groupRef = useRef<THREE.Group>(null)
+  // Minimal type: object with rotation.y used by the animation
+  const groupRef = useRef<{ rotation: { y: number } } | null>(null)
 
   const logos = [
     { name: "Ethereum", id: 1027, color: "#627EEA" },
