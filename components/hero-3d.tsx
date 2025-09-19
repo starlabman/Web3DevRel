@@ -4,14 +4,13 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber"
 import { OrbitControls, Sphere, MeshDistortMaterial, Float, Html } from "@react-three/drei"
 import { useRef, useMemo, Suspense, useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import { TextureLoader } from "three"
 import Image from "next/image"
 
 function AnimatedSphere() {
   // Minimal type: object with a scale.setScalar method used by the animation
   const meshRef = useRef<{ scale: { setScalar: (n: number) => void } } | null>(null)
 
-  // Dynamically require TextureLoader to avoid compile-time type requirement for 'three'
-  const TextureLoader = useMemo(() => (require("three") as any).TextureLoader, [])
   const profileTexture = useLoader(TextureLoader, "/kodjo-labore-profile.png")
 
   useFrame((state) => {
