@@ -31,7 +31,7 @@ export function Navigation({ currentLang, onLanguageChange }: NavigationProps) {
     { icon: Twitter, href: "https://x.com/0xWeb3DevRel", label: "Twitter" },
     { icon: Linkedin, href: "https://linkedin.com/in/starlabman", label: "LinkedIn" },
     { icon: Github, href: "https://github.com/starlabman", label: "GitHub" },
-    { icon: Mail, href: "mailto:hello@0xweb3devrel.com", label: "Email" },
+    { icon: Mail, href: "mailto:akodjolabore@gmail.com", label: "Email" },
   ]
 
   const languages = [

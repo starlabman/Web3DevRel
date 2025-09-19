@@ -10,7 +10,7 @@ interface AccessibilityEnhancerProps {
 
 export function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
   const [isMuted, setIsMuted] = useState(false)
-  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system')
+  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('dark')
   const [fontSize, setFontSize] = useState(16)
 
   useEffect(() => {

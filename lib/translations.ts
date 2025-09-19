@@ -219,10 +219,10 @@ export const translations = {
       subtitle: "Diriger l'innovation Web3 à travers l'Afrique",
       founder: "Fondateur - Communauté Blockchain Afrique",
       coverner: "Gouverneur - ETHAfrique - 1ère conférence Ethereum Fr Afrique",
-      devrel_expert: "DevRel (Relations Développeurs) & Constructeur d'Écosystème",
-      ecosystem_builder: "Co-Fondateur, PDG & Développeur Backend - OrgaAfrica",
+      devrel_expert: "DevRel & Constructeur d'Écosystème",
+      ecosystem_builder: "Co-Fondateur & Développeur Backend - OrgaAfrica",
       web3_ambassador: "Ancien Ambassadeur Principal Web3.js",
-      cmo: "Directeur Général & Consultant - Senchange",
+      cmo: "Chef de fil & Consultant - Senchange",
       correspondent: "Co-Fondateur & Développeur Backend - Chaapa Ride",
     },
     contact: {
@@ -420,7 +420,7 @@ const LanguageContext = createContext<{
   language: Language
   setLanguage: (lang: Language) => void
 }>({
-  language: "fr",
+  language: "en",
   setLanguage: () => {},
 })
 

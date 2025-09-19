@@ -297,6 +297,90 @@ export const mentorshipServices = [
 export const projects = [
   {
     title: {
+      en: "BSC MoMo Cash",
+      fr: "BSC MoMo Cash",
+      ewe: "BSC MoMo Cash",
+    },
+    blurb: {
+      en: "Mobile money cash management built on Binance Smart Chain (BSC).",
+      fr: "Gestion de cash mobile money construite sur Binance Smart Chain (BSC).",
+      ewe: "Mobile money cash dzikpɔkpɔ wɔwɔ le Binance Smart Chain (BSC) me.",
+    },
+    href: "https://github.com/starlabman/bsc-momo-cash",
+    chips: ["BSC", "Web3", "Open Source"],
+  },
+  {
+    title: {
+      en: "EcoPatch",
+      fr: "EcoPatch",
+      ewe: "EcoPatch",
+    },
+    blurb: {
+      en: "Sustainability-focused project with environmental impact tracking.",
+      fr: "Projet axé sur la durabilité avec suivi de l'impact environnemental.",
+      ewe: "Sustainability dzi la, environment ɖoɖo ƒe kpɔɖeŋu.",
+    },
+    href: "https://github.com/starlabman/ecopatch",
+    chips: ["Sustainability", "Web", "Open Source"],
+  },
+  {
+    title: {
+      en: "DevPlan.ai",
+      fr: "DevPlan.ai",
+      ewe: "DevPlan.ai",
+    },
+    blurb: {
+      en: "AI-powered developer planning and productivity toolkit.",
+      fr: "Boîte à outils de planification et productivité pour développeurs, propulsée par l'IA.",
+      ewe: "AI kple developer planning kple dɔwɔƒe dzidzɔkpɔkpɔ ƒe agbalẽwo.",
+    },
+    href: "https://github.com/starlabman/DevPlan.ai",
+    chips: ["AI", "Developer Tools", "Open Source"],
+  },
+  {
+    title: {
+      en: "Chaapa Ride - Landing Page",
+      fr: "Chaapa Ride - Page d'atterrissage",
+      ewe: "Chaapa Ride - Landing Page",
+    },
+    blurb: {
+      en: "Landing page for Chaapa Ride mobility platform.",
+      fr: "Page d'atterrissage pour la plateforme de mobilité Chaapa Ride.",
+      ewe: "Landing page na Chaapa Ride mobility platform.",
+    },
+    href: "https://github.com/chaapa-ride/landingpage",
+    chips: ["Landing Page", "Web", "Open Source"],
+  },
+  {
+    title: {
+      en: "Korea Blockchain Gaming Map - Shareable Infographic",
+      fr: "Korea Blockchain Gaming Map - Infographie Partageable",
+      ewe: "Korea Blockchain Gaming Map - Infographic",
+    },
+    blurb: {
+      en: "Shareable infographic mapping Korea's blockchain gaming ecosystem.",
+      fr: "Infographie partageable cartographiant l'écosystème du gaming blockchain en Corée.",
+      ewe: "Infographic si wotsɔna to Korea blockchain gaming ecosystem ŋgɔ.",
+    },
+    href: "https://github.com/starlabman/Korea-Blockchain-Gaming-Map-Shareable-Infographic",
+    chips: ["Infographic", "Blockchain Gaming", "Open Source"],
+  },
+  {
+    title: {
+      en: "Africa Blockchain Community",
+      fr: "Africa Blockchain Community",
+      ewe: "Africa Blockchain Community",
+    },
+    blurb: {
+      en: "Community initiatives and resources for blockchain across Africa.",
+      fr: "Initiatives communautaires et ressources pour la blockchain à travers l'Afrique.",
+      ewe: "Habɔbɔ dɔwɔwɔwo kple gomekɔwo na blockchain le Afrika me.",
+    },
+    href: "https://github.com/starlabman/AfricaBlockchainCommunity",
+    chips: ["Community", "Blockchain", "Open Source"],
+  },
+  {
+    title: {
       en: "Phonebook Management System",
       fr: "Système de Gestion de Répertoire Téléphonique",
       ewe: "Ameŋkɔwo Dzikpɔkpɔ Habɔbɔ",

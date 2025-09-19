@@ -36,7 +36,7 @@ import type { Language } from "@/lib/translations"
 import { LanguageProvider } from "@/components/language-switcher"
 
 export default function HomePage() {
-  const [currentLang, setCurrentLang] = useState<Language>("fr")
+  const [currentLang, setCurrentLang] = useState<Language>("en")
   const { t } = useTranslation(currentLang)
 
   const safeT = useMemo(() => {
@@ -725,7 +725,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 glow">
                   <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                  hello@0xweb3devrel.com
+                  akodjolabore@gmail.com
                 </Button>
                 <Button size="lg" variant="outline" className="border-white/20 hover:bg-white/10 bg-transparent">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
@@ -745,7 +745,7 @@ export default function HomePage() {
                 { icon: Twitter, href: "https://twitter.com/0xWeb3DevRel" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/starlabman/" },
                 { icon: Github, href: "https://github.com/starlabman" },
-                { icon: Mail, href: "mailto:hello@0xweb3devrel.com" },
+                { icon: Mail, href: "mailto:akodjolabore@gmail.com" },
               ].map((social, index) => (
                 <Button
                   key={index}

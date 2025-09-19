@@ -65,7 +65,7 @@ const LanguageContext = createContext<{
   language: Language
   setLanguage: (lang: Language) => void
 }>({
-  language: "fr",
+  language: "en",
   setLanguage: () => {},
 })
 
