@@ -17,8 +17,7 @@
     "jsx": "preserve",
     "incremental": true,
     "types": [
-      "jest",
-      "@testing-library/jest-dom"
+      "jest"
     ],
     "plugins": [
       {

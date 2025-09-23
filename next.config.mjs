@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Write Next.js build output to a custom directory to avoid Windows locks on .next
-  distDir: 'build',
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
