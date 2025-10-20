@@ -18,8 +18,8 @@
     "check-and-fix": "node scripts/check-and-fix.js",
     "analyze": "ANALYZE=true npm run build",
     "clean": "rm -rf .next build out dist",
-    "prebuild": "npm run type-check && npm run lint",
-    "postbuild": "npm run optimize-images"
+    "build:ci": "CI=true npm run type-check && npm run lint && cross-env NEXT_DISABLE_OUTPUT_TRACE=1 next build",
+    "build:images": "cross-env OPTIMIZE_IMAGES=1 npm run build"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",

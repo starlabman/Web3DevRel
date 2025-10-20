@@ -6,6 +6,11 @@ const { execSync } = require('child_process');
 
 console.log('🖼️ Optimisation des images...\n');
 
+if (process.env.OPTIMIZE_IMAGES !== '1') {
+  console.log('ℹ️ OPTIMIZE_IMAGES non défini. Ignorer l\'optimisation des images.');
+  process.exit(0);
+}
+
 const publicDir = path.join(__dirname, '../public');
 
 function optimizeImages() {
@@ -43,19 +48,13 @@ function optimizeImages() {
   console.log(`📁 ${images.length} images trouvées`);
 
   // Vérifier si sharp est installé
+  let sharp;
   try {
-    require('sharp');
+    sharp = require('sharp');
   } catch (error) {
-    console.log('⚠️ Sharp non installé. Installation...');
-    try {
-      execSync('npm install sharp', { stdio: 'inherit' });
-    } catch (installError) {
-      console.log('❌ Impossible d\'installer sharp');
-      return;
-    }
+    console.log('⚠️ Sharp non installé. Ignorer l\'optimisation des images.');
+    return;
   }
-
-  const sharp = require('sharp');
 
   images.forEach((imagePath, index) => {
     try {
