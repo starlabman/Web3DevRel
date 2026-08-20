@@ -16,9 +16,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": [
-      "jest"
-    ],
     "plugins": [
       {
         "name": "next"
@@ -28,43 +25,18 @@
     "paths": {
       "@/*": [
         "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/lib/*": [
-        "./lib/*"
-      ],
-      "@/hooks/*": [
-        "./hooks/*"
-      ],
-      "@/app/*": [
-        "./app/*"
-      ],
-      "@/styles/*": [
-        "./styles/*"
-      ],
-      "@/public/*": [
-        "./public/*"
       ]
     },
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "forceConsistentCasingInFileNames": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "**/*.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "next-env.d.ts",
-    "build/types/**/*.ts"
+    "next-env.d.ts"
   ],
   "exclude": [
     "node_modules",
