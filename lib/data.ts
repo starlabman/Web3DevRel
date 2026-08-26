@@ -755,6 +755,134 @@ export const thoughtLeadership = {
       },
       href: "https://x.com/0xWeb3DevRel/status/1952081326544232745",
     },
+    {
+      title: {
+        en: "Tangem Wallet for Beginners: The Complete Guide to Self-Custody",
+        fr: "Tangem Wallet pour Débutants : Le Guide Complet de l'Auto-Garde",
+        ewe: "Tangem Wallet na Ame Yeyewo: Self-Custory Mɔfiame Blibo",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2082631770499936325",
+    },
+    {
+      title: {
+        en: "Exchange Shutdowns: Why Self-Custody Matters Now More Than Ever",
+        fr: "Fermetures d'Échanges : Pourquoi l'Auto-Garde Compte Plus Que Jamais",
+        ewe: "Exchange ƒe Dadzɔ: Aleke Self-Custory Xɔ ŋkɔ Esime",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2081410141371469860",
+    },
+    {
+      title: {
+        en: "Self-Custody Starts With Education, Not Hardware",
+        fr: "L'Auto-Garde Commence par l'Éducation, Pas le Matériel",
+        ewe: "Self-Custory Dze le Nusrɔ̃ɖoɖo Me, Mɔ̃ɖaŋu O",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2079567148687475016",
+    },
+    {
+      title: {
+        en: "First Impressions: The New Tangem Wallet Redesign",
+        fr: "Premières Impressions : Le Nouveau Redesign du Tangem Wallet",
+        ewe: "Nya Yeyewo: Tangem Wallet Yeye ƒe Dzidzɔ",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2079304968973025443",
+    },
+    {
+      title: {
+        en: "Tangem Send via Swap: Less Friction, Better UX",
+        fr: "Tangem Send via Swap : Moins de Friction, Meilleure Expérience",
+        ewe: "Tangem Send via Swap: Friction Mina, UX Nyui",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2075688240859042231",
+    },
+    {
+      title: {
+        en: "Building Web3 Communities Across Africa",
+        fr: "Construire des Communautés Web3 à Travers l'Afrique",
+        ewe: "Web3 Habɔbɔwo Tutu le Afrika",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2087168354817613834",
+    },
+    {
+      title: {
+        en: "The Future of DevRel in Web3",
+        fr: "L'Avenir du DevRel dans le Web3",
+        ewe: "DevRel ƒe Etsɔme le Web3 Me",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2088679530151977318",
+    },
+    {
+      title: {
+        en: "Onboarding the Next Million Users to Web3",
+        fr: "Embarquer le Prochain Million d'Utilisateurs vers le Web3",
+        ewe: "Ame Miliɔn Yeyewo Kpe ɖe Web3 ŋu",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2086891785998004352",
+    },
+    {
+      title: {
+        en: "Why Africa Is the Next Frontier for Blockchain",
+        fr: "Pourquoi l'Afrique est la Prochaine Frontière de la Blockchain",
+        ewe: "Aleke Afrika Xɔ Blockchain ƒe Asi Yeye",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2085780849383903614",
+    },
+    {
+      title: {
+        en: "Smart Contract Security Best Practices",
+        fr: "Meilleures Pratiques de Sécurité des Contrats Intelligents",
+        ewe: "Smart Contract Dzigbɔkpɔ Dɔwɔwɔ Nyuitɔwo",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2083672133134102864",
+    },
+    {
+      title: {
+        en: "ETHAfrique: Bringing Ethereum to Francophone Africa",
+        fr: "ETHAfrique : Apporter Ethereum à l'Afrique Francophone",
+        ewe: "ETHAfrique: Ethereum Kpe ɖe Francophone Afrika ŋu",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2062283336987320829",
+    },
+    {
+      title: {
+        en: "Developer Education: The Key to Web3 Mass Adoption",
+        fr: "Éducation des Développeurs : La Clé de l'Adoption Massive du Web3",
+        ewe: "Nusrɔ̃la Nusrɔ̃ɖoɖo: Web3 Adoption Gã ƒe Kpɔɖeŋu",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/2039415085857194456",
+    },
+    {
+      title: {
+        en: "Africa Fintech Summit: Bridging Financial Inclusion",
+        fr: "Africa Fintech Summit : Combler l'Inclusion Financière",
+        ewe: "Africa Fintech Summit: Gaɖeɖe Financial Inclusion",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/1984325740171837576",
+    },
+    {
+      title: {
+        en: "EFP Workshops at ETHAccra",
+        fr: "Ateliers EFP à ETHAccra",
+        ewe: "EFP Dɔwɔƒewo le ETHAccra",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/1966264783214178355",
+    },
+    {
+      title: {
+        en: "Open to Join a Web3 Team",
+        fr: "Ouvert pour Rejoindre une Équipe Web3",
+        ewe: "Web3 Habɔbɔ ƒe Mɔ̃ ɖo",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/1930007463723708674",
+    },
+    {
+      title: {
+        en: "The Best Web3 Advice I Received This Year",
+        fr: "Le Meilleur Conseil Web3 que J'ai Reçu Cette Année",
+        ewe: "Web3 Aɖaŋuɖoɖo Nyuitɔ si Nye Xɔ Le Ƒe Sia",
+      },
+      href: "https://x.com/0xWeb3DevRel/status/1880238960980709520",
+    },
   ],
   posts: [
     {
